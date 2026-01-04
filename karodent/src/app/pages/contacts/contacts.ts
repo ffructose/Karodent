@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-contacts',
-  imports: [],
+  standalone: false,
   templateUrl: './contacts.html',
   styleUrl: './contacts.css',
 })

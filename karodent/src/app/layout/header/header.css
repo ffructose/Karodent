@@ -1,0 +1,121 @@
+.header {
+    height: 66px;
+    background-color: rgba(0, 0, 0, 0.486);
+    border: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.header-body {
+    height: 100%;
+    display: flex;
+    border: 0;
+    width: 100%;
+    align-items: center;
+}
+
+.header-list {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 10%;
+}
+
+.header-list a {
+    color: white;
+    font-size: 23px;
+    text-decoration: none;
+    font-family: 'Futura';
+
+    display: inline-block;
+    transition: transform 150ms ease, color 150ms ease;
+    transform-origin: center;
+
+}
+
+.header-list a:hover {
+    color: #DEBC4C;
+    transform: translateY(-2px) scale(1.08);
+}
+
+.header-option-list {
+    font-family: 'Futura';
+    width: 8%;
+    justify-self: end;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 20px;
+    justify-items: end;
+}
+
+.dd {
+    position: relative;
+    width: max-content;
+}
+
+.dd-trigger {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+
+    color: #c8a24a;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    padding: 2px 2px;
+}
+
+.dd-arrow {
+    display: inline-block;
+    font-size: 18px;
+    transform: translateY(1px);
+    transition: transform 150ms ease;
+    opacity: 0.9;
+}
+
+.dd.open .dd-arrow {
+    transform: translateY(1px) rotate(180deg);
+}
+
+.dd-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    min-width: 100%;
+    background: rgba(45, 45, 45, 0.92);
+    border-radius: 5px;
+    padding: 6px;
+
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+    z-index: 1000;
+}
+
+.dd-item {
+    width: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    padding: 5px 22px 5px 12px;
+    border-radius: 8px;
+
+    color: #c8a24a;
+    font-family: 'Futura';
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: end;
+    /* як на скріні */
+
+    transition: background 140ms ease, transform 140ms ease;
+}
+
+.dd-item:hover {
+    background: rgba(200, 162, 74, 0.12);
+    transform: translateY(-1px);
+}

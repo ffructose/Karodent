@@ -1,0 +1,53 @@
+<header class="header">
+    <div class="header-body">
+
+        <div class="header-list">
+            <a routerLink="/">home</a>
+            <a routerLink="/services">services</a>
+            <a routerLink="/doctors">doctors</a>
+            <a routerLink="/aboutus">aboutus</a>
+            <a routerLink="/results">results</a>
+            <a routerLink="/prices">prices</a>
+            <a routerLink="/contacts">contacts</a>
+        </div>
+
+        <div class="header-option-list" (click)="$event.stopPropagation()">
+            <!-- CITY DROPDOWN -->
+            <div class="dd" [class.open]="openDropdown === 'city'">
+                <button type="button" class="dd-trigger" (click)="toggle('city'); $event.stopPropagation()"
+                    aria-haspopup="listbox" [attr.aria-expanded]="openDropdown === 'city'">
+                    <span class="dd-value">{{ selectedCity }}</span>
+                    <span class="dd-arrow" aria-hidden="true">▾</span>
+                </button>
+
+                <div class="dd-menu" *ngIf="openDropdown === 'city'" role="listbox">
+                    <button type="button" class="dd-item" *ngFor="let c of cities" (click)="selectCity(c)" role="option"
+                        [hidden]="c === selectedCity">
+                        {{ c }}
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- LANG DROPDOWN -->
+            <div class="dd" [class.open]="openDropdown === 'lang'">
+                <button type="button" class="dd-trigger" (click)="toggle('lang'); $event.stopPropagation()"
+                    aria-haspopup="listbox" [attr.aria-expanded]="openDropdown === 'lang'">
+                    <span class="dd-value">{{ selectedLang }}</span>
+                    <span class="dd-arrow" aria-hidden="true">▾</span>
+                </button>
+
+                <div class="dd-menu" *ngIf="openDropdown === 'lang'" role="listbox">
+                    <button type="button" class="dd-item" *ngFor="let l of langs" (click)="selectLang(l)" role="option"
+                        [hidden]="l === selectedLang">
+                        {{ l }}
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</header>

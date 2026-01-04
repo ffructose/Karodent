@@ -8,7 +8,7 @@ describe('Footer', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Footer]
+      declarations: [Footer]
     })
     .compileComponents();
 
