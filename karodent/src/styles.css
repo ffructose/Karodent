@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Expressa';
+    src: url('/assets/fonts/Expressa Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rotonda ';
+    src: url('/assets/fonts/Rotonda-Medium.B2S6dovj.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Parisienne';
+    src: url('/assets/fonts/Pn parisienne fn.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jura';
+    src: url('/assets/fonts/Jura-VariableFont_wght.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('/assets/fonts/FuturaCyrillicLight.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+h1 {
+    font-family: 'Jura';
+    font-size: 48;
+}
+
+h2 {
+    font-family: 'Jura';
+    font-size: 36;
+}
+
+h4 {
+    font-family: 'Futura';
+    font-size: 16;
+}
+
+h5 {
+    font-family: 'Futura';
+    font-size: 15;
+}
