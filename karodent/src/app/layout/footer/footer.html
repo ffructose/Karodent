@@ -1,1 +1,156 @@
-<p>footer works!</p>
+<footer class="footer">
+    <div class="footer-body">
+
+        <hr class="seperator-line">
+
+        <div class="appointment-block">
+            <section class="appointment">
+                <div class="appointment__wrap">
+                    <!-- LEFT (dark panel) -->
+                    <div class="appointment__left">
+                        <h2 class="appointment__title">
+                            MAKE AN<br />
+                            <span style="color: rgba(0, 255, 255, 0);">____</span>APPOINTMENT
+                        </h2>
+
+                        <div class="appointment__info">
+                            <div class="info-block">
+                                <div class="info-label">Address</div>
+                                <div class="info-value">Warsaw, Siedmiogrodzka 7/U1</div>
+                            </div>
+
+                            <div class="info-block">
+                                <div class="info-label">Phone</div>
+                                <div class="info-value">+48-505-506-793</div>
+                            </div>
+
+                            <div class="info-block">
+                                <div class="info-label">Mail</div>
+                                <a class="info-link" href="mailto:karodent@gmail.com">karodent@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="appointment__social">
+                            <!-- Instagram -->
+                            <a class="social-btn" href="#" aria-label="Instagram">
+                                <img src="/assets/photos/insta-logo.png" alt="Instagram" class="social-icon">
+                            </a>
+
+                            <!-- TikTok -->
+                            <a class="social-btn" href="#" aria-label="TikTok">
+                                <img src="/assets/photos/tiktok-logo.png" alt="TikTok" class="social-icon">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT (floating form) -->
+                    <div class="appointment__right">
+                        <form class="form" autocomplete="on">
+                            <label class="field">
+                                <span class="field__label">Your name</span>
+                                <input class="field__control" type="text" name="name" />
+                            </label>
+
+                            <label class="field">
+                                <span class="field__label">Your phone number</span>
+                                <input class="field__control" type="tel" name="phone" />
+                            </label>
+
+                            <label class="field">
+                                <span class="field__label">Your question</span>
+                                <textarea class="field__control field__control--textarea" name="question"></textarea>
+                            </label>
+
+                            <button class="form__btn" type="button">SUBMIT</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <hr class="seperator-line">
+
+        <section class="footer-second-part">
+            <div class="footer-second-part__wrap">
+
+                <!-- LEFT -->
+                <div class="fsp__info">
+                    <h3 style="font-family: 'Jura';" class="fsp__title">KARODENT STOMATOLOGIA</h3>
+
+                    <p class="fsp__text">
+                        Siedmiogrodzka 7 street, local U1, 01-204, Warsaw
+                    </p>
+
+                    <div class="fsp__row">
+                        <a href="mailto:karodent@gmail.com" class="fsp__link">
+                            karodent@gmail.com
+                        </a>
+                        <span class="soc-block">Tel. +48-505-506-793</span>
+                    </div>
+                    <div class="fsp__row">
+                        <p class="fsp__muted">Mo–Su: 9.00 to 20.00</p>
+                        <div class="soc-block">
+                            <a href="#" class="fsp__social-btn" aria-label="WhatsApp">
+                                <img href="#" class="fsp__social-btn" src="/assets/photos/whatsapp-logo.png"
+                                    alt="WhatsApp">
+                            </a>
+                            <a href="#" class="fsp__social-btn" aria-label="Telegram">
+                                <img href="#" class="fsp__social-btn" src="/assets/photos/telegram-logo.png"
+                                    alt="Telegram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SOCIAL -->
+                <div class="fsp__social">
+                    <a href="#" class="fsp__social-btn" aria-label="Facebook">
+                        <img href="#" class="fsp__social-btn" src="/assets/photos/facebook-logo.png" alt="Facebook">
+                    </a>
+                    <a href="#" class="fsp__social-btn" aria-label="TikTok">
+                        <img href="#" class="fsp__social-btn" src="/assets/photos/tiktok-logo.png" alt="TikTok">
+                    </a>
+                    <a href="#" class="fsp__social-btn" aria-label="Instagram">
+                        <img style="filter: brightness(1) invert(1); " href="#" class="fsp__social-btn"
+                            src="/assets/photos/insta-logo.png" alt="Instagram">
+                    </a>
+
+                </div>
+
+                <!-- NAV -->
+                <div class="fsp__nav">
+                    <div class="fsp__nav-col">
+                        <a routerLink="/services">services</a>
+                        <a routerLink="/contacts">contacts</a>
+                        <a routerLink="/aboutus">about us</a>
+                    </div>
+
+                    <div class="fsp__nav-col">
+                        <a routerLink="/doctors">doctors</a>
+                        <a routerLink="/results">results</a>
+                        <a routerLink="/prices">prices</a>
+                    </div>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="fsp__extra">
+                    <a href="#" class="fsp__extra-link">website in Pulawy</a>
+                    <a href="#" class="fsp__extra-link">change language</a>
+
+                </div>
+
+                <img class="fsp__logo" src="/assets/photos/karodent-logo-golden.png" alt="karodent-logo">
+
+            </div>
+        </section>
+
+        <button class="go-top" [class.go-top--visible]="showGoTop" (click)="scrollToTop()">
+            <span class="go-top__line"></span>
+            <span class="go-top__text">go to the top</span>
+            <span class="go-top__line"></span>
+        </button>
+
+
+
+    </div>
+</footer>

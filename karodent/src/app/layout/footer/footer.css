@@ -1,0 +1,1523 @@
+.footer {
+    padding-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-body {
+    width: 90%;
+    margin-bottom: 30px;
+
+}
+
+.seperator-line {
+    margin-bottom: 40px;
+    width: 95%;
+    height: 3px;
+    background-color: #947C2D;
+}
+
+.appointment {
+    padding: 60px 0;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.appointment__wrap {
+    margin: 0 auto;
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+/* LEFT panel */
+.appointment__left {
+    min-height: 420px;
+    background: black;
+    border-radius: 0;
+
+    padding: 70px 80px;
+    color: #ffffff;
+
+    /* важливо: даємо місце для “виходу” форми */
+    padding-right: 530px;
+    position: relative;
+    overflow: visible;
+}
+
+/* big title */
+.appointment__title {
+    font-family: 'Jura';
+    margin: 0;
+    font-size: 55px;
+    line-height: 1.30;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/* info blocks */
+.appointment__info {
+    font-family: 'Futura';
+    margin-top: 34px;
+    display: grid;
+    gap: 26px;
+    max-width: 420px;
+}
+
+.info-block .info-label {
+    opacity: 0.75;
+    font-size: 23px;
+    margin-bottom: 6px;
+}
+
+.info-block .info-value {
+    font-size: 28px;
+    letter-spacing: 0.4px;
+}
+
+.info-block .info-link {
+    font-size: 28px;
+    letter-spacing: 0.4px;
+}
+
+.info-link {
+    font-size: 18px;
+    letter-spacing: 0.4px;
+    color: #ffffff;
+    text-decoration: none;
+    text-underline-offset: 4px;
+}
+
+.appointment__social {
+    margin-top: 40px;
+    display: flex;
+    gap: 25px;
+}
+
+.social-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        transform 150ms ease,
+        border-color 150ms ease,
+        opacity 150ms ease;
+}
+
+.social-icon {
+    width: 110%;
+    height: 110%;
+    object-fit: contain;
+    display: block;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.9);
+    opacity: 1;
+}
+
+.social-btn:last-child .social-icon {
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgb(219, 219, 219);
+    border-radius: 50%;
+}
+
+
+
+
+
+/* RIGHT form card */
+.appointment__right {
+    position: relative;
+    z-index: 2;
+
+    margin-left: -340px;
+}
+
+.form {
+    width: 580px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    font-family: 'Jura';
+    padding: 20px 36px;
+}
+
+/* field */
+.field {
+    display: block;
+    margin-bottom: 26px;
+}
+
+.field__label {
+    display: block;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.65);
+    margin-bottom: 10px;
+}
+
+/* inputs */
+.field__control {
+    width: 100%;
+    height: 45px;
+    border: 2px solid rgba(31, 31, 31, 0.308);
+    padding: 10px 12px;
+    font-size: 14px;
+    outline: none;
+}
+
+.field__control:focus {
+    border-color: rgba(0, 0, 0, 0.6);
+}
+
+/* textarea */
+.field__control--textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* bottom black button */
+.form__btn {
+    font-family: 'Jura';
+    font-size: 25px;
+    color: rgb(204, 204, 204);
+    width: 100%;
+    height: 58px;
+    border: none;
+    background: #0b0b0b;
+    margin-top: 6px;
+    cursor: pointer;
+    transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.form__btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+
+
+
+
+
+
+
+
+.footer-second-part {
+    font-family: 'Futura';
+    font-size: 20px;
+
+}
+
+.footer-second-part__wrap {
+    width: 90%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 5fr 0.5fr 4fr 2fr 2fr;
+    gap: 0px;
+    align-items: center;
+}
+
+/* LEFT INFO */
+.fsp__title {
+    letter-spacing: 1.5px;
+    margin: 0 0 14px;
+    font-size: 30px;
+
+}
+
+.fsp__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.fsp__link {
+    color: #000;
+    text-decoration: none;
+}
+
+.fsp__link:hover {
+    text-decoration: underline;
+}
+
+.fsp__muted {
+    opacity: 0.8;
+    font-size: 18px;
+}
+
+.soc-block {
+    display: flex;
+    width: 50%;
+    gap: 30px;
+}
+
+/* SOCIAL */
+.fsp__social {
+    display: grid;
+    gap: 14px;
+    margin-top: 35px;
+}
+
+.fsp__social-btn {
+    width: 35px;
+    height: auto;
+
+    display: grid;
+    place-items: center;
+
+    color: #000;
+    text-decoration: none;
+
+    transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.fsp__social-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+/* NAV */
+.fsp__nav {
+    display: flex;
+    gap: 50px;
+    justify-content: space-evenly;
+}
+
+.fsp__nav-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fsp__nav-col a {
+    color: #000;
+    text-decoration: none;
+}
+
+.fsp__nav-col a:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT */
+.fsp__extra {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-self: end;
+}
+
+.fsp__extra-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.fsp__extra-link:hover {
+    text-decoration: underline;
+}
+
+.fsp__logo {
+    margin-top: 6px;
+    width: 120px;
+    color: #9c7a2f;
+    justify-self: end;
+}
+
+
+.go-top {
+    position: fixed;
+    /* не sticky */
+    right: 24px;
+    top: 80%;
+    transform: translateY(-50%);
+    /* просто по центру екрана */
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    /* лінія - текст - лінія */
+    align-items: center;
+    gap: 12px;
+
+    z-index: 1000;
+    color: #947C2D;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+
+}
+
+.go-top--visible {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+    pointer-events: auto;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-40%) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+
+.go-top__text:hover {
+    opacity: 1;
+}
+
+/* текст */
+.go-top__text {
+    writing-mode: vertical-rl;
+    /* вертикально */
+    transform: rotate(180deg);
+    /* щоб читалося знизу вгору як на фото */
+    white-space: nowrap;
+
+    font-family: 'FuturaBold';
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+/* лінії */
+.go-top__line {
+    width: 1px;
+    height: 70px;
+    background-color: #947C2D;
+    opacity: 0.9;
+}
+
+/* desktop  DONE*/
+@media (max-width: 1540px) {
+    .seperator-line {
+        margin-bottom: 20px;
+    }
+
+    .appointment {
+        padding: 30px 0;
+    }
+
+    /* LEFT panel */
+    .appointment__left {
+        min-height: 320px;
+        padding: 40px 30px;
+        padding-right: 530px;
+    }
+
+    /* big title */
+    .appointment__title {
+        margin: 0;
+        font-size: 35px;
+        letter-spacing: 1.2px;
+    }
+
+    /* info blocks */
+    .appointment__info {
+        margin-top: 20px;
+        gap: 25px;
+        max-width: 320px;
+    }
+
+    .info-block .info-label {
+        font-size: 18px;
+        margin-bottom: 2px;
+    }
+
+    .info-block .info-value {
+        font-size: 24px;
+    }
+
+    .info-block .info-link {
+        font-size: 24px;
+    }
+
+    .appointment__social {
+        margin-top: 25px;
+        gap: 20px;
+    }
+
+    .social-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-btn:last-child .social-icon {
+        border: 2px solid rgb(219, 219, 219);
+    }
+
+    /* RIGHT form card */
+    .appointment__right {
+        margin-left: -340px;
+    }
+
+    .form {
+        width: 480px;
+        padding: 20px 20px;
+    }
+
+    /* field */
+    .field {
+        margin-bottom: 10px;
+    }
+
+    .field__label {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    /* textarea */
+    .field__control--textarea {
+        height: 100px;
+    }
+
+    /* bottom black button */
+    .form__btn {
+        font-size: 20px;
+        height: 50px;
+    }
+
+    .footer-second-part {
+        font-size: 18px;
+    }
+
+    /* LEFT INFO */
+    .fsp__title {
+        letter-spacing: 1.2px;
+        font-size: 25px;
+    }
+
+    .fsp__muted {
+        font-size: 16px;
+    }
+
+    .soc-block {
+        display: flex;
+        width: 50%;
+        gap: 30px;
+    }
+
+    .fsp__social-btn {
+        width: 30px;
+    }
+
+    /* NAV */
+    .fsp__nav {
+        gap: 30px;
+    }
+
+    .fsp__logo {
+        margin-top: 6px;
+        width: 100px;
+    }
+
+    .go-top {
+        right: 20px;
+        top: 80%;
+        gap: 12px;
+    }
+
+    .go-top__text {
+        font-size: 11px;
+        letter-spacing: 2.5px;
+    }
+
+    .go-top__line {
+        height: 50px;
+    }
+
+}
+
+/* small laptops DONE*/
+@media (max-width: 1280px) {
+    .footer {
+        padding-top: 10px;
+    }
+
+    .footer-body {
+        margin-bottom: 10px;
+
+    }
+
+    .seperator-line {
+        margin-bottom: 10px;
+    }
+
+    .appointment {
+        padding: 35px 0;
+    }
+
+    /* LEFT panel */
+    .appointment__left {
+        min-height: 300px;
+        padding: 50px 30px;
+        padding-right: 330px;
+    }
+
+    /* big title */
+    .appointment__title {
+        font-size: 30px;
+        letter-spacing: 1.5px;
+    }
+
+    /* info blocks */
+    .appointment__info {
+        margin-top: 20px;
+        gap: 15px;
+        max-width: 250px;
+    }
+
+    .info-block .info-label {
+        font-size: 15px;
+        margin-bottom: 0px;
+    }
+
+    .info-block .info-value {
+        font-size: 18px;
+    }
+
+    .info-block .info-link {
+        font-size: 18px;
+    }
+
+    .appointment__social {
+        margin-top: 15px;
+        gap: 15px;
+    }
+
+    .social-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-btn:last-child .social-icon {
+        border: 1px solid rgb(219, 219, 219);
+    }
+
+    /* RIGHT form card */
+    .appointment__right {
+        margin-left: -200px;
+    }
+
+    .form {
+        width: 350px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        padding: 20px 36px;
+    }
+
+    /* field */
+    .field {
+        margin-bottom: 26px;
+    }
+
+    .field__label {
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    /* inputs */
+    .field__control {
+        height: 32px;
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    /* textarea */
+    .field__control--textarea {
+        height: 80px;
+    }
+
+    /* bottom black button */
+    .form__btn {
+        font-size: 20px;
+        width: 100%;
+        height: 45px;
+        margin-top: 0px;
+    }
+
+    .footer-second-part {
+        font-size: 16px;
+    }
+
+    .footer-second-part__wrap {
+        width: 90%;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 6fr 0.5fr 3fr 2fr 1fr;
+        align-items: center;
+    }
+
+    /* LEFT INFO */
+    .fsp__title {
+        letter-spacing: 1.2px;
+        font-size: 24px;
+    }
+
+    .fsp__row {
+        gap: 15px;
+    }
+
+    .fsp__muted {
+        font-size: 15px;
+        opacity: 0.9;
+        padding-top: 10px;
+    }
+
+    .soc-block {
+        display: flex;
+        width: 50%;
+        gap: 10px;
+    }
+
+    /* SOCIAL */
+    .fsp__social {
+        display: grid;
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    .fsp__social-btn {
+        width: 25px;
+    }
+
+    /* NAV */
+    .fsp__nav {
+        gap: 10px;
+    }
+
+    .fsp__nav-col {
+        gap: 8px;
+    }
+
+    .fsp__logo {
+        margin-top: 6px;
+        width: 90px;
+        margin-right: -20px;
+    }
+
+    .go-top {
+        right: 10px;
+    }
+
+    .go-top__text {
+        font-size: 10px;
+    }
+
+    .go-top__line {
+        height: 50px;
+    }
+
+}
+
+/* tablets landscape DONE*/
+@media (max-width: 1024px) {
+    .footer {
+        padding-top: 10px;
+    }
+
+    .footer-body {
+        margin-bottom: 10px;
+    }
+
+    .seperator-line {
+        margin-bottom: 20px;
+        height: 3px;
+    }
+
+    .appointment {
+        padding: 20px 0;
+    }
+
+    /* LEFT panel */
+    .appointment__left {
+        min-height: 350px;
+        padding: 60px 30px;
+        padding-right: 280px;
+    }
+
+    /* big title */
+    .appointment__title {
+        margin: 0;
+        font-size: 25px;
+    }
+
+    /* info blocks */
+    .appointment__info {
+        margin-top: 15px;
+        gap: 10px;
+        max-width: 320px;
+    }
+
+    .info-block .info-label {
+        opacity: 0.75;
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
+
+    .info-block .info-value {
+        font-size: 16px;
+        letter-spacing: 0.4px;
+    }
+
+    .info-block .info-link {
+        font-size: 16px;
+        letter-spacing: 0.4px;
+    }
+
+    .appointment__social {
+        margin-top: 15px;
+        display: flex;
+        gap: 15px;
+    }
+
+    .social-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-btn:last-child .social-icon {
+        border: 1px solid rgb(219, 219, 219);
+    }
+
+    /* RIGHT form card */
+    .appointment__right {
+        margin-left: -200px;
+    }
+
+    .form {
+        width: 320px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        padding: 20px 36px;
+    }
+
+    /* field */
+    .field {
+        margin-bottom: 12px;
+    }
+
+    .field__label {
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    /* inputs */
+    .field__control {
+        width: 100%;
+        height: 30px;
+        padding: 5px 6px;
+    }
+
+    /* textarea */
+    .field__control--textarea {
+        height: 70px;
+    }
+
+    /* bottom black button */
+    .form__btn {
+        font-size: 20px;
+        width: 100%;
+        height: 40px;
+        margin-top: 6px;
+    }
+
+    .footer-second-part {
+        font-size: 14px;
+    }
+
+    .footer-second-part__wrap {
+        grid-template-columns: 7fr 0.5fr 3fr 2fr 1fr;
+    }
+
+    /* LEFT INFO */
+    .fsp__title {
+        letter-spacing: 1.5px;
+        margin: 0 0 14px;
+        font-size: 22px;
+    }
+
+    .fsp__muted {
+        font-size: 14px;
+    }
+
+    .soc-block {
+        gap: 15px;
+    }
+
+    /* SOCIAL */
+    .fsp__social {
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    .fsp__social-btn {
+        width: 25px;
+        height: auto;
+
+        display: grid;
+        place-items: center;
+    }
+
+    /* NAV */
+    .fsp__nav {
+        gap: 10px;
+    }
+
+    .fsp__nav-col {
+        gap: 5px;
+    }
+
+
+    .fsp__logo {
+        width: 70px;
+    }
+
+    .go-top {
+        right: 2px;
+        top: 80%;
+        gap: 12px;
+    }
+
+    .go-top__text {
+        font-size: 10px;
+    }
+
+    .go-top__line {
+        height: 50px;
+    }
+
+}
+
+/* tablets portrait DONE*/
+@media (max-width: 900px) {
+    .footer {
+        padding-top: 10px;
+    }
+
+    .footer-body {
+        margin-bottom: 10px;
+    }
+
+    .seperator-line {
+        margin-bottom: 20px;
+        height: 2px;
+    }
+
+    .appointment {
+        padding: 30px 0;
+    }
+
+    /* LEFT panel */
+    .appointment__left {
+        min-height: 400px;
+        padding: 50px 30px;
+        padding-right: 180px;
+    }
+
+    /* big title */
+    .appointment__title {
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.30;
+        letter-spacing: 2px;
+        font-weight: 300;
+    }
+
+    /* info blocks */
+    .appointment__info {
+        margin-top: 14px;
+        display: grid;
+        gap: 26px;
+        max-width: 280px;
+    }
+
+    .info-block .info-label {
+        opacity: 0.75;
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .info-block .info-value {
+        font-size: 16px;
+        letter-spacing: 0.4px;
+    }
+
+    .info-block .info-link {
+        font-size: 16px;
+        letter-spacing: 0.4px;
+    }
+
+    .appointment__social {
+        margin-top: 15px;
+        display: flex;
+        gap: 15px;
+    }
+
+    .social-btn {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .social-btn:last-child .social-icon {
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgb(219, 219, 219);
+        border-radius: 50%;
+    }
+
+    /* RIGHT form card */
+    .appointment__right {
+        margin-left: -140px;
+    }
+
+    .form {
+        width: 250px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        padding: 20px 12px;
+    }
+
+    /* field */
+    .field {
+        margin-bottom: 12px;
+        font-size: 12px;
+    }
+
+    .field__label {
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
+
+    /* inputs */
+    .field__control {
+        width: 100%;
+        height: 26px;
+        border: 1.5px solid rgba(31, 31, 31, 0.308);
+        padding: 5px 6px;
+        font-size: 14px;
+    }
+
+    /* textarea */
+    .field__control--textarea {
+        height: 60px;
+    }
+
+    /* bottom black button */
+    .form__btn {
+        font-size: 18px;
+        width: 100%;
+        height: 36px;
+        margin-top: 6px;
+    }
+
+    .footer-second-part {
+        font-size: 18px;
+    }
+
+
+    .fsp__info {
+        grid-area: 1/1/2/4;
+        width: 110%;
+    }
+
+    /* LEFT INFO */
+    .fsp__title {
+        font-size: 26px;
+    }
+
+    .fsp__muted {
+        font-size: 18px;
+    }
+
+    .soc-block {
+        gap: 30px;
+    }
+
+    /* SOCIAL */
+    .fsp__social {
+        justify-self: end;
+        grid-area: 1/4/2/5;
+        gap: 14px;
+        margin-top: 15px;
+    }
+
+    .fsp__social-btn {
+        width: 35px;
+    }
+
+    /* NAV */
+    .fsp__nav {
+        grid-area: 2/1/3/3;
+        gap: 50px;
+        justify-content: space-evenly;
+    }
+
+    .fsp__nav-col {
+        gap: 12px;
+    }
+
+    /* RIGHT */
+    .fsp__extra {
+        grid-area: 2/3/3/4;
+        gap: 12px;
+    }
+
+    .fsp__logo {
+        grid-area: 2/4/3/5;
+        width: 80px;
+    }
+
+    .go-top {
+        right: 10px;
+        gap: 12px;
+    }
+
+    .go-top__text {
+        font-size: 11px;
+    }
+
+    .go-top__line {
+        height: 50px;
+    }
+
+}
+
+/* small tablets / fold DONE*/
+@media (max-width: 600px) {
+    .footer {
+        padding-top: 10px;
+        width: 100%;
+    }
+
+    .footer-body {
+        width: 95%;
+        margin-bottom: 10px;
+
+    }
+
+    .seperator-line {
+        margin-bottom: 10px;
+        width: 95%;
+        height: 2px;
+    }
+
+    .appointment {
+        padding: 20px 0;
+    }
+
+    .appointment__wrap {
+        display: grid;
+        justify-items: center;
+    }
+
+    /* LEFT panel */
+    .appointment__left {
+        justify-items: center;
+        grid-area: 1/1/2/2;
+        min-height: 380px;
+        min-width: 380px;
+
+        padding: 20px 6px;
+        /* важливо: даємо місце для “виходу” форми */
+        padding-bottom: 100px;
+        display: grid;
+    }
+
+    /* big title */
+    .appointment__title {
+        grid-area: 1/1/2/6;
+        font-size: 30px;
+        line-height: 1.30;
+        letter-spacing: 1px;
+        font-weight: 300;
+        height: min-content;
+    }
+
+    /* info blocks */
+    .appointment__info {
+        align-self: flex-end;
+        grid-area: 2/1/3/5;
+        margin-top: 0px;
+        display: grid;
+        gap: 15px;
+    }
+
+    .info-block .info-label {
+        opacity: 0.75;
+        font-size: 14px;
+        margin-bottom: 1px;
+    }
+
+    .info-block .info-value {
+        font-size: 16px;
+    }
+
+    .info-block .info-link {
+        font-size: 16px;
+    }
+
+    .appointment__social {
+        align-self: flex-end;
+        grid-area: 2/5/3/6;
+        margin-top: 15px;
+        gap: 25px;
+        display: grid
+    }
+
+    .social-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-btn:last-child .social-icon {
+        border: 2px solid rgb(219, 219, 219);
+    }
+
+    /* RIGHT form card */
+    .appointment__right {
+        grid-area: 2/1/3/2;
+        margin-left: -0px;
+        margin-top: -70px;
+    }
+
+    .form {
+        width: 320px;
+        padding: 15px 20px;
+    }
+
+    /* field */
+    .field {
+        margin-bottom: 10px;
+    }
+
+    .field__label {
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
+
+    /* inputs */
+    .field__control {
+        width: 100%;
+        height: 30px;
+        border: 1.5px solid rgba(31, 31, 31, 0.308);
+        padding: 5px 6px;
+        font-size: 14px;
+    }
+
+    /* textarea */
+    .field__control--textarea {
+        height: 60px;
+    }
+
+    /* bottom black button */
+    .form__btn {
+        font-size: 18px;
+        width: 100%;
+        height: 30px;
+        margin-top: 6px;
+    }
+
+
+    .footer-second-part {
+        font-size: 14px;
+    }
+
+    .fsp__info {
+        grid-area: 1/1/2/4;
+        width: 110%;
+    }
+
+    /* LEFT INFO */
+    .fsp__title {
+        font-size: 22px;
+        width: 120%;
+    }
+
+    .fsp__muted {
+        font-size: 14px;
+    }
+
+    .soc-block {
+        gap: 15px;
+    }
+
+    /* SOCIAL */
+    .fsp__social {
+        justify-self: end;
+        grid-area: 1/4/2/5;
+        gap: 9px;
+        margin-top: 25px;
+    }
+
+    .fsp__social-btn {
+        width: 25px;
+    }
+
+    /* NAV */
+    .fsp__nav {
+        grid-area: 2/1/3/3;
+        gap: 50px;
+        justify-content: space-evenly;
+    }
+
+    .fsp__nav-col {
+        gap: 12px;
+    }
+
+    /* RIGHT */
+    .fsp__extra {
+        grid-area: 2/3/3/4;
+        gap: 12px;
+    }
+
+    .fsp__logo {
+        grid-area: 2/4/3/5;
+        width: 70px;
+    }
+
+    .go-top {
+        right: 2px;
+        gap: 9px;
+    }
+
+    .go-top__text {
+        font-size: 9px;
+    }
+
+    .go-top__line {
+        height: 50px;
+    }
+
+}
+
+/* phones DONE*/
+@media (max-width: 430px) {
+    .appointment {
+        padding: 15px 0;
+    }
+
+    /* LEFT panel */
+    .appointment__left {
+        min-height: 350px;
+        min-width: 300px;
+
+        padding-bottom: 100px;
+    }
+
+    /* big title */
+    .appointment__title {
+        font-size: 26px;
+    }
+
+    /* info blocks */
+    .appointment__info {
+        gap: 10px;
+    }
+
+    .info-block .info-label {
+        margin-bottom: 0px;
+    }
+
+    .appointment__social {
+        margin-top: 15px;
+        gap: 20px;
+        display: grid
+    }
+
+    .social-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social-btn:last-child .social-icon {
+        border: 1px solid rgb(219, 219, 219);
+    }
+
+    /* RIGHT form card */
+    .appointment__right {
+        grid-area: 2/1/3/2;
+        margin-left: -0px;
+        margin-top: -80px;
+    }
+
+    .form {
+        width: 270px;
+        padding: 15px 20px;
+    }
+
+    .footer-second-part__wrap {
+        grid-template-columns: 1fr 4fr 3fr 1fr;
+    }
+
+    .fsp__info {
+        grid-area: 1/1/2/5;
+        width: 100%;
+    }
+
+    /* LEFT INFO */
+    .fsp__title {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .fsp__muted {
+        font-size: 14px;
+    }
+
+    .soc-block {
+        gap: 15px;
+    }
+
+    /* SOCIAL */
+    .fsp__social {
+        justify-self: start;
+        grid-area: 2/1/3/2;
+        gap: 9px;
+        margin-top: 0px;
+    }
+
+    .fsp__social-btn {
+        width: 25px;
+    }
+
+    /* NAV */
+    .fsp__nav {
+        grid-area: 2/2/3/3;
+        gap: 10px;
+        justify-content: space-around;
+    }
+
+    .fsp__nav-col {
+        gap: 12px;
+    }
+
+    /* RIGHT */
+    .fsp__extra {
+        grid-area: 2/3/3/4;
+        gap: 12px;
+    }
+
+    .fsp__logo {
+        grid-area: 2/4/3/5;
+        width: 70px;
+    }
+
+    .go-top {
+        right: 0px;
+        gap: 9px;
+    }
+
+    .go-top__text {
+        font-size: 7px;
+    }
+
+    .go-top__line {
+        height: 30px;
+    }
+
+}
+
+/* min phones DONE*/
+@media (max-width: 360px) {
+    .appointment {
+        padding: 15px 0;
+    }
+
+    /* LEFT panel */
+    .appointment__left {
+        min-height: 350px;
+        min-width: 290px;
+
+        padding-bottom: 100px;
+    }
+
+    .footer-second-part {
+        font-size: 13px;
+    }
+
+    .footer-second-part__wrap {
+        grid-template-columns: 1fr 4fr 3fr 1fr;
+    }
+
+    .fsp__info {
+        grid-area: 1/1/2/5;
+        width: 100%;
+    }
+
+    /* LEFT INFO */
+    .fsp__title {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .fsp__muted {
+        font-size: 13px;
+    }
+
+    .fsp__social-btn {
+        width: 22px;
+    }
+
+    /* RIGHT */
+    .fsp__extra {
+        gap: 8px;
+    }
+
+    .fsp__logo {
+        grid-area: 2/4/3/5;
+        width: 50px;
+    }
+
+    .go-top {
+        right: 0px;
+        gap: 5px;
+    }
+
+    .go-top__text {
+        font-size: 6px;
+    }
+
+    .go-top__line {
+        height: 30px;
+    }
+
+}

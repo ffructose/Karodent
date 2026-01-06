@@ -18,46 +18,59 @@ export class Header {
 
   openDropdown: DropdownName = null;
 
+  mobileMenuOpen = false;
+
   toggle(which: Exclude<DropdownName, null>) {
     this.openDropdown = this.openDropdown === which ? null : which;
   }
 
-  closeAll() {
+  closeDropdowns() {
     this.openDropdown = null;
+  }
+
+  toggleMobileMenu(ev?: Event) {
+    ev?.stopPropagation();
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+    if (!this.mobileMenuOpen) this.closeDropdowns();
+  }
+
+  closeMobileMenu() {
+    this.mobileMenuOpen = false;
+    this.closeDropdowns();
+  }
+
+  onMobileNavClick() {
+    // коли клікнули лінк — закриваємо меню
+    this.closeMobileMenu();
   }
 
   selectCity(city: string) {
     this.selectedCity = city;
-    this.closeAll();
-    // тут можеш робити навігацію/збереження в localStorage, якщо треба
+    this.closeDropdowns();
+    // localStorage / navigation - за потреби
   }
 
   selectLang(lang: string) {
     this.selectedLang = lang;
-    this.closeAll();
-    // тут можеш підключити i18n/ngx-translate і т.д.
+    this.closeDropdowns();
   }
 
-  // 1) click anywhere - close
+  // click outside: close dropdowns + mobile menu
   @HostListener('document:click')
   onDocumentClick() {
-    this.closeAll();
+    this.closeDropdowns();
+    this.mobileMenuOpen = false;
   }
 
-  // 2) any wheel move - close
-  @HostListener('window:scroll')
-  onScroll() {
-    this.closeAll();
-  }
-
-  @HostListener('window:wheel')
-  onWheel() {
-    this.closeAll();
-  }
-
-  // 3) Esc — close
+  // Esc
   @HostListener('document:keydown.escape')
   onEsc() {
-    this.closeAll();
+    this.closeMobileMenu();
+  }
+
+  // optional: scroll closes mobile panel
+  @HostListener('window:scroll')
+  onScroll() {
+    if (this.mobileMenuOpen) this.closeMobileMenu();
   }
 }

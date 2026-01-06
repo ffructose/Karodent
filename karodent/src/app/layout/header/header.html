@@ -1,18 +1,22 @@
 <header class="header">
     <div class="header-body">
 
-        <div class="header-list">
-            <a routerLink="/">home</a>
-            <a routerLink="/services">services</a>
-            <a routerLink="/doctors">doctors</a>
-            <a routerLink="/aboutus">aboutus</a>
-            <a routerLink="/results">results</a>
-            <a routerLink="/prices">prices</a>
-            <a routerLink="/contacts">contacts</a>
-        </div>
+        <img class="logo-header" src="/assets/photos/karodent-logo-golden.png" alt="karodent-logo">
 
-        <div class="header-option-list" (click)="$event.stopPropagation()">
-            <!-- CITY DROPDOWN -->
+        <!-- DESKTOP NAV -->
+        <nav class="header-list header-list--desktop">
+            <a routerLink="/" routerLinkActive="active">home</a>
+            <a routerLink="/services" routerLinkActive="active">services</a>
+            <a routerLink="/doctors" routerLinkActive="active">doctors</a>
+            <a routerLink="/aboutus" routerLinkActive="active">aboutus</a>
+            <a routerLink="/results" routerLinkActive="active">results</a>
+            <a routerLink="/prices" routerLinkActive="active">prices</a>
+            <a routerLink="/contacts" routerLinkActive="active">contacts</a>
+        </nav>
+
+        <!-- DESKTOP OPTIONS -->
+        <div class="header-option-list header-option-list--desktop" (click)="$event.stopPropagation()">
+            <!-- CITY -->
             <div class="dd" [class.open]="openDropdown === 'city'">
                 <button type="button" class="dd-trigger" (click)="toggle('city'); $event.stopPropagation()"
                     aria-haspopup="listbox" [attr.aria-expanded]="openDropdown === 'city'">
@@ -21,15 +25,14 @@
                 </button>
 
                 <div class="dd-menu" *ngIf="openDropdown === 'city'" role="listbox">
-                    <button type="button" class="dd-item" *ngFor="let c of cities" (click)="selectCity(c)" role="option"
-                        [hidden]="c === selectedCity">
+                    <button type="button" class="dd-item" *ngFor="let c of cities"
+                        (click)="selectCity(c); $event.stopPropagation()" role="option" [hidden]="c === selectedCity">
                         {{ c }}
                     </button>
-
                 </div>
             </div>
 
-            <!-- LANG DROPDOWN -->
+            <!-- LANG -->
             <div class="dd" [class.open]="openDropdown === 'lang'">
                 <button type="button" class="dd-trigger" (click)="toggle('lang'); $event.stopPropagation()"
                     aria-haspopup="listbox" [attr.aria-expanded]="openDropdown === 'lang'">
@@ -38,16 +41,73 @@
                 </button>
 
                 <div class="dd-menu" *ngIf="openDropdown === 'lang'" role="listbox">
-                    <button type="button" class="dd-item" *ngFor="let l of langs" (click)="selectLang(l)" role="option"
-                        [hidden]="l === selectedLang">
+                    <button type="button" class="dd-item" *ngFor="let l of langs"
+                        (click)="selectLang(l); $event.stopPropagation()" role="option" [hidden]="l === selectedLang">
                         {{ l }}
                     </button>
+                </div>
+            </div>
+        </div>
 
+        <h2 class="mobile-header-name">KARODENT</h2>
+
+        <!-- MOBILE BURGER -->
+        <button type="button" class="burger" (click)="toggleMobileMenu($event)" [attr.aria-expanded]="mobileMenuOpen"
+            aria-label="Open menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+    </div>
+
+    <!-- MOBILE OVERLAY -->
+    <div class="overlay" *ngIf="mobileMenuOpen" (click)="closeMobileMenu()"></div>
+
+    <!-- MOBILE PANEL -->
+    <aside class="mobile-panel" [class.open]="mobileMenuOpen" (click)="$event.stopPropagation()">
+        <div class="mobile-panel__top">
+            <div class="mobile-title">MENU</div>
+            <button type="button" class="mobile-close" (click)="closeMobileMenu()" aria-label="Close menu">✕</button>
+        </div>
+
+        <nav class="mobile-nav" (click)="onMobileNavClick()">
+            <a routerLink="/" routerLinkActive="active">home</a>
+            <a routerLink="/services" routerLinkActive="active">services</a>
+            <a routerLink="/doctors" routerLinkActive="active">doctors</a>
+            <a routerLink="/aboutus" routerLinkActive="active">aboutus</a>
+            <a routerLink="/results" routerLinkActive="active">results</a>
+            <a routerLink="/prices" routerLinkActive="active">prices</a>
+            <a routerLink="/contacts" routerLinkActive="active">contacts</a>
+        </nav>
+
+        <div class="mobile-options">
+            <!-- CITY (same dropdown styles can be reused) -->
+            <div class="dd" [class.open]="openDropdown === 'city'">
+                <button type="button" class="dd-trigger" (click)="toggle('city'); $event.stopPropagation()">
+                    <span class="dd-value">{{ selectedCity }}</span>
+                    <span class="dd-arrow" aria-hidden="true">▾</span>
+                </button>
+                <div class="dd-menu" *ngIf="openDropdown === 'city'">
+                    <button type="button" class="dd-item" *ngFor="let c of cities"
+                        (click)="selectCity(c); $event.stopPropagation()" [hidden]="c === selectedCity">
+                        {{ c }}
+                    </button>
                 </div>
             </div>
 
+            <!-- LANG -->
+            <div class="dd" [class.open]="openDropdown === 'lang'">
+                <button type="button" class="dd-trigger" (click)="toggle('lang'); $event.stopPropagation()">
+                    <span class="dd-value">{{ selectedLang }}</span>
+                    <span class="dd-arrow" aria-hidden="true">▾</span>
+                </button>
+                <div class="dd-menu" *ngIf="openDropdown === 'lang'">
+                    <button type="button" class="dd-item" *ngFor="let l of langs"
+                        (click)="selectLang(l); $event.stopPropagation()" [hidden]="l === selectedLang">
+                        {{ l }}
+                    </button>
+                </div>
+            </div>
         </div>
-    </div>
-
-
+    </aside>
 </header>
