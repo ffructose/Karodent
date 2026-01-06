@@ -6,20 +6,21 @@
 }
 
 .footer-body {
-    width: 90%;
+    width: 80%;
     margin-bottom: 30px;
-
 }
 
 .seperator-line {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    /* was 40px */
     width: 95%;
     height: 3px;
     background-color: #947C2D;
 }
 
 .appointment {
-    padding: 60px 0;
+    padding: 30px 0;
+    /* was 60px 0 */
     background: #ffffff;
     display: flex;
     justify-content: center;
@@ -27,9 +28,7 @@
 
 .appointment__wrap {
     margin: 0 auto;
-
     position: relative;
-
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
@@ -37,11 +36,13 @@
 
 /* LEFT panel */
 .appointment__left {
-    min-height: 420px;
+    min-height: 320px;
+    /* was 420px */
     background: black;
     border-radius: 0;
 
-    padding: 70px 80px;
+    padding: 40px 30px;
+    /* was 70px 80px */
     color: #ffffff;
 
     /* важливо: даємо місце для “виходу” форми */
@@ -54,9 +55,11 @@
 .appointment__title {
     font-family: 'Jura';
     margin: 0;
-    font-size: 55px;
+    font-size: 35px;
+    /* was 55px */
     line-height: 1.30;
-    letter-spacing: 2px;
+    letter-spacing: 1.2px;
+    /* was 2px */
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -64,25 +67,32 @@
 /* info blocks */
 .appointment__info {
     font-family: 'Futura';
-    margin-top: 34px;
+    margin-top: 20px;
+    /* was 34px */
     display: grid;
-    gap: 26px;
-    max-width: 420px;
+    gap: 25px;
+    /* was 26px */
+    max-width: 320px;
+    /* was 420px */
 }
 
 .info-block .info-label {
     opacity: 0.75;
-    font-size: 23px;
-    margin-bottom: 6px;
+    font-size: 18px;
+    /* was 23px */
+    margin-bottom: 2px;
+    /* was 6px */
 }
 
 .info-block .info-value {
-    font-size: 28px;
+    font-size: 24px;
+    /* was 28px */
     letter-spacing: 0.4px;
 }
 
 .info-block .info-link {
-    font-size: 28px;
+    font-size: 24px;
+    /* was 28px */
     letter-spacing: 0.4px;
 }
 
@@ -95,14 +105,18 @@
 }
 
 .appointment__social {
-    margin-top: 40px;
+    margin-top: 25px;
+    /* was 40px */
     display: flex;
-    gap: 25px;
+    gap: 20px;
+    /* was 25px */
 }
 
 .social-btn {
-    width: 56px;
-    height: 56px;
+    width: 40px;
+    /* was 56px */
+    height: 40px;
+    /* was 56px */
     border-radius: 50%;
 
     display: flex;
@@ -135,11 +149,10 @@
 .social-btn:last-child .social-icon {
     width: 100%;
     height: 100%;
-    border: 3px solid rgb(219, 219, 219);
+    border: 2px solid rgb(219, 219, 219);
+    /* was 3px */
     border-radius: 50%;
 }
-
-
 
 
 
@@ -147,30 +160,35 @@
 .appointment__right {
     position: relative;
     z-index: 2;
-
     margin-left: -340px;
+    /* same as provided */
 }
 
 .form {
-    width: 580px;
+    width: 480px;
+    /* was 580px */
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.08);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
     font-family: 'Jura';
-    padding: 20px 36px;
+    padding: 20px 20px;
+    /* was 20px 36px */
 }
 
 /* field */
 .field {
     display: block;
-    margin-bottom: 26px;
+    margin-bottom: 10px;
+    /* was 26px */
 }
 
 .field__label {
     display: block;
-    font-size: 22px;
+    font-size: 16px;
+    /* was 22px */
     color: rgba(0, 0, 0, 0.65);
-    margin-bottom: 10px;
+    margin-bottom: 6px;
+    /* was 10px */
 }
 
 /* inputs */
@@ -189,17 +207,20 @@
 
 /* textarea */
 .field__control--textarea {
-    height: 120px;
+    height: 100px;
+    /* was 120px */
     resize: none;
 }
 
 /* bottom black button */
 .form__btn {
     font-family: 'Jura';
-    font-size: 25px;
+    font-size: 20px;
+    /* was 25px */
     color: rgb(204, 204, 204);
     width: 100%;
-    height: 58px;
+    height: 50px;
+    /* was 58px */
     border: none;
     background: #0b0b0b;
     margin-top: 6px;
@@ -213,17 +234,10 @@
 }
 
 
-
-
-
-
-
-
-
 .footer-second-part {
     font-family: 'Futura';
-    font-size: 20px;
-
+    font-size: 18px;
+    /* was 20px */
 }
 
 .footer-second-part__wrap {
@@ -231,17 +245,20 @@
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: 5fr 0.5fr 4fr 2fr 2fr;
+    grid-template-columns: 5.5fr 0.5fr 4fr 2fr 2fr;
     gap: 0px;
     align-items: center;
 }
 
 /* LEFT INFO */
-.fsp__title {
-    letter-spacing: 1.5px;
-    margin: 0 0 14px;
-    font-size: 30px;
 
+.fsp__title {
+    letter-spacing: 1.2px;
+    /* was 1.5px */
+    margin: 0 0 14px;
+    font-size: 25px;
+    /* was 30px */
+    width: 110%;
 }
 
 .fsp__row {
@@ -262,7 +279,8 @@
 
 .fsp__muted {
     opacity: 0.8;
-    font-size: 18px;
+    font-size: 16px;
+    /* was 18px */
 }
 
 .soc-block {
@@ -279,7 +297,8 @@
 }
 
 .fsp__social-btn {
-    width: 35px;
+    width: 30px;
+    /* was 35px */
     height: auto;
 
     display: grid;
@@ -299,7 +318,8 @@
 /* NAV */
 .fsp__nav {
     display: flex;
-    gap: 50px;
+    gap: 30px;
+    /* was 50px */
     justify-content: space-evenly;
 }
 
@@ -337,7 +357,8 @@
 
 .fsp__logo {
     margin-top: 6px;
-    width: 120px;
+    width: 100px;
+    /* was 120px */
     color: #9c7a2f;
     justify-self: end;
 }
@@ -345,11 +366,10 @@
 
 .go-top {
     position: fixed;
-    /* не sticky */
-    right: 24px;
+    right: 20px;
+    /* was 24px */
     top: 80%;
     transform: translateY(-50%);
-    /* просто по центру екрана */
 
     background: none;
     border: none;
@@ -357,7 +377,6 @@
 
     display: flex;
     flex-direction: column;
-    /* лінія - текст - лінія */
     align-items: center;
     gap: 12px;
 
@@ -370,7 +389,6 @@
     transition:
         opacity 0.35s ease,
         transform 0.35s ease;
-
 }
 
 .go-top--visible {
@@ -391,7 +409,6 @@
     }
 }
 
-
 .go-top__text:hover {
     opacity: 1;
 }
@@ -399,14 +416,14 @@
 /* текст */
 .go-top__text {
     writing-mode: vertical-rl;
-    /* вертикально */
     transform: rotate(180deg);
-    /* щоб читалося знизу вгору як на фото */
     white-space: nowrap;
 
     font-family: 'FuturaBold';
-    font-size: 13px;
-    letter-spacing: 3px;
+    font-size: 11px;
+    /* was 13px */
+    letter-spacing: 2.5px;
+    /* was 3px */
     text-transform: uppercase;
     opacity: 0.85;
 }
@@ -414,150 +431,13 @@
 /* лінії */
 .go-top__line {
     width: 1px;
-    height: 70px;
+    height: 50px;
+    /* was 70px */
     background-color: #947C2D;
     opacity: 0.9;
 }
 
-/* desktop  DONE*/
-@media (max-width: 1540px) {
-    .seperator-line {
-        margin-bottom: 20px;
-    }
 
-    .appointment {
-        padding: 30px 0;
-    }
-
-    /* LEFT panel */
-    .appointment__left {
-        min-height: 320px;
-        padding: 40px 30px;
-        padding-right: 530px;
-    }
-
-    /* big title */
-    .appointment__title {
-        margin: 0;
-        font-size: 35px;
-        letter-spacing: 1.2px;
-    }
-
-    /* info blocks */
-    .appointment__info {
-        margin-top: 20px;
-        gap: 25px;
-        max-width: 320px;
-    }
-
-    .info-block .info-label {
-        font-size: 18px;
-        margin-bottom: 2px;
-    }
-
-    .info-block .info-value {
-        font-size: 24px;
-    }
-
-    .info-block .info-link {
-        font-size: 24px;
-    }
-
-    .appointment__social {
-        margin-top: 25px;
-        gap: 20px;
-    }
-
-    .social-btn {
-        width: 40px;
-        height: 40px;
-    }
-
-    .social-btn:last-child .social-icon {
-        border: 2px solid rgb(219, 219, 219);
-    }
-
-    /* RIGHT form card */
-    .appointment__right {
-        margin-left: -340px;
-    }
-
-    .form {
-        width: 480px;
-        padding: 20px 20px;
-    }
-
-    /* field */
-    .field {
-        margin-bottom: 10px;
-    }
-
-    .field__label {
-        font-size: 16px;
-        margin-bottom: 6px;
-    }
-
-    /* textarea */
-    .field__control--textarea {
-        height: 100px;
-    }
-
-    /* bottom black button */
-    .form__btn {
-        font-size: 20px;
-        height: 50px;
-    }
-
-    .footer-second-part {
-        font-size: 18px;
-    }
-
-    /* LEFT INFO */
-    .fsp__title {
-        letter-spacing: 1.2px;
-        font-size: 25px;
-    }
-
-    .fsp__muted {
-        font-size: 16px;
-    }
-
-    .soc-block {
-        display: flex;
-        width: 50%;
-        gap: 30px;
-    }
-
-    .fsp__social-btn {
-        width: 30px;
-    }
-
-    /* NAV */
-    .fsp__nav {
-        gap: 30px;
-    }
-
-    .fsp__logo {
-        margin-top: 6px;
-        width: 100px;
-    }
-
-    .go-top {
-        right: 20px;
-        top: 80%;
-        gap: 12px;
-    }
-
-    .go-top__text {
-        font-size: 11px;
-        letter-spacing: 2.5px;
-    }
-
-    .go-top__line {
-        height: 50px;
-    }
-
-}
 
 /* small laptops DONE*/
 @media (max-width: 1280px) {
