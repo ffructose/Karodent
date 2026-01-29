@@ -8,7 +8,7 @@
             <a routerLink="/" routerLinkActive="active">home</a>
             <a routerLink="/services" routerLinkActive="active">services</a>
             <a routerLink="/doctors" routerLinkActive="active">doctors</a>
-            <a routerLink="/aboutus" routerLinkActive="active">aboutus</a>
+            <a routerLink="/aboutus" routerLinkActive="active">about us</a>
             <a routerLink="/results" routerLinkActive="active">results</a>
             <a routerLink="/prices" routerLinkActive="active">prices</a>
             <a routerLink="/contacts" routerLinkActive="active">contacts</a>
@@ -70,14 +70,14 @@
             <button type="button" class="mobile-close" (click)="closeMobileMenu()" aria-label="Close menu">✕</button>
         </div>
 
-        <nav class="mobile-nav" (click)="onMobileNavClick()">
-            <a routerLink="/" routerLinkActive="active">home</a>
-            <a routerLink="/services" routerLinkActive="active">services</a>
-            <a routerLink="/doctors" routerLinkActive="active">doctors</a>
-            <a routerLink="/aboutus" routerLinkActive="active">aboutus</a>
-            <a routerLink="/results" routerLinkActive="active">results</a>
-            <a routerLink="/prices" routerLinkActive="active">prices</a>
-            <a routerLink="/contacts" routerLinkActive="active">contacts</a>
+        <nav class="mobile-nav">
+            <a routerLink="/" (click)="onMobileNavClick()" routerLinkActive="active">home</a>
+            <a routerLink="/services" (click)="onMobileNavClick()" routerLinkActive="active">services</a>
+            <a routerLink="/doctors" (click)="onMobileNavClick()" routerLinkActive="active">doctors</a>
+            <a routerLink="/aboutus" (click)="onMobileNavClick()" routerLinkActive="active">aboutus</a>
+            <a routerLink="/results" (click)="onMobileNavClick()" routerLinkActive="active">results</a>
+            <a routerLink="/prices" (click)="onMobileNavClick()" routerLinkActive="active">prices</a>
+            <a routerLink="/contacts" (click)="onMobileNavClick()" routerLinkActive="active">contacts</a>
         </nav>
 
         <div class="mobile-options">

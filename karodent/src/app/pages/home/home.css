@@ -1,3 +1,246 @@
-.home-block{
-    padding-top: 1000px;
+/* ========= PAGE WRAP ========= */
+.home-page {
+    position: relative;
+    min-height: 100vh;
+    background: #000;
+    color: #DEBC4C;
+}
+
+/* ========= VIDEO BACKGROUND ========= */
+.bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.75);
+}
+
+/* ========= MAIN SECTION ========= */
+.home-intro {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    background-color: #333332;
+}
+
+/* ========= LEFT BLACK PANEL ========= */
+.black-line {
+    width: 280px;
+    /* підганяй під твій дизайн */
+    background: #000;
+    display: flex;
+}
+
+.black-line__info-section {
+    width: 100%;
+    position: relative;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    /* контент внизу, як на скріні */
+    gap: 28px;
+}
+
+/* ========= "scroll down" вертикально ========= */
+.scroll-down {
+    position: absolute;
+    left: 10px;
+    bottom: 7%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    letter-spacing: 2px;
+}
+
+.scroll-down__text {
+    font-family: 'FuturaBook';
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #947C2D;
+    opacity: 75%;
+}
+
+.scroll-down__line {
+    width: 1px;
+    height: 70px;
+    background: #947C2D;
+    opacity: 0.65;
+
+}
+
+.line-two {
+    height: 120px;
+}
+
+/* ========= INFO BLOCKS ========= */
+.black-line__info {
+    width: max-content;
+    display: grid;
+    justify-content: end;
+
+    gap: 20px;
+}
+
+.info-block {
+    display: grid;
+    gap: 3px;
+}
+
+.info-label {
+    font-family: 'FuturaBook';
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    color: #947C2D;
+    text-transform: lowercase;
+    opacity: 75%;
+}
+
+.info-value,
+.info-link {
+    font-family: 'Futura';
+    font-size: 16px;
+    color: #DEBC4C;
+    text-decoration: none;
+}
+
+.info-link:hover {
+    color: #947C2D;
+}
+
+/* ========= SOCIAL ========= */
+.black-line__social {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.social-btn {
+    width: 40px;
+    /* was 56px */
+    height: 40px;
+    /* was 56px */
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        transform 150ms ease,
+        border-color 150ms ease,
+        opacity 150ms ease;
+}
+
+.social-icon {
+    width: 110%;
+    height: 110%;
+    object-fit: contain;
+    display: block;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.9);
+    opacity: 1;
+}
+
+.circle-outline {
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(219, 219, 219);
+    /* was 3px */
+    border-radius: 50%;
+}
+
+
+/* ========= RIGHT TITLE AREA ========= */
+.title-section {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-left: -50px;
+    margin-top: -300px;
+    justify-self: left;
+    width: max-content;
+}
+
+/* Title */
+.clinique-title {
+    font-family: 'JuraThin';
+    font-weight: 100;
+    font-size: 56px;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    color: white;
+    margin: 0 0 26px;
+}
+
+/* Button */
+.make-appointment-button {
+    justify-self: end;
+    margin-top: 6px;
+    padding: 12px 22px;
+    background: black;
+    border: none;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    color: #978D6E;
+    font-family: 'FuturaBook';
+    font-size: 14px;
+    text-transform: lowercase;
+    letter-spacing: 0.6px;
+    cursor: pointer;
+    transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.make-appointment-button:hover {
+    transform: translateY(-2px);
+    background: rgba(0, 0, 0, 0.9);
+    border-color: rgba(222, 188, 76, 0.9);
+}
+
+/* ========= BOTTOM TRIANGLES ========= */
+.triangles {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    position: absolute;
+    left: 280px;
+    /* має дорівнювати ширині .black-line */
+    right: 0;
+    bottom: 0;
+    height: 160px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.left-triangle,
+.right-triangle {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    background: #000;
+}
+
+.left-triangle {
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 50% 50%, 0 100%);
+}
+
+.right-triangle {
+    right: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 50%);
 }

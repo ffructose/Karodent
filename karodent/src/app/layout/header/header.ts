@@ -56,11 +56,21 @@ export class Header {
   }
 
   // click outside: close dropdowns + mobile menu
-  @HostListener('document:click')
-  onDocumentClick() {
-    this.closeDropdowns();
-    this.mobileMenuOpen = false;
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    const target = event.target as HTMLElement | null;
+    if (!target) return;
+
+    // Якщо клік був всередині header або mobile-panel — НЕ закриваємо
+    const clickedInside =
+      !!target.closest('header.header') || !!target.closest('aside.mobile-panel');
+
+    if (clickedInside) return;
+
+    // Інакше — закрити все
+    this.closeMobileMenu();
   }
+
 
   // Esc
   @HostListener('document:keydown.escape')
@@ -68,9 +78,5 @@ export class Header {
     this.closeMobileMenu();
   }
 
-  // optional: scroll closes mobile panel
-  @HostListener('window:scroll')
-  onScroll() {
-    if (this.mobileMenuOpen) this.closeMobileMenu();
-  }
+
 }
