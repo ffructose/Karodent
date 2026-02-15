@@ -2,8 +2,23 @@
 .home-page {
     position: relative;
     min-height: 100vh;
-    background: #000;
     color: #DEBC4C;
+}
+
+.seperator-line {
+    /* was 40px */
+    width: 70%;
+    height: 3px;
+    background-color: #d8ceab;
+}
+
+/* =================================== MAIN SECTION ========= */
+.home-intro {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    background-color: #333332;
 }
 
 /* ========= VIDEO BACKGROUND ========= */
@@ -15,15 +30,6 @@
     object-fit: cover;
     z-index: 0;
     filter: brightness(0.75);
-}
-
-/* ========= MAIN SECTION ========= */
-.home-intro {
-    position: relative;
-    z-index: 1;
-    min-height: 100vh;
-    display: flex;
-    background-color: #333332;
 }
 
 /* ========= LEFT BLACK PANEL ========= */
@@ -198,7 +204,7 @@
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
     color: #978D6E;
     font-family: 'FuturaBook';
-    font-size: 14px;
+    font-size: 16px;
     text-transform: lowercase;
     letter-spacing: 0.6px;
     cursor: pointer;
@@ -243,4 +249,752 @@
 .right-triangle {
     right: 0;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 50%);
+}
+
+
+
+
+/* ============================================ ABOUT CLINIQUE ========= */
+
+.about-clinique {
+    position: relative;
+    color: #1a1a1a;
+    overflow: hidden;
+    padding: 50px 0 70px;
+    display: grid;
+    justify-items: center;
+}
+
+/* Овал тепер окремий шар, не реагує на рух заголовка */
+.about-arc {
+    position: absolute;
+    left: 41%;
+    top: -320px;
+    /* PX замість % -> не "пливе" */
+    width: 120%;
+    height: 600px;
+    background: #000;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.about-clinique_block {
+    max-width: 1550px;
+
+}
+
+.unified-title {
+    color: rgba(46, 27, 0, 0.808);
+    font-family: "Jura";
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 40px;
+}
+
+.about-body {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    gap: 20px;
+    align-items: stretch;
+    /* важливо: обидві колонки однакової висоти */
+}
+
+.about-text {
+    padding-top: 45px;
+    align-self: center;
+    height: 80%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    /* title | text */
+}
+
+.aboutText {
+    align-self: center;
+}
+
+/* заголовок на чорній дузі */
+.about-title {
+    margin: 0;
+    /* важливо */
+    font-family: "JuraThin";
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 40px;
+    color: #fff;
+}
+
+.plain-text {
+    margin: 0px 0 14px;
+
+    font-family: "FuturaBook";
+    font-size: 19px;
+    line-height: 1.55;
+    color: #000000;
+}
+
+/* ===== Gallery stack ===== */
+.card {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform .4s ease, opacity .4s ease;
+    cursor: pointer;
+}
+
+.carousel {
+    width: 100%;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    height: 600px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ЛІВА */
+.card.left {
+    transform: translateX(-40%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+}
+
+/* ПРАВА */
+.card.right {
+    transform: translateX(40%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+}
+
+/* ЦЕНТР */
+.card.active {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+.card.active img {
+    box-shadow: 0 0 5px 0 rgba(81, 81, 81, 0.47);
+}
+
+/* ВСІ ІНШІ */
+.card.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(0) scale(.8);
+}
+
+/* ===== OUR SERVICES ===== */
+.our-services {
+    padding: 20px 0 50px;
+    display: grid;
+    justify-items: center;
+}
+
+.our-services_block {
+    width: 1250px;
+}
+
+
+.services-body {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 44px;
+    align-items: start;
+}
+
+/* LEFT LIST */
+.services-menu button {
+    display: block;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    padding: 8px 0;
+    text-align: left;
+    cursor: pointer;
+
+    font-family: "FuturaBook";
+    font-size: 18px;
+    line-height: 1.3;
+    color: #2b2032;
+
+    transition: color 160ms ease, transform 160ms ease;
+}
+
+.services-menu button:hover {
+    color: rgba(216, 166, 27, 0.801);
+    transform: translateX(2px);
+}
+
+.services-menu button.is-active {
+    color: #cca331;
+}
+
+/* RIGHT PANEL */
+.services-panel {
+    background: #fff;
+    border: 1px solid rgba(43, 32, 50, 0.08);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.10);
+    padding: 28px 34px 26px;
+}
+
+.services-panel__meta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 14px;
+}
+
+.services-panel__counter {
+    font-family: "FuturaBook";
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: rgba(43, 32, 50, 0.55);
+}
+
+.services-panel__line {
+    height: 1px;
+    background: rgba(43, 32, 50, 0.14);
+}
+
+.services-panel__content {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 220ms ease, transform 220ms ease;
+
+}
+
+.services-panel__content.is-fading {
+    opacity: 0;
+    transform: translateY(6px);
+}
+
+.services-panel__content:not(.is-fading) {
+    opacity: 1;
+}
+
+.services-panel__title {
+    font-family: "JuraThin";
+    font-weight: 100;
+    font-size: 35px;
+    letter-spacing: 0.02em;
+    margin: 18px 0 12px;
+    color: #2b2032;
+}
+
+.services-panel__desc {
+    font-family: "FuturaBook";
+    font-size: 19px;
+    line-height: 1.65;
+    color: rgba(34, 32, 32, 0.7);
+    margin: 0 0 22px;
+    min-height: 100px;
+    max-width: 760px;
+
+    margin: 0px 0 14px;
+
+
+}
+
+/* two columns list (pink like reference) */
+.services-panel__links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.services-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.services-links li {
+    font-family: "FuturaBook";
+    font-size: 13px;
+    line-height: 1.6;
+    color: #d8b51b;
+    margin: 6px 0;
+}
+
+/* bottom nav */
+.services-panel__nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-btn {
+    width: 44px;
+    height: 44px;
+    border: 0;
+    cursor: pointer;
+    background: rgba(155, 138, 40, 0.08);
+    color: #be9d2e;
+    font-size: 20px;
+    line-height: 44px;
+    transition: transform 160ms ease, background 160ms ease;
+}
+
+.nav-btn:hover {
+    transform: translateY(-1px);
+    background: rgba(216, 197, 27, 0.247);
+}
+
+.progress {
+    position: relative;
+    height: 2px;
+    background: rgba(43, 32, 50, 0.14);
+    overflow: hidden;
+}
+
+.progress__fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #DEBC4C;
+    width: 0%;
+    transition: width 220ms ease;
+}
+
+
+/* ===== OUR DOCTORS ===== */
+.our-doctors {
+    padding: 50px 0 120px;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    justify-items: center;
+}
+
+.our-doctors__title {
+    margin-bottom: 22px;
+    justify-self: start;
+}
+
+.our-doctors__title-block {
+    width: 1250px;
+}
+
+
+/* container */
+.our-doctors__block {
+    width: 1450px;
+    position: relative;
+    min-height: 720px;
+    padding: 60px 60px 70px;
+    display: grid;
+    gap: 90px;
+
+    z-index: 1;
+}
+
+/* big oval background */
+.doctors-oval {
+    top: -20px;
+    position: absolute;
+    left: 50%;
+    width: 1480px;
+    height: 1100px;
+    background: #000;
+    border-radius: 50%;
+    transform: translateX(-50%) rotate(-20.39deg);
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+/* doctor rows */
+.doctor-row {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 300px 600px;
+    gap: 50px;
+    align-items: center;
+}
+
+/* second row mirrored */
+.doctor-row.is-reverse {
+    justify-self: end;
+    margin-top: -50px;
+    grid-template-columns: 600px 300px;
+}
+
+.doctor-row.is-reverse .doctor-photo {
+    order: 2;
+}
+
+.doctor-row.is-reverse .doctor-name {
+    order: 1;
+    text-align: right;
+}
+
+.doctor-row.is-reverse .doctor-text {
+    order: 1;
+    text-align: left;
+}
+
+/* photo box like on mockup */
+.doctor-photo {
+    width: 320px;
+    height: auto;
+    overflow: hidden;
+    background: #0b0b0b;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35);
+}
+
+.doctor-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* text */
+.doctor-text {
+    color: #fff;
+    max-width: 680px;
+
+}
+
+.doctor-name {
+    font-family: "JuraThin";
+    padding-bottom: 10px;
+    font-weight: 100;
+    font-size: 34px;
+    letter-spacing: 0.02em;
+    margin: 0 0 12px;
+    color: #fff;
+}
+
+.doctor-row.is-reverse .doctor-credo {
+    text-align: right;
+}
+
+.doctor-credo {
+    font-family: "JuraThin";
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.55;
+    margin: 0 0 10px;
+    color: rgba(253, 242, 207, 0.82);
+}
+
+.doctor-desc {
+    font-family: "FuturaBook";
+    font-size: 19px;
+    line-height: 1.55;
+    margin: 0 0 10px;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+/* ===== FIRST APPOINTMENT ===== */
+.first-app {
+    padding: 40px 0 110px;
+    display: grid;
+    justify-items: center;
+}
+
+.first-app-body {
+    max-width: 1250px;
+    display: grid;
+
+    grid-template-columns: 1fr 1.75fr;
+    grid-template-areas:
+        "title title"
+        "text  icons";
+
+    gap: 0px 60px;
+    align-items: center;
+}
+
+/* LEFT */
+.app-title {
+    grid-area: title;
+}
+
+.first-app-text {
+    grid-area: text;
+}
+
+
+.fa-button {
+    width: 100%;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    padding: 4px;
+    background-color: #000;
+    letter-spacing: 0.08em;
+    text-transform: lowercase;
+    font-family: 'JuraThin';
+    display: inline-flex;
+    justify-content: center;
+    gap: 10px;
+    transition: color 110ms ease, transform 110ms ease;
+}
+
+.fa-button:hover {
+    transform: translateY(-1px);
+    opacity: 0.92;
+    cursor: pointer;
+}
+
+/* RIGHT GRID */
+.first-app-icons {
+    display: grid;
+    grid-area: icons;
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
+    gap: 18px;
+}
+
+/* Icon card */
+.icon-block {
+    background: #fbfbfb;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.06);
+
+    height: 160px;
+    padding: 18px 16px;
+
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 10px;
+
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.icon-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.09);
+}
+
+.icon-block img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+}
+
+.icon-al {
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    height: 100px;
+}
+
+.icon-name {
+    padding-top: 10px;
+    font-family: "FuturaBook";
+    font-size: 14px;
+    line-height: 1.35;
+    text-align: center;
+    color: rgba(17, 17, 17, 0.65);
+    margin: 0;
+    max-width: 160px;
+}
+
+/* ==== SLIDER =======*/
+
+
+
+.keep-teeth {
+    padding: 90px 0 30px;
+    display: grid;
+    justify-items: center;
+}
+
+.keep-teeth-body {
+    max-width: 1250px;
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* LEFT: slider */
+.slider-block {
+    width: 750px;
+}
+
+.slider-body {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.10);
+    overflow: hidden;
+}
+
+.slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* nav (той самий стиль, що ти вже маєш) */
+.slider__nav {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 16px;
+}
+
+/* RIGHT text */
+.keep-teeth-title {
+    text-align: right;
+    max-width: 420px;
+    margin-left: auto;
+}
+
+.keep-teeth-text .plain-text {
+    max-width: 420px;
+    margin-left: auto;
+    text-align: left;
+    /* або right, як хочеш */
+}
+
+/* ===== compare frame ===== */
+.compare-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.10);
+
+    user-select: none;
+    touch-action: none;
+}
+
+/* трек, який “їде” */
+.case-track {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    width: 300%;
+    /* prev + current + next */
+    height: 100%;
+    transform: translateX(-33.3333%);
+    /* завжди показуємо CENTER (current) */
+    will-change: transform;
+}
+
+.case-track.is-animating {
+    transition: transform 460ms cubic-bezier(.2, .8, .2, 1);
+}
+
+/* їдемо: до NEXT (current -> ліворуч) */
+.case-track.to-next {
+    transform: translateX(-66.6666%);
+}
+
+/* їдемо: до PREV (current -> праворуч) */
+.case-track.to-prev {
+    transform: translateX(0%);
+}
+
+.case-slide {
+    position: relative;
+    width: 33.3333%;
+    height: 100%;
+    flex: 0 0 33.3333%;
+}
+
+/* compare всередині кожного слайду */
+.compare-img {
+    width: 750px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.compare-before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.compare-before .compare-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* divider line + handle */
+.compare-divider {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: rgba(65, 44, 0, 0.575);
+    transform: translateX(-1px);
+    z-index: 5;
+}
+
+.compare-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+    cursor: ew-resize;
+
+}
+.compare-handle:hover {
+transform: translate(-50%, -50%) scale(1.1);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+
+}
+
+.compare-handle::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    background-image: url('/assets/photos/compareButton.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.compare-frame.is-dragging .compare-handle {
+    transform: translate(-50%, -50%) scale(0.88);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
 }

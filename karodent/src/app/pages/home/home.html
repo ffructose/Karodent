@@ -1,0 +1,380 @@
+<div class="home-page">
+
+
+    <section class="home-intro">
+
+        <video class="bg-video" autoplay muted loop playsinline preload="auto">
+            <source src="..." type="video/mp4" />
+        </video>
+
+        <section class="black-line">
+            <section class="black-line__info-section">
+
+                <div class="scroll-down">
+                    <span class="scroll-down__line"></span>
+                    <span class="scroll-down__text">scroll down</span>
+                    <span class="scroll-down__line line-two"></span>
+                </div>
+
+                <div class="black-line__info">
+                    <div class="info-block">
+                        <div class="info-label">Address</div>
+                        <div class="info-value">Warsaw, Siedmiogrodzka 7/U1</div>
+                    </div>
+
+                    <div class="info-block">
+                        <div class="info-label">Phone</div>
+                        <div class="info-value">+48-505-506-793</div>
+                    </div>
+
+                    <div class="info-block">
+                        <div class="info-label">Mail</div>
+                        <a class="info-link" href="mailto:karodent@gmail.com">karodent@gmail.com</a>
+                    </div>
+
+                    <div class="black-line__social">
+                        <!-- Instagram -->
+                        <a class="social-btn" href="#" aria-label="Instagram">
+                            <img src="/assets/photos/insta-logo.png" alt="Instagram" class="social-icon">
+                        </a>
+
+                        <!-- TikTok -->
+                        <a class="social-btn" href="#" aria-label="TikTok">
+                            <img src="/assets/photos/tiktok-logo.png" alt="TikTok" class="social-icon  circle-outline">
+                        </a>
+
+                        <!-- Facebook -->
+                        <a class="social-btn" href="#" aria-label="Facebook">
+                            <img src="/assets/photos/facebook-logo.png" alt="Facebook"
+                                class="social-icon  circle-outline">
+                        </a>
+                    </div>
+                </div>
+
+
+            </section>
+        </section>
+
+
+        <section class="title-section">
+            <h2 class="clinique-title">Stomatological <br>clinique KARO Dent</h2>
+            <button class="make-appointment-button" type="button" (click)="scrollToFooter()">make an
+                appointment</button>
+
+        </section>
+
+        <section class="triangles">
+            <span class="left-triangle"></span>
+            <span class="right-triangle"></span>
+        </section>
+    </section>
+
+
+    <section class="about-clinique">
+        <span class="about-arc" aria-hidden="true"></span>
+
+        <section class="about-clinique_block">
+
+            <section class="about-body">
+
+                <!-- CAROUSEL -->
+                <div class="carousel">
+                    <div class="carousel-container">
+                        <div class="cards">
+                            <label class="card" *ngFor="let src of photos; let i = index"
+                                [class.left]="stateOf(i) === 'left'" [class.active]="stateOf(i) === 'active'"
+                                [class.right]="stateOf(i) === 'right'" [class.hidden]="stateOf(i) === 'hidden'"
+                                (click)="setActive(i)">
+                                <img [src]="src" alt="photo" loading="lazy" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- TEXT -->
+                <div class="about-text">
+                    <h2 class="about-title about-title-marg">ABOUT CLINIQUE</h2>
+                    <p class="plain-text aboutText">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                        Source text
+                    </p>
+
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <hr class="seperator-line">
+
+    <section class="our-services">
+        <section class="our-services_block">
+
+            <h2 class="unified-title">OUR SERVICES</h2>
+
+            <section class="services-body">
+                <!-- LEFT MENU -->
+                <aside class="services-menu" aria-label="Services list">
+                    <button type="button" *ngFor="let s of services; let i = index" (click)="select(i)"
+                        [class.is-active]="i === servicesActiveIndex">
+                        {{ s.name }}
+                    </button>
+                </aside>
+
+                <!-- RIGHT PANEL -->
+                <section class="services-panel">
+                    <div class="services-panel__meta">
+                        <span class="services-panel__counter">
+                            {{ servicesActiveIndex + 1 }} / {{ services.length }}
+                        </span>
+                        <span class="services-panel__line"></span>
+                    </div>
+
+                    <ng-container *ngIf="services.length > 0">
+                        <div class="services-panel__content" [class.is-fading]="isFading">
+                            <h3 class="services-panel__title">
+                                {{ services[servicesActiveIndex]?.title }}
+                            </h3>
+
+                            <p class="services-panel__desc">
+                                {{ services[servicesActiveIndex]?.desc }}
+                            </p>
+                        </div>
+                    </ng-container>
+
+                    <div class="services-panel__nav">
+                        <button type="button" class="nav-btn" (click)="prevService()"
+                            aria-label="Previous service">←</button>
+
+                        <div class="progress">
+                            <span class="progress__fill" [style.width.%]="serviceProgressPercent"></span>
+                        </div>
+
+                        <button type="button" class="nav-btn" (click)="nextService()"
+                            aria-label="Next service">→</button>
+                    </div>
+                </section>
+
+            </section>
+
+        </section>
+    </section>
+
+    <hr class="seperator-line">
+
+    <section class="our-doctors">
+        <header class="our-doctors__title-block">
+            <h2 class="unified-title our-doctors__title">OUR DOCTORS</h2>
+        </header>
+
+        <div class="our-doctors__block">
+            <span class="doctors-oval" aria-hidden="true"></span>
+
+            <!-- Doctor 1 -->
+            <article class="doctor-row">
+                <div class="doctor-photo">
+                    <img src="/assets/photos/Rafal.png" alt="Dr. Rafal Sulej">
+                </div>
+
+                <div class="doctor-text">
+                    <h3 class="doctor-name">Dr. Rafal Sulej</h3>
+                    <p class="doctor-credo">
+                        Your teeth - are your best friends!
+                    </p>
+                    <p class="doctor-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Source text
+                    </p>
+                </div>
+            </article>
+
+            <!-- Doctor 2 -->
+            <article class="doctor-row is-reverse">
+                <div class="doctor-photo">
+                    <img src="/assets/photos/Rafal.png" alt="Dr. Robert Sulej">
+                </div>
+
+                <div class="doctor-text">
+                    <h3 class="doctor-name">Dr. Robert Sulej</h3>
+                    <p class="doctor-credo">
+                        Your teeth - are your best friends!
+                    </p>
+                    <p class="doctor-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Source text
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+    <hr class="seperator-line">
+    <section class="first-app">
+        <div class="first-app-body">
+            <h2 class="unified-title app-title">FIRST APPOINTMENT</h2>
+
+            <!-- LEFT TEXT -->
+            <div class="first-app-text">
+
+                <p class="plain-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+
+                <button class="fa-button" type="button" (click)="scrollToFooter()">
+                    make an appointment <span aria-hidden="true">→</span>
+                </button>
+            </div>
+
+            <!-- RIGHT ICONS GRID -->
+            <div class="first-app-icons">
+                <div class="icon-block">
+                    <div class="icon-al">
+                        <img src="/assets/photos/icon1.png" alt="Photodiagnostics">
+                        <h4 class="icon-name">Photodiagnostics</h4>
+                    </div>
+                </div>
+
+                <div class="icon-block">
+                    <div class="icon-al">
+                        <img src="/assets/photos/icon2.png" alt="Microscopic Examination of Teeth">
+                        <h4 class="icon-name">Microscopic Examination of Teeth</h4>
+                    </div>
+                </div>
+
+                <div class="icon-block">
+                    <div class="icon-al">
+                        <img src="/assets/photos/icon3.png" alt="X-ray Examination">
+                        <h4 class="icon-name">X-ray Examination</h4>
+                    </div>
+                </div>
+
+                <div class="icon-block">
+                    <div class="icon-al">
+                        <img src="/assets/photos/icon4.png" alt="Superficial Occlusal Analysis">
+                        <h4 class="icon-name">Superficial Occlusal Analysis</h4>
+                    </div>
+                </div>
+
+                <div class="icon-block">
+                    <div class="icon-al">
+                        <img src="/assets/photos/icon5.png" alt="Determination of Periodontal Status">
+                        <h4 class="icon-name">Determination of Periodontal Status</h4>
+                    </div>
+                </div>
+
+                <div class="icon-block">
+                    <div class="icon-al">
+                        <img src="/assets/photos/icon6.png" alt="Study of Medical History">
+                        <h4 class="icon-name">Study of Medical History</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="seperator-line">
+
+    <section class="keep-teeth">
+        <div class="keep-teeth-body">
+
+            <!-- LEFT Photo slider -->
+            <div class="slider-block">
+                <div class="compare-frame" [class.is-dragging]="isDragging" #frame (pointerdown)="onPointerDown($event)"
+                    (pointermove)="onPointerMove($event)" (pointerup)="onPointerUp()" (pointercancel)="onPointerUp()"
+                    (pointerleave)="onPointerUp()">
+
+                    <!-- TRACK -->
+                    <div class="case-track" [class.is-animating]="isCaseSliding" [class.to-next]="slideDir === 'next'"
+                        [class.to-prev]="slideDir === 'prev'" (transitionend)="onCaseTransitionEnd($event)">
+
+                        <!-- PREV -->
+                        <div class="case-slide">
+                            <img class="compare-img" [src]="cases[prevCaseIndex].after" alt="After">
+
+                            <div class="compare-before" [style.width.%]="comparePercent">
+                                <img class="compare-img" [src]="cases[prevCaseIndex].before" alt="Before">
+                            </div>
+                            <!-- divider + handle (поверх усього) -->
+                            <div class="compare-divider" [style.left.%]="comparePercent">
+                                <div class="compare-handle" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <!-- CURRENT (CENTER) -->
+                        <div class="case-slide">
+                            <img class="compare-img" [src]="cases[activeCase].after" alt="After">
+
+                            <div class="compare-before" [style.width.%]="comparePercent">
+                                <img class="compare-img" [src]="cases[activeCase].before" alt="Before">
+                            </div>
+                            <!-- divider + handle (поверх усього) -->
+                            <div class="compare-divider" [style.left.%]="comparePercent">
+                                <div class="compare-handle" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <!-- NEXT -->
+                        <div class="case-slide">
+                            <img class="compare-img" [src]="cases[nextCaseIndexReal].after" alt="After">
+
+                            <div class="compare-before" [style.width.%]="comparePercent">
+                                <img class="compare-img" [src]="cases[nextCaseIndexReal].before" alt="Before">
+                            </div>
+                            <!-- divider + handle (поверх усього) -->
+                            <div class="compare-divider" [style.left.%]="comparePercent">
+                                <div class="compare-handle" aria-hidden="true"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- bottom nav like services -->
+                <div class="slider__nav">
+                    <button type="button" class="nav-btn" (click)="prevCase()" aria-label="Previous slide">←</button>
+
+                    <div class="progress">
+                        <span class="progress__fill" [style.width.%]="casesProgress"></span>
+                    </div>
+
+                    <button type="button" class="nav-btn" (click)="nextCase()" aria-label="Next slide">→</button>
+                </div>
+            </div>
+
+
+            <!-- RIGHT TEXT -->
+            <div class="keep-teeth-text">
+                <h2 class="unified-title keep-teeth-title">WE KEEP YOUR TEETH HEALTHY</h2>
+
+                <p class="plain-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+</div>
