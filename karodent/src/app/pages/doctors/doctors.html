@@ -1,1 +1,60 @@
-<p>doctors works!</p>
+<div class="doctors-page">
+
+
+    <section class="doctors-intro">
+        <div class="bg-photo"></div>
+
+        <div class="intro-overlay">
+            <hr class="intro-line">
+            <h1 class="intro-title">DOCTORS</h1>
+        </div>
+    </section>
+
+
+    <div class="doctor-block" *ngFor="let d of doctors; let di = index">
+        <div class="doctor-info">
+            <img [src]="d.photo" alt="doctor-photo">
+
+            <div class="doctor-row">
+                <h2 class="doctor-name">{{ d.name }}</h2>
+                <p class="plain-text">{{ d.text }}</p>
+            </div>
+        </div>
+
+        <!-- CAROUSEL -->
+        <div class="carousel">
+            <button class="arrow left" (click)="prev(di)" aria-label="Previous"></button>
+
+            <div class="carousel-container" #track>
+                <div class="cards">
+                    <div class="card" *ngFor="let src of d.loopPhotos; let i = index" (click)="openLightbox(di, i)">
+                        <img [src]="src" alt="photo" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+
+            <button class="arrow right" (click)="next(di)" aria-label="Next"></button>
+        </div>
+    </div>
+
+
+    <!-- LIGHTBOX / MODAL -->
+    <div class="lightbox-backdrop" *ngIf="lightboxOpen" (click)="closeLightbox()">
+
+        <div class="lightbox" (click)="$event.stopPropagation()">
+
+            <button class="lightbox-close" (click)="closeLightbox()" aria-label="Close">✕</button>
+
+            <button class="lightbox-arrow left" (click)="lightboxPrev()" aria-label="Previous"></button>
+
+            <div class="lightbox-image">
+                <img [src]="lightboxSrc" alt="photo-large" />
+            </div>
+
+            <button class="lightbox-arrow right" (click)="lightboxNext()" aria-label="Next"></button>
+
+        </div>
+    </div>
+
+
+</div>
