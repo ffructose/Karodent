@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class Services {
 
+  // SCROLLBAR
+  scrollToFooter() {
+    const footer = document.getElementById('page-footer');
+    if (footer) footer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }

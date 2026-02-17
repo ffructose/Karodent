@@ -1,0 +1,262 @@
+.services-intro {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+}
+
+/* ФОТО ФОНОМ */
+.bg-photo {
+    position: absolute;
+    inset: 0;
+    background: url('/assets/photos/your-photo.jpg') center/cover no-repeat;
+    filter: brightness(0.55);
+    background-color: #363434;
+}
+
+/* БЛОК З ЛІНІЄЮ І ТЕКСТОМ */
+.intro-overlay {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 20px 0;
+}
+
+/* тонка лінія */
+.intro-line {
+    width: 460px;
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.7);
+    margin: 0 0 18px 0;
+    margin-left: -20px;
+}
+
+/* SERVICES */
+.intro-title {
+    margin: 0;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+/* ===== FIRST APPOINTMENT ===== */
+.first-app {
+    padding: 40px 0 110px;
+    display: grid;
+    justify-items: center;
+}
+
+.first-app-body {
+    max-width: 1250px;
+    display: grid;
+
+    grid-template-columns: 1fr 1.75fr;
+    grid-template-areas:
+        "title title"
+        "text  icons";
+
+    gap: 0px 60px;
+    align-items: center;
+}
+
+/* LEFT */
+.app-title {
+    grid-area: title;
+}
+
+.first-app-text {
+    grid-area: text;
+}
+
+
+.fa-button {
+    width: 100%;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    padding: 4px;
+    background-color: #000;
+    letter-spacing: 0.08em;
+    text-transform: lowercase;
+    font-family: 'JuraThin';
+    display: inline-flex;
+    justify-content: center;
+    gap: 10px;
+    transition: color 110ms ease, transform 110ms ease;
+}
+
+.fa-button:hover {
+    transform: translateY(-1px);
+    opacity: 0.92;
+    cursor: pointer;
+}
+
+/* RIGHT GRID */
+.first-app-icons {
+    display: grid;
+    grid-area: icons;
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
+    gap: 18px;
+}
+
+/* Icon card */
+.icon-block {
+    background: #fbfbfb;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.06);
+
+    height: 160px;
+    padding: 18px 16px;
+
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 10px;
+
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.icon-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.09);
+}
+
+.icon-block img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+}
+
+.icon-al {
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    height: 100px;
+}
+
+.icon-name {
+    padding-top: 10px;
+    font-family: "FuturaBook";
+    font-size: 14px;
+    line-height: 1.35;
+    text-align: center;
+    color: rgba(17, 17, 17, 0.65);
+    margin: 0;
+    max-width: 160px;
+}
+
+.services-text {
+    padding-top: 25px;
+    max-width: 1250px;
+}
+
+.plain-text {
+    margin: 0px 0 14px;
+
+    font-family: "FuturaBook";
+    font-size: 19px;
+    line-height: 1.4;
+    color: #000000;
+}
+
+
+.unified-title {
+    color: rgba(46, 27, 0, 0.808);
+    font-family: "Jura";
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 35px;
+}
+
+
+.seperator-line {
+    /* was 40px */
+    width: 70%;
+    height: 3px;
+    background-color: #d8ceab;
+}
+
+/* контейнер списку */
+.service-list {
+    padding-top: 50px;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+/* один сервіс = 2 колонки: текст/фото */
+.service {
+    padding: 20px 0;
+}
+
+/* щоб були великі відстані як на макеті */
+.service+.service {
+    margin-top: 50px;
+}
+
+/* БАЗОВО (непарні): заголовок+текст зліва, фото справа */
+.service {
+    display: grid;
+    grid-template-areas:
+        "title title"
+        "text  image";
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-name {
+    grid-area: title;
+    margin: 0 0 18px 0;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #111;
+}
+
+.service-row {
+    /* прибираємо "свою" grid-розкладку в row і даємо елементам areas */
+    display: contents;
+}
+
+/* текст */
+.service-row .plain-text {
+    grid-area: text;
+    margin: 0;
+    line-height: 1.7;
+    color: #222;
+    max-width: 500px;
+    min-width: 600px;
+    /* щоб виглядало як на скріні (не дуже широко) */
+}
+
+/* фото */
+.service-row img {
+    grid-area: image;
+    width: 500px;
+    height: 250px;
+    /* як прямокутник на макеті */
+    object-fit: cover;
+    display: block;
+    background: #b7abab;
+    /* якщо картинка не встигла/не завантажилась */
+}
+
+/* ПАРНІ: міняємо місцями (фото зліва, заголовок+текст справа) */
+.service:nth-child(even) {
+    grid-template-areas:
+        "image title"
+        "image text";
+}
+
+.service:nth-child(even) .service-name {
+    text-align: right;
+    /* як на макеті */
+    justify-self: end;
+}
+
+.service:nth-child(even) .service-row .plain-text {
+    justify-self: end;
+    text-align: left;
+    /* залишаємо читабельним */
+}

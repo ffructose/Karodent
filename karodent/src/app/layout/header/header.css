@@ -20,12 +20,19 @@
     align-items: center;
 }
 
+/* базово (home) */
 .logo-header {
     width: 180px;
     align-self: start;
     margin-top: 12px;
     margin-left: 30px;
 }
+
+/* всі сторінки, крім головної */
+.header.two .logo-header {
+    width: 120px;
+}
+
 
 .header-list {
     width: 90%;
