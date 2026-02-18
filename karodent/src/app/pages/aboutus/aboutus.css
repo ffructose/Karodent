@@ -1,0 +1,399 @@
+.aboutus-intro {
+  position: relative;
+  height: 760px;
+  overflow: hidden;
+}
+
+/* ФОТО ФОНОМ */
+.bg-photo {
+  position: absolute;
+  inset: 0;
+  background: url('/assets/photos/your-photo.jpg') center/cover no-repeat;
+  filter: brightness(0.55);
+  background-color: #363434;
+}
+
+/* БЛОК З ЛІНІЄЮ І ТЕКСТОМ */
+.intro-overlay {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 20px 0;
+}
+
+/* тонка лінія */
+.intro-line {
+  width: 460px;
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.7);
+  margin: 0 0 18px 0;
+  margin-left: -20px;
+}
+
+.intro-title {
+  margin: 0;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+.intro-text {
+  max-width: 1200px;
+  margin: 300px 0 0 0;
+  font-family: "Futura";
+  font-size: 20px;
+  line-height: 1.7;
+  color: #ffffff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/* Button */
+.make-appointment-button {
+  margin-top: 50px;
+  justify-self: end;
+  padding: 12px 22px;
+  background: black;
+  border: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  color: #978D6E;
+  font-family: 'FuturaBook';
+  font-size: 16px;
+  text-transform: lowercase;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.make-appointment-button:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 0, 0, 0.9);
+  border-color: rgba(222, 188, 76, 0.9);
+}
+
+
+/* =====  BLOCK LAYOUT ===== */
+
+.info-block {
+  max-width: 1250px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.block-title {
+  color: rgba(46, 27, 0, 0.808);
+  font-family: "Jura";
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-size: 40px;
+  margin: 0 0 0 0;
+}
+
+/* текст */
+.plain-text {
+  margin: 40px 0 0 0;
+  font-family: "FuturaBook";
+  font-size: 21px;
+  line-height: 1.7;
+  color: #111;
+}
+
+
+
+/*CAROUSEL*/
+
+.about-body {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 5fr 8fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+
+/* ===== Gallery stack ===== */
+.about-body .card {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform .4s ease, opacity .4s ease;
+  cursor: pointer;
+}
+
+.about-body .carousel {
+  width: 100%;
+}
+
+.about-body .carousel-container {
+  width: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  height: 600px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-body .cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.about-body .card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about-body .card.left {
+  transform: translateX(-40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+.about-body .card.right {
+  transform: translateX(40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+.about-body .card.active {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+.about-body .card.active img {
+  box-shadow: 0 0 5px 0 rgba(81, 81, 81, 0.47);
+}
+
+.about-body .card.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(0) scale(.8);
+}
+
+
+/*ourphotos*/
+
+.ourphotos-block {
+  max-width: 1250px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+/* ===== CAROUSEL ROW ===== */
+.ourphotos-block .carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.ourphotos-block .carousel-container {
+  width: calc(var(--card-w) * 3 + var(--gap) * 2);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.ourphotos-block .cards {
+  --card-w: 360px;
+  --card-h: 220px;
+  --gap: 60px;
+
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+  width: max-content;
+}
+
+.ourphotos-block .card {
+  flex: 0 0 auto;
+  width: var(--card-w);
+  height: var(--card-h);
+}
+.ourphotos-block .card:hover {
+  cursor: pointer;
+}
+
+.ourphotos-block .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+  background: #b7abab;
+}
+
+/* arrows */
+.ourphotos-block .arrow {
+  position: absolute;
+  top: 67%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+.ourphotos-block .arrow.left {
+  left: -50px;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-right: 20px solid #1a1a1a;
+}
+
+.ourphotos-block .arrow.right {
+  right: -50px;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 20px solid #1a1a1a;
+}
+
+.ourphotos-block .arrow:hover {
+  opacity: 0.65;
+}
+
+
+/* ===== LIGHTBOX ===== */
+/* ===== LIGHTBOX ===== */
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* контейнер модалки */
+.lightbox {
+  position: relative;
+  width: min(1100px, 90vw);
+  height: min(760px, 85vh);
+  border-radius: 12px;
+  background: rgba(18, 18, 18, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* зона зображення */
+.lightbox-image {
+  width: 100%;
+  height: 100%;
+  padding: 18px 70px;
+  /* щоб стрілки не перекривали картинку */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #111;
+}
+
+/* close */
+.lightbox-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.lightbox-close:hover {
+  opacity: 0.85;
+}
+
+/* arrows (круглі кнопки поверх) */
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  z-index: 3;
+  opacity: 0.95;
+}
+
+.lightbox-arrow:hover {
+  opacity: 0.75;
+}
+
+.lightbox-arrow.left {
+  left: 14px;
+}
+
+.lightbox-arrow.right {
+  right: 14px;
+}
+
+.lightbox-arrow.left::before,
+.lightbox-arrow.right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+}
+
+.lightbox-arrow.left::before {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 14px solid #fff;
+  margin-left: -2px;
+}
+
+.lightbox-arrow.right::before {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 14px solid #fff;
+  margin-left: 2px;
+}
