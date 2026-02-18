@@ -1,4 +1,6 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
+
+type FooterVariant = 'default' | 'contacts';
 
 @Component({
   selector: 'app-footer',
@@ -7,6 +9,7 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './footer.css',
 })
 export class Footer {
+  @Input() variant: FooterVariant = 'default';
 
   showGoTop = false;
 
@@ -22,9 +25,6 @@ export class Footer {
   }
 
   scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

@@ -1,0 +1,163 @@
+.prices-intro {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+}
+
+/* ФОТО ФОНОМ */
+.bg-photo {
+    position: absolute;
+    inset: 0;
+    background: url('/assets/photos/your-photo.jpg') center/cover no-repeat;
+    filter: brightness(0.55);
+    background-color: #363434;
+}
+
+/* БЛОК З ЛІНІЄЮ І ТЕКСТОМ */
+.intro-overlay {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 20px 0;
+}
+
+/* тонка лінія */
+.intro-line {
+    width: 460px;
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.7);
+    margin: 0 0 18px 0;
+    margin-left: -20px;
+}
+
+.intro-title {
+    margin: 0;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.intro-text {
+    max-width: 1200px;
+    margin: 300px 0 0 0;
+    font-family: "Futura";
+    font-size: 20px;
+    line-height: 1.7;
+    color: #ffffff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/* Button */
+.make-appointment-button {
+    margin-top: 50px;
+    justify-self: end;
+    padding: 12px 22px;
+    background: black;
+    border: none;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    color: #978D6E;
+    font-family: 'FuturaBook';
+    font-size: 16px;
+    text-transform: lowercase;
+    letter-spacing: 0.6px;
+    cursor: pointer;
+    transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.make-appointment-button:hover {
+    transform: translateY(-2px);
+    background: rgba(0, 0, 0, 0.9);
+    border-color: rgba(222, 188, 76, 0.9);
+}
+
+/* =====  BLOCK LAYOUT ===== */
+
+.info-block {
+    max-width: 1250px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+.caution {
+    font-family: 'Jura';
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #ad9d7da2;
+    justify-self: center;
+    margin: 0;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+
+
+.outer-container {
+    margin-top: 10px;
+    border: 1px solid rgba(173, 157, 125, 0.45);
+    border-radius: 8px;
+}
+
+.inner-container {
+    display: grid;
+    grid-template-columns: 20px 120px 1fr 240px;
+    align-items: center;
+    gap: 24px;
+    padding: 10px 25px;
+}
+
+.number {
+    font-family: 'FuturaBook';
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.35);
+    margin: 0;
+    align-self: start;
+}
+
+.inner-container img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.service-name {
+    margin: 0 0 10px 0;
+    font-family: 'Jura';
+    font-size: 28px;
+    font-weight: 600;
+    color: rgba(46, 27, 0, 0.808);
+}
+
+.service-description {
+    margin: 0;
+    font-family: 'FuturaBook';
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.72);
+    max-width: 720px;
+}
+
+/* ціна справа */
+.price-block {
+    text-align: right;
+    font-family: 'Jura';
+    color: #79581C;
+    white-space: nowrap;
+    display: grid;
+}
+
+.price-note {
+    font-size: 18px;
+    margin: 0;
+}
+
+.price {
+    font-size: 28px;
+    margin: 0;
+}

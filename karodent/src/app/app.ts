@@ -3,6 +3,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
 type HeaderType = 'one' | 'two';
+type FooterVariant = 'default' | 'contacts';
 
 @Component({
   selector: 'app-root',
@@ -13,13 +14,19 @@ type HeaderType = 'one' | 'two';
 
 export class App {
   activeHeader: HeaderType = 'one';
+  footerVariant: FooterVariant = 'default';
 
   constructor(private router: Router) {
     this.router.events
       .pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd))
       .subscribe((e) => {
         const url = e.urlAfterRedirects.split('?')[0];
+
+        // HEADER 
         this.activeHeader = (url === '/' || url === '') ? 'one' : 'two';
+
+        // FOOTER 
+        this.footerVariant = (url === '/contacts') ? 'contacts' : 'default';
       });
   }
 }

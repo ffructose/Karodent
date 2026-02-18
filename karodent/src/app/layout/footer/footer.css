@@ -436,7 +436,9 @@
     opacity: 0.9;
 }
 
-
+.appointment-block--contacts{
+    display: none;
+}
 
 /* small laptops DONE*/
 @media (max-width: 1280px) {

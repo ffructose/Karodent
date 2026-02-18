@@ -1,1 +1,46 @@
-<p>prices works!</p>
+<div class="prices-page">
+
+
+    <section class="prices-intro">
+        <div class="bg-photo"></div>
+
+        <div class="intro-overlay">
+            <hr class="intro-line">
+            <h1 class="intro-title">PRICES</h1>
+            <button class="make-appointment-button" type="button" (click)="scrollToFooter()">make an
+                appointment</button>
+
+        </div>
+    </section>
+    <section class="info-block">
+
+        <h5 class="caution">Wycena leczenia ustalana jest indywidualnie podczas konsultacji z lekarzem</h5>
+
+        <div class="outer-container" *ngFor="let item of prices; let i = index">
+            <div class="inner-container">
+
+                <h4 class="number">
+                    {{ i + 1 < 10 ? ('0' + (i + 1)) : (i + 1) }} </h4>
+
+                        <img [src]="item.photo" alt="servicePhoto">
+
+                        <div>
+                            <h4 class="service-name">{{ item.title }}</h4>
+                            <p class="service-description">{{ item.description }}</p>
+                        </div>
+
+                        <div class="price-block">
+                            <h3 class="price-note" *ngIf="item.priceNote">
+                                {{ item.priceNote }}
+                            </h3>
+
+                            <h3 class="price">{{ item.price }}</h3>
+                        </div>
+
+            </div>
+        </div>
+        <h5 class="caution">Wycena leczenia ustalana jest indywidualnie podczas konsultacji z lekarzem</h5>
+
+    </section>
+
+</div>

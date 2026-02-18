@@ -1,9 +1,9 @@
 <footer class="footer">
     <div class="footer-body">
 
-        <hr class="seperator-line">
+        <hr class="seperator-line"  [ngClass]="{ 'appointment-block--contacts': variant === 'contacts' }">
 
-        <div class="appointment-block">
+        <div class="appointment-block"  [ngClass]="{ 'appointment-block--contacts': variant === 'contacts' }">
             <section class="appointment" id="page-footer">
                 <div class="appointment__wrap">
                     <!-- LEFT (dark panel) -->
