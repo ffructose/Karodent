@@ -436,8 +436,14 @@
     opacity: 0.9;
 }
 
-.appointment-block--contacts{
+.appointment-block--contacts {
     display: none;
+}
+
+
+.fsp__muted p {
+    padding: 0 0 1px 0;
+    margin: 0 0 1px 0;
 }
 
 /* small laptops DONE*/

@@ -23,7 +23,7 @@ export class App {
         const url = e.urlAfterRedirects.split('?')[0];
 
         // HEADER 
-        this.activeHeader = (url === '/' || url === '') ? 'one' : 'two';
+        this.activeHeader = (url === '/' || url === ''|| url === '/contacts') ? 'one' : 'two';
 
         // FOOTER 
         this.footerVariant = (url === '/contacts') ? 'contacts' : 'default';

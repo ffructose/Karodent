@@ -1,0 +1,261 @@
+.contacts-intro {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #333332;
+}
+
+.bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.75);
+}
+
+.intro-overlay {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 20px 0;
+}
+
+.black-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 350px;
+    height: 100%;
+    background: #000;
+    z-index: 1;
+}
+
+/* тонка лінія */
+.intro-line {
+    width: 460px;
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.7);
+    margin: 0 0 18px 0;
+    margin-left: -20px;
+}
+
+.intro-title {
+    margin: 0;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.intro-text {
+    max-width: 1200px;
+    margin: 300px 0 0 0;
+    font-family: "Futura";
+    font-size: 20px;
+    line-height: 1.7;
+    color: #ffffff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+
+.appointment {
+    position: relative;
+    z-index: 2;
+    margin-top: 80px;
+    margin-left: -20px;
+}
+
+.form {
+    width: 700px;
+    background: #000000;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    font-family: 'JuraThin';
+    padding: 40px 30px;
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    align-items: center;
+}
+
+.field {
+    display: block;
+    margin-bottom: 10px;
+    grid-column: 1;
+}
+
+.large-field {
+    grid-area: 1/2/4/3;
+}
+
+.field__label {
+    display: block;
+    font-size: 16px;
+    color: rgb(255, 248, 239);
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.field__control {
+    width: 90%;
+    height: 45px;
+    padding: 10px 12px;
+    font-size: 14px;
+    outline: none;
+}
+
+.field__control:focus {
+    border-color: rgba(0, 0, 0, 0.6);
+}
+
+.field__control--textarea {
+    height: 245px;
+    width: 100%;
+    resize: none;
+}
+
+.form__btn {
+    font-family: 'Jura';
+    font-size: 20px;
+    color: rgb(204, 204, 204);
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: #6A5131;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: transform 150ms ease, opacity 150ms ease;
+    grid-area: 4/1/5/3;
+}
+
+.form__btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+
+
+/* =====  BLOCK LAYOUT ===== */
+
+.info-block {
+    max-width: 1250px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.info-body {
+    margin-left: 40px;
+}
+
+.block-body {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    column-gap: 22px;
+    row-gap: 6px;
+    align-items: start;
+    margin-bottom: 40px;
+}
+
+.block-body p,
+h5,
+h3,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.icon-wrap {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    grid-row: 1 / span 2;
+}
+
+.block-body .icon {
+    display: block;
+    max-width: 31px;
+    max-height: 31px;
+    object-fit: contain;
+}
+
+.block-body .name {
+    align-self: first baseline;
+    grid-area: 1/2/2/3;
+    color: rgba(46, 27, 0, 0.808);
+    font-family: "Jura";
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 30px;
+    margin: 0;
+    line-height: 1.1;
+    padding-bottom: 6px;
+}
+
+.block-body .info {
+    grid-area: 2/2/4/3;
+    color: black;
+    font-family: "FuturaBook";
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.block-body .info h5 {
+    color: black;
+    font-family: "FuturaBook";
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.block-body .info h6 {
+    color: rgba(48, 42, 36, 0.925);
+    font-family: "FuturaBook";
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.block-body .info p {
+    color: black;
+    font-family: "FuturaBook";
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+.socials .social-btn {
+    width: 45px;
+    height: 45px;
+}
+
+.socials .social-btn:hover {
+    transform: translateY(-2px);
+    opacity: 1;
+    transition:
+        transform 150ms ease,
+        border-color 150ms ease,
+        opacity 150ms ease;
+}
+
+.socials .social-btn .inst {
+    filter: brightness(1) invert(1);
+}
