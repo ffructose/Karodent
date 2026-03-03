@@ -5,7 +5,9 @@
 
         <!-- DESKTOP NAV -->
         <nav class="header-list header-list--desktop">
-            <a routerLink="/" routerLinkActive="active">home</a>
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                home
+            </a>
             <a routerLink="/services" routerLinkActive="active">services</a>
             <a routerLink="/doctors" routerLinkActive="active">doctors</a>
             <a routerLink="/aboutus" routerLinkActive="active">about us</a>
