@@ -176,6 +176,7 @@
         width: 150px;
     }
 
+
     .header-list {
         margin-left: 30px;
     }
@@ -259,6 +260,12 @@
         margin-left: 10px;
     }
 
+    .header.two .logo-header {
+        width: 80px;
+        margin-top: 6px;
+        margin-left: 10px;
+    }
+
     .header-list {
         margin-left: 10px;
     }
@@ -301,12 +308,26 @@
 
 /* small tablets / fold DONE*/
 @media (max-width: 600px) {
-
-
     .logo-header {
         width: 45px;
         margin-top: 2px;
         margin-left: 10px;
+    }
+
+    .header.two .logo-header {
+        width: 60px;
+        margin-top: 2px;
+        margin-left: 10px;
+    }
+
+    .header.scrolled .logo-header {
+        width: 45px;
+        margin-top: 2px;
+        margin-left: 25px;/
+    }
+
+    .logo-header {
+        transition: width 0.25s ease, margin 0.25s ease, transform 0.25s ease;
     }
 
     .mobile-header-name {
@@ -481,8 +502,24 @@
         margin-left: 3px;
     }
 
+    .header.two .logo-header {
+        width: 45px;
+        margin-top: 2px;
+        margin-left: 3px;
+    }
+
     .mobile-header-name {
         font-size: 30px;
+    }
+
+    .header.scrolled .logo-header {
+        width: 36px;
+        margin-top: 2px;
+        margin-left: 12px;/
+    }
+
+    .logo-header {
+        transition: width 0.25s ease, margin 0.25s ease, transform 0.25s ease;
     }
 
     .header {

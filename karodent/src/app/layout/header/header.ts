@@ -12,6 +12,7 @@ export class Header {
 
   @Input() headerType: 'one' | 'two' = 'one';
 
+
   cities = ['WARSAW', 'PULAWY'];
   langs = ['PL', 'ENG', 'UA'];
 
@@ -65,4 +66,13 @@ export class Header {
 
   @HostListener('document:keydown.escape')
   onEsc() { this.closeMobileMenu(); }
+
+
+  isScrolled = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    // поріг можна змінити (30/50/80)
+    this.isScrolled = window.scrollY > 40;
+  }
 }
