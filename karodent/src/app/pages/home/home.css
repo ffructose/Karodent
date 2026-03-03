@@ -178,7 +178,8 @@
     align-items: flex-end;
     justify-content: center;
     margin-left: -50px;
-    margin-top: -300px;
+    margin-top: 220px;
+    height: min-content;
     justify-self: left;
     width: max-content;
 }
@@ -978,8 +979,9 @@
     cursor: ew-resize;
 
 }
+
 .compare-handle:hover {
-transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.1);
     transition: transform 160ms ease, box-shadow 160ms ease;
 
 }
@@ -997,4 +999,1501 @@ transform: translate(-50%, -50%) scale(1.1);
 .compare-frame.is-dragging .compare-handle {
     transform: translate(-50%, -50%) scale(0.88);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+
+/* desktop DONE*/
+@media (max-width: 1540px) {
+
+
+    .seperator-line {
+        width: 90%;
+        height: 3px;
+    }
+
+    /*  MAIN SECTION */
+
+
+    /* ========= LEFT BLACK PANEL ========= */
+    .black-line {
+        width: 250px;
+    }
+
+    .black-line__info-section {
+        padding: 30px 12px;
+    }
+
+    /* ========= scroll down ========= */
+    .scroll-down {
+        left: 5px;
+        bottom: 5%;
+        gap: 13px;
+    }
+
+    .scroll-down__text {
+        font-size: 12px;
+        opacity: 80%;
+    }
+
+    .scroll-down__line {
+        height: 70px;
+    }
+
+    .line-two {
+        height: 110px;
+    }
+
+    /* ========= INFO BLOCKS ========= */
+
+    .info-label {
+        opacity: 85%;
+    }
+
+    /* ========= SOCIAL ========= */
+    .black-line__social {
+        gap: 15px;
+    }
+
+    .social-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    /* ========= RIGHT TITLE AREA ========= */
+    .title-section {
+        margin-left: -55px;
+        margin-top: 220px;
+        height: min-content;
+    }
+
+    /* ========= BOTTOM TRIANGLES ========= */
+    .triangles {
+        left: 250px;
+        height: 150px;
+    }
+
+    /*  ABOUT CLINIQUE ========= */
+
+    .about-clinique {
+        padding: 40px 0 70px;
+    }
+
+    .about-arc {
+        left: 40%;
+        top: -290px;
+        width: 140%;
+        height: 550px;
+    }
+
+    .about-clinique_block {
+        max-width: 1080px;
+    }
+
+    .unified-title {
+        letter-spacing: 2px;
+        font-size: 38px;
+    }
+
+    .about-body {
+        grid-template-columns: 6fr 4fr;
+    }
+
+    .about-text {
+        padding-top: 55px;
+    }
+
+    .about-title {
+        font-size: 38px;
+    }
+
+    .plain-text {
+        margin: 0px 0 0px;
+        font-size: 19px;
+    }
+
+    /* ===== Gallery stack ===== */
+    .carousel {
+        margin-left: 32px;
+    }
+
+    .card {
+        width: 72%;
+    }
+
+    .carousel-container {
+        max-width: 550px;
+    }
+
+    /* ===== OUR SERVICES ===== */
+    .our-services {
+        padding: 20px 0 50px;
+    }
+
+    .our-services_block {
+        width: 1080px;
+    }
+
+    /* ===== OUR DOCTORS ===== */
+
+    .our-doctors__title-block {
+        width: 1080px;
+    }
+
+    /* container */
+    .our-doctors__block {
+        width: 1080px;
+        min-height: 720px;
+        padding: 50px 60px 70px;
+        gap: 60px;
+    }
+
+    /* big oval background */
+    .doctors-oval {
+        top: -10px;
+        left: 50%;
+        width: 1250px;
+        height: 1000px;
+        transform: translateX(-50%) rotate(-35.39deg);
+    }
+
+    /* doctor rows */
+    .doctor-row {
+        margin-left: -50px;
+    }
+
+    /* second row mirrored */
+    .doctor-row.is-reverse {
+        margin-left: 50px;
+    }
+
+    /* photo box */
+    .doctor-photo {
+        width: 300px;
+    }
+
+    /* ===== FIRST APPOINTMENT ===== */
+    .first-app-body {
+        max-width: 1080px;
+
+    }
+
+    .fa-button {
+        margin-top: 10px;
+    }
+
+    /* ==== SLIDER =======*/
+
+    .keep-teeth-body {
+        max-width: 1080px;
+        gap: 30px;
+    }
+
+    /* LEFT: slider */
+    .slider-block {
+        width: 650px;
+    }
+
+    .compare-img {
+        width: 650px;
+    }
+}
+
+/* small laptops DONE*/
+@media (max-width: 1280px) {
+
+    .seperator-line {
+        width: 90%;
+    }
+
+    /* ========= LEFT BLACK PANEL ========= */
+    .black-line {
+        width: 220px;
+    }
+
+    .black-line__info-section {
+        padding: 30px 12px;
+    }
+
+    /* ========= "scroll down" вертикально ========= */
+    .scroll-down {
+        left: 5px;
+        bottom: 35%;
+        gap: 10px;
+        letter-spacing: 2px;
+    }
+
+    .scroll-down__text {
+        font-size: 11px;
+    }
+
+    .scroll-down__line {
+        height: 60px;
+    }
+
+    .line-two {
+        height: 90px;
+    }
+
+    /* ========= SOCIAL ========= */
+    .black-line__social {
+        gap: 15px;
+    }
+
+    .social-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-icon {
+        width: 110%;
+        height: 110%;
+    }
+
+    .circle-outline {
+        border: 2px solid rgba(219, 219, 219, 0.781);
+    }
+
+    /* ========= RIGHT TITLE AREA ========= */
+    .title-section {
+        margin-left: -80px;
+        margin-top: 220px;
+        height: min-content;
+    }
+
+    /* Title */
+    .clinique-title {
+        font-size: 54px;
+    }
+
+    /* Button */
+    .make-appointment-button {
+        font-size: 15px;
+    }
+
+    /* ========= BOTTOM TRIANGLES ========= */
+    .triangles {
+        left: 220px;
+        height: 120px;
+    }
+
+    /* === ABOUT CLINIQUE ========= */
+
+    .about-clinique {
+        padding: 50px 0 70px;
+    }
+
+    .about-arc {
+        left: 41%;
+        top: -150px;
+        width: 140%;
+        height: 320px;
+        transform: translateX(-55%);
+    }
+
+    .about-clinique_block {
+        max-width: 924px;
+    }
+
+    .unified-title {
+        font-size: 36px;
+    }
+
+    .about-body {
+        grid-template-columns: 7fr 4.5fr;
+        gap: 0px;
+    }
+
+    .about-text {
+        padding-top: 0px;
+        margin-top: -80px;
+    }
+
+    /* заголовок на чорній дузі */
+    .about-title {
+        margin: 0;
+        font-size: 36px;
+        color: #fff;
+    }
+
+    .plain-text {
+        margin: 18px 0 0px;
+
+        font-size: 17px;
+    }
+
+    /* ===== Gallery stack ===== */
+    .card {
+        width: 60%;
+        height: 100%;
+    }
+
+
+    .carousel {
+        margin-left: 0px;
+    }
+
+    .carousel-container {
+        width: 100%;
+        max-width: 550px;
+        height: 520px;
+    }
+
+    /* ЛІВА */
+    .card.left {
+        transform: translateX(-36%) scale(.8);
+    }
+
+    /* ПРАВА */
+    .card.right {
+        transform: translateX(36%) scale(.8);
+    }
+
+    .our-services_block {
+        width: 924px;
+    }
+
+    .services-body {
+        grid-template-columns: 200px 1fr;
+        gap: 10px;
+    }
+
+    /* LEFT LIST */
+    .services-menu button {
+        font-size: 17px;
+    }
+
+    /* RIGHT PANEL */
+    .services-panel {
+        padding: 20px 20px 20px;
+    }
+
+    .services-panel__meta {
+        margin-bottom: 10px;
+    }
+
+    .services-panel__counter {
+        font-size: 11px;
+    }
+
+    .services-panel__title {
+        font-size: 32px;
+        margin: 18px 0 14px;
+    }
+
+    .services-panel__desc {
+        font-size: 17px;
+    }
+
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    /* ===== OUR DOCTORS ===== */
+    .our-doctors__title-block {
+        width: 924px;
+    }
+
+    /* container */
+    .our-doctors__block {
+        width: 924px;
+        gap: 100px;
+    }
+
+    /* big oval background */
+    .doctors-oval {
+        top: 10px;
+        left: 50%;
+        width: 1080px;
+        height: 900px;
+        transform: translateX(-50%) rotate(-50.39deg);
+    }
+
+    /* doctor rows */
+    .doctor-row {
+        margin-left: -65px;
+        gap: 15px;
+    }
+
+    /* second row mirrored */
+    .doctor-row.is-reverse {
+        margin-left: -5px;
+    }
+
+    /* photo box */
+    .doctor-photo {
+        width: 270px;
+    }
+
+    /* ===== FIRST APPOINTMENT ===== */
+    .first-app {
+        padding: 30px 0 70px;
+    }
+
+    .first-app-body {
+        max-width: 924px;
+
+    }
+
+    /* ==== SLIDER =======*/
+
+
+
+    .keep-teeth {
+        padding: 80px 0 30px;
+    }
+
+    .keep-teeth-body {
+        max-width: 924px;
+        gap: 20px;
+    }
+
+    /* LEFT: slider */
+    .slider-block {
+        width: 550px;
+    }
+
+    /* compare всередині кожного слайду */
+    .compare-img {
+        width: 550px;
+    }
+
+    /* divider line + handle */
+    .compare-divider {
+        width: 2px;
+    }
+
+    .compare-handle {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* tablets landscape DONE*/
+@media (max-width: 1024px) {
+
+    /* ========= RIGHT TITLE AREA ========= */
+    .title-section {
+        margin-left: -100px;
+        margin-top: 230px;
+        height: min-content;
+    }
+
+    /* Title */
+    .clinique-title {
+        font-size: 50px;
+    }
+
+    /* Button */
+    .make-appointment-button {
+        padding: 10px 15px;
+    }
+
+    /* Button */
+    .make-appointment-button {
+        font-size: 15px;
+    }
+
+    /* === ABOUT CLINIQUE ========= */
+
+    .about-clinique {
+        padding: 40px 0 30px;
+    }
+
+    .about-arc {
+        left: 45%;
+        top: -150px;
+        width: 150%;
+        height: 300px;
+        transform: translateX(-55%);
+    }
+
+    .about-clinique_block {
+        max-width: 820px;
+    }
+
+    .unified-title {
+        font-size: 34px;
+    }
+
+    .about-text {
+        margin-top: -70px;
+    }
+
+    /* заголовок на чорній дузі */
+    .about-title {
+        margin: 0;
+        font-size: 34px;
+    }
+
+    .plain-text {
+        margin: -20px 0 0px;
+        font-size: 16px;
+    }
+
+    /* ===== Gallery stack ===== */
+    .card {
+        width: 70%;
+        height: 90%;
+    }
+
+    .carousel {
+        margin-left: 20px;
+    }
+
+    .carousel-container {
+        width: 100%;
+        max-width: 450px;
+        height: 520px;
+    }
+
+
+    .our-services_block {
+        width: 820px;
+    }
+
+    .services-body {
+        grid-template-columns: 210px 1fr;
+        gap: 10px;
+    }
+
+    /* ===== OUR DOCTORS ===== */
+    .our-doctors__title-block {
+        width: 820px;
+    }
+
+    /* container */
+    .our-doctors__block {
+        width: 820px;
+        gap: 100px;
+        padding: 50px 60px 30px;
+    }
+
+    /* big oval background */
+    .doctors-oval {
+        top: 10px;
+        width: 970px;
+        height: 820px;
+        transform: translateX(-50%) rotate(-50.39deg);
+    }
+
+    /* doctor rows */
+    .doctor-row {
+        margin-left: -74px;
+        gap: 30px;
+    }
+
+    .doctor-row {
+        grid-template-columns: 250px 500px;
+    }
+
+    /* second row mirrored */
+    .doctor-row.is-reverse {
+        margin-left: -2px;
+        grid-template-columns: 500px 250px;
+    }
+
+
+    /* photo box */
+    .doctor-photo {
+        width: 250px;
+    }
+
+    /* text */
+    .doctor-text {
+        color: #fff;
+        max-width: 500px;
+    }
+
+    .doctor-name {
+        font-size: 30px;
+        margin: 0 0 1px;
+    }
+
+
+    .doctor-credo {
+        font-size: 17px;
+        margin: 0 0 9px;
+    }
+
+    .doctor-desc {
+        font-size: 16px;
+        line-height: 1.55;
+        letter-spacing: 0.6px;
+    }
+
+    /* ===== FIRST APPOINTMENT ===== */
+    .first-app {
+        padding: 30px 0 70px;
+    }
+
+    .first-app-body {
+        max-width: 820px;
+
+    }
+
+    .fa-button {
+        font-size: 18px;
+    }
+
+    /* ==== SLIDER =======*/
+    .keep-teeth {
+        padding: 80px 0 30px;
+    }
+
+    .keep-teeth-body {
+        max-width: 820px;
+        gap: 20px;
+    }
+
+    /* LEFT: slider */
+    .slider-block {
+        width: 500px;
+    }
+
+    /* compare всередині кожного слайду */
+    .compare-img {
+        width: 500px;
+    }
+
+}
+
+/* tablets portrait DONE*/
+@media (max-width: 900px) {
+
+    .seperator-line {
+        width: 90%;
+    }
+
+    /* ========= LEFT BLACK PANEL ========= */
+    .black-line {
+        width: 85px;
+    }
+
+    .black-line__info-section {
+        width: 100%;
+        padding: 30px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0px;
+    }
+
+    /* ========= scroll down ========= */
+    .scroll-down {
+        display: none;
+    }
+
+    .line-two {
+        height: 120px;
+    }
+
+    /* ========= INFO BLOCKS ========= */
+
+    .info-block {
+        display: block;
+    }
+
+    .info-label {
+        display: none;
+    }
+
+    .info-value,
+    .info-link {
+        display: none;
+    }
+
+    /* ========= SOCIAL ========= */
+    .black-line__social {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    /* ========= RIGHT TITLE AREA ========= */
+    .title-section {
+        margin-left: -30px;
+        margin-top: 280px;
+        height: min-content;
+    }
+
+    /* Title */
+    .clinique-title {
+        font-size: 40px;
+    }
+
+    /* Button */
+    .make-appointment-button {
+        font-size: 14px;
+    }
+
+    /* ========= BOTTOM TRIANGLES ========= */
+    .triangles {
+        display: none;
+    }
+
+    /* === ABOUT CLINIQUE ========= */
+
+    .about-clinique {
+        padding: 120px 0 0px;
+        display: block;
+    }
+
+    .about-arc {
+        left: 50%;
+        top: -120px;
+        width: 150%;
+        height: 300px;
+    }
+
+    .about-clinique_block {
+        max-width: 550px;
+    }
+
+    .unified-title {
+        font-size: 32px;
+    }
+
+    .about-body {
+        display: grid;
+        grid-template-areas:
+            "text"
+            "icons";
+        grid-template-columns: 1fr;
+    }
+
+    .about-text {
+        align-self: center;
+        height: 100%;
+        display: block;
+        grid-area: text;
+    }
+
+    .aboutText {
+        padding-top: 75px;
+        align-self: center;
+    }
+
+    /* заголовок на чорній дузі */
+    .about-title {
+        letter-spacing: 2px;
+        font-size: 35px;
+        justify-self: center;
+    }
+
+    .plain-text {
+        margin: 0px 0 14px;
+        font-size: 18px;
+    }
+
+    /* ===== Gallery stack ===== */
+
+    .carousel {
+        padding: 55px 0px 20px;
+        width: 100%;
+        grid-area: icons;
+    }
+
+    .carousel-container {
+        width: 100%;
+        max-width: 500px;
+        height: 450px;
+    }
+
+    .card {
+        width: 70%;
+    }
+
+    /* ЛІВА */
+    .card.left {
+        transform: translateX(-35%) scale(.8);
+    }
+
+    /* ПРАВА */
+    .card.right {
+        transform: translateX(35%) scale(.8);
+    }
+
+
+    /* === SERVICES =============*/
+    .our-services_block {
+        width: 550px;
+    }
+
+    .services-body {
+        grid-template-columns: 180px 1fr;
+        gap: 10px;
+    }
+
+    /* LEFT LIST */
+    .services-menu button {
+        font-size: 16px;
+    }
+
+    /* RIGHT PANEL */
+    .services-panel {
+        padding: 20px 20px 20px;
+    }
+
+    .services-panel__meta {
+        margin-bottom: 10px;
+    }
+
+    .services-panel__counter {
+        font-size: 10px;
+    }
+
+    .services-panel__title {
+        font-size: 28px;
+        margin: 10px 0 12px;
+    }
+
+    .services-panel__desc {
+        font-size: 15px;
+    }
+
+    .nav-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 17px;
+        line-height: 32px;
+    }
+
+    /* ===== OUR DOCTORS ===== */
+
+    .our-doctors {
+        padding: 10px 0 0px;
+    }
+
+    .our-doctors__title {
+        margin-bottom: 22px;
+    }
+
+    .our-doctors__title-block {
+        width: 550px;
+    }
+
+    /* container */
+    .our-doctors__block {
+        width: 550px;
+        padding: 55px 0px 90px;
+        gap: 70px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* big oval background */
+    .doctors-oval {
+        top: -10px;
+        left: 50%;
+        width: 1300px;
+        height: 920px;
+        transform: translateX(-50%) rotate(-20.39deg);
+    }
+
+    /* doctor rows */
+    .doctor-row {
+        margin: 0;
+        grid-template-columns: 250px 1fr;
+        gap: 20px;
+        align-items: center;
+        justify-self: unset;
+    }
+
+    /* second row mirrored */
+    .doctor-row.is-reverse {
+        margin: 0;
+        justify-self: unset;
+        margin-top: 0px;
+        grid-template-columns: 250px 1fr;
+    }
+
+    .doctor-row.is-reverse .doctor-photo {
+        order: 1;
+    }
+
+    .doctor-row.is-reverse .doctor-name {
+        order: 2;
+        text-align: left;
+    }
+
+    .doctor-row.is-reverse .doctor-credo {
+        text-align: left;
+    }
+
+    .doctor-row.is-reverse .doctor-text {
+        order: 2;
+        text-align: left;
+    }
+
+    /* photo box like on mockup */
+    .doctor-photo {
+        width: 250px;
+    }
+
+    /* text */
+    .doctor-text {
+        color: #fff;
+        max-width: 100%;
+    }
+
+    .doctor-name {
+        font-size: 27px;
+        margin: 0 0 7px;
+    }
+
+
+    .doctor-credo {
+        font-size: 17px;
+        margin: -5px 0 7px;
+    }
+
+    .doctor-desc {
+        font-family: "Futura";
+        font-size: 16px;
+        line-height: 1.45;
+        margin: 0 0 10px;
+        color: rgba(255, 244, 232, 0.89);
+    }
+
+    /* ===== FIRST APPOINTMENT ===== */
+    .first-app {
+        padding: 10px 0 40px;
+        display: grid;
+        justify-items: center;
+    }
+
+    .first-app-icons {
+        margin: 10px 0 35px;
+    }
+
+    .first-app-body {
+        max-width: 550px;
+        grid-template-columns: 1fr 1.75fr;
+        grid-template-areas:
+            "title title"
+            "icons  icons"
+            "text text";
+
+        gap: 0px 120px;
+        align-items: center;
+    }
+
+    .fa-button {
+        font-size: 18px;
+    }
+
+
+    /* ==== SLIDER =======*/
+    .keep-teeth {
+        padding: 60px 0 20px;
+        display: grid;
+        justify-items: center;
+    }
+
+    .keep-teeth-body {
+        max-width: 550px;
+        display: grid;
+        grid-template-areas:
+            "text text"
+            "slider slider";
+        grid-template-columns: 1.35fr 1fr;
+        gap: 20px;
+        align-items: start;
+    }
+
+    /* LEFT: slider */
+    .slider-block {
+        width: 550px;
+        grid-area: slider;
+    }
+
+    /* RIGHT text */
+    .keep-teeth-title {
+        text-align: left;
+        max-width: 550px;
+        margin-left: auto;
+    }
+
+    .keep-teeth-text {
+        grid-area: text;
+    }
+
+    .keep-teeth-text .plain-text {
+        max-width: 550px;
+        text-align: left;
+    }
+
+    .compare-img {
+        width: 550px;
+    }
+
+    .compare-handle {
+        width: 60px;
+        height: 60px;
+    }
+
+}
+
+/* small tablets */
+@media (max-width: 600px) {
+
+    /* ========= LEFT BLACK PANEL ========= */
+    .black-line {
+        width: 60px;
+    }
+
+    /* Title */
+    .clinique-title {
+        font-size: 35px;
+    }
+
+    /* Button */
+    .make-appointment-button {
+        font-size: 13px;
+    }
+
+    /* === ABOUT CLINIQUE ========= */
+
+    .about-clinique_block {
+        max-width: 390px;
+    }
+
+    .unified-title {
+        font-size: 30px;
+    }
+
+    .plain-text {
+        font-size: 17px;
+    }
+
+    /* ===== Gallery stack ===== */
+
+    .carousel {
+        padding: 55px 0px 0px 0px;
+        margin: 0;
+    }
+
+    .carousel-container {
+        max-width: 390px;
+        height: 420px;
+        padding: 0;
+    }
+
+    .card {
+        width: 67%;
+    }
+
+    .our-services {
+        padding: 0;
+    }
+
+    /* === SERVICES =============*/
+    .our-services_block {
+        width: 390px;
+    }
+
+    .services-body {
+        grid-template-columns: 100px 1fr;
+        gap: 10px;
+        padding-bottom: 25px;
+    }
+
+    /* LEFT LIST */
+    .services-menu button {
+        font-size: 14px;
+    }
+
+    /* RIGHT PANEL */
+    .services-panel {
+        padding: 15px 15px 15px;
+    }
+
+    .services-panel__meta {
+        margin-bottom: 5px;
+    }
+
+    .services-panel__counter {
+        font-size: 9px;
+    }
+
+    .services-panel__title {
+        font-size: 22px;
+        margin: 10px 0 12px;
+    }
+
+    .services-panel__desc {
+        font-size: 14px;
+    }
+
+    .nav-btn {
+        width: 27px;
+        height: 27px;
+        font-size: 17px;
+        line-height: 27px;
+    }
+
+    /* ===== OUR DOCTORS ===== */
+    .our-doctors {
+        padding: 10px 0 80px;
+    }
+
+    .our-doctors__title {
+        margin-bottom: 22px;
+        justify-self: start;
+    }
+
+    .our-doctors__title-block {
+        width: 390px;
+    }
+
+
+    /* container */
+    .our-doctors__block {
+        width: 390px;
+        min-height: 720px;
+        padding: 0;
+        gap: 90px;
+    }
+
+    /* big oval background */
+    .doctors-oval {
+        top: 40px;
+        left: 50%;
+        width: 1900px;
+        height: 1350px;
+        transform: translateX(-50%) rotate(-30.39deg);
+    }
+
+
+    /* doctor rows */
+    .doctor-row {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    /* second row mirrored */
+    .doctor-row.is-reverse {
+        justify-self: end;
+        margin-top: -30px;
+    }
+
+    .doctor-photo {
+        width: 250px;
+    }
+
+    /* text */
+    .doctor-text {
+        max-width: 380px;
+    }
+
+    .doctor-name {
+        padding-bottom: 0px;
+        font-weight: 100;
+        font-size: 32px;
+        letter-spacing: 0.02em;
+        margin: 0 0 12px;
+        color: #fff;
+        justify-self: center;
+    }
+
+    .doctor-credo {
+        font-size: 17px;
+    }
+
+    .doctor-desc {
+        font-family: "Futura";
+        font-size: 17px;
+    }
+
+    /* ===== FIRST APPOINTMENT ===== */
+
+
+    /* RIGHT GRID */
+    .first-app-icons {
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        gap: 10px;
+    }
+
+    .icon-block img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .icon-name {
+        font-size: 13px;
+    }
+
+    .first-app {
+        padding: 10px 0 30px;
+        display: grid;
+        justify-items: center;
+    }
+
+
+    .first-app-body {
+        max-width: 390px;
+    }
+
+    .fa-button {
+        font-size: 16px;
+    }
+
+    /* ==== SLIDER =======*/
+    .keep-teeth {
+        padding: 10px 0 20px;
+    }
+
+    .keep-teeth-body {
+        max-width: 390px;
+    }
+
+    /* LEFT: slider */
+    .slider-block {
+        width: 390px;
+    }
+
+    /* RIGHT text */
+    .keep-teeth-title {
+        max-width: 390px;
+    }
+
+    .keep-teeth-text .plain-text {
+        max-width: 550px;
+    }
+
+    .compare-img {
+        width: 550px;
+    }
+
+    .compare-handle {
+        width: 57px;
+        height: 57px;
+    }
+
+}
+
+/* phones */
+@media (max-width: 430px) {
+
+    /* ========= LEFT BLACK PANEL ========= */
+    .black-line {
+        width: 50px;
+    }
+
+    .social-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Title */
+    .clinique-title {
+        font-size: 28px;
+    }
+
+    /* Button */
+    .make-appointment-button {
+        font-size: 12px;
+    }
+
+    /* === ABOUT CLINIQUE ========= */
+    .about-clinique_block {
+        max-width: 300px;
+    }
+
+    .about-arc {
+        left: 50%;
+        top: -100px;
+        width: 180%;
+        height: 250px;
+    }
+
+    .unified-title {
+        font-size: 25px;
+    }
+
+    .plain-text {
+        font-size: 15px;
+    }
+
+    .aboutText {
+        padding-top: 30px;
+    }
+
+    /* ===== Gallery stack ===== */
+
+    .carousel {
+        padding: 45px 0px 0px 0px;
+        margin: 0;
+    }
+
+    .carousel-container {
+        max-width: 300px;
+        height: 400px;
+        padding: 0;
+    }
+
+    .card {
+        width: 67%;
+    }
+
+    /* === SERVICES =============*/
+    .our-services_block {
+        width: 300px;
+    }
+
+    .services-body {
+        display: block;
+        gap: 10px;
+        padding-bottom: 25px;
+    }
+
+    /* LEFT LIST */
+    .services-menu {
+        display: none;
+    }
+
+
+    /* ===== OUR DOCTORS ===== */
+    .our-doctors {
+        padding: 10px 0 80px;
+    }
+
+    .our-doctors__title {
+        margin-bottom: 22px;
+        justify-self: start;
+    }
+
+    .our-doctors__title-block {
+        width: 300px;
+    }
+
+
+    /* container */
+    .our-doctors__block {
+        width: 300px;
+        min-height: 720px;
+        padding: 0;
+        gap: 50px;
+    }
+
+    /* big oval background */
+    .doctors-oval {
+        top: 40px;
+        left: 50%;
+        width: 1800px;
+        height: 1300px;
+        transform: translateX(-50%) rotate(-30.39deg);
+    }
+
+
+    /* doctor rows */
+    .doctor-row {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 55px;
+    }
+
+    /* second row mirrored */
+    .doctor-row.is-reverse {
+        justify-self: end;
+        margin-top: -30px;
+    }
+
+    .doctor-photo {
+        width: 240px;
+    }
+
+    /* text */
+    .doctor-text {
+        max-width: 290px;
+    }
+
+    .doctor-name {
+        font-size: 26px;
+    }
+
+    .doctor-credo {
+        font-size: 16px;
+    }
+
+    .doctor-desc {
+        font-size: 15px;
+    }
+
+    /* ===== FIRST APPOINTMENT ===== */
+
+
+    /* RIGHT GRID */
+    .first-app-icons {
+        grid-template-columns: repeat(3, minmax(90px, 1fr));
+        gap: 10px;
+    }
+
+    .icon-block img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon-name {
+        font-size: 12px;
+    }
+
+    .first-app {
+        padding: 10px 0 30px;
+        display: grid;
+        justify-items: center;
+    }
+
+    .first-app-text {
+        margin-top: -15px;
+    }
+
+    .first-app-body {
+        max-width: 300px;
+    }
+
+    .fa-button {
+        font-size: 14px;
+    }
+
+    /* ==== SLIDER =======*/   
+    .keep-teeth {
+        padding: 10px 0 20px;
+    }
+
+    .keep-teeth-body {
+        max-width: 300px;
+    }
+
+    /* LEFT: slider */
+    .slider-block {
+        width: 300px;
+    }
+
+    /* RIGHT text */
+    .keep-teeth-title {
+        max-width: 300px;
+    }
+
+    .keep-teeth-text .plain-text {
+        max-width: 300px;
+    }
+
+    .compare-img {
+        width: 300px;
+    }
+
+    .compare-handle {
+        width: 51     px;
+        height: 51px;
+    }
+
 }
