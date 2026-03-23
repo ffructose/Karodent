@@ -1,4 +1,4 @@
-.doctors-intro {
+.intro {
   position: relative;
   height: 360px;
   overflow: hidden;
@@ -13,16 +13,15 @@
   background-color: #363434;
 }
 
-/* БЛОК З ЛІНІЄЮ І ТЕКСТОМ */
 .intro-overlay {
   position: relative;
   z-index: 1;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 120px 20px 0;
 }
 
-/* тонка лінія */
+/*  line */
 .intro-line {
   width: 460px;
   border: 0;
@@ -40,10 +39,9 @@
   letter-spacing: 3px;
 }
 
-
 /* Button */
 .make-appointment-button {
-  margin-top: 50px;
+  margin-top: 20px;
   justify-self: end;
   padding: 12px 22px;
   background: black;
@@ -160,6 +158,10 @@
   background: #b7abab;
 }
 
+.doctor-block .card img:hover {
+  cursor: pointer;
+}
+
 /* arrows */
 .doctor-block .arrow {
   position: absolute;
@@ -194,7 +196,6 @@
 
 
 /* ===== LIGHTBOX ===== */
-/* ===== LIGHTBOX ===== */
 .lightbox-backdrop {
   position: fixed;
   inset: 0;
@@ -206,7 +207,6 @@
   padding: 24px;
 }
 
-/* контейнер модалки */
 .lightbox {
   position: relative;
   width: min(1100px, 90vw);
@@ -222,12 +222,10 @@
   justify-content: center;
 }
 
-/* зона зображення */
 .lightbox-image {
   width: 100%;
   height: 100%;
   padding: 18px 70px;
-  /* щоб стрілки не перекривали картинку */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,7 +239,6 @@
   background: #111;
 }
 
-/* close */
 .lightbox-close {
   position: absolute;
   top: 14px;
@@ -264,7 +261,6 @@
   opacity: 0.85;
 }
 
-/* arrows (круглі кнопки поверх) */
 .lightbox-arrow {
   position: absolute;
   top: 50%;
@@ -314,4 +310,553 @@
   border-bottom: 10px solid transparent;
   border-left: 14px solid #fff;
   margin-left: 2px;
+}
+
+
+
+/* desktop DONE*/
+@media (max-width: 1540px) {
+
+  .intro-overlay {
+    max-width: 1080px;
+    padding: 200px 0px 0;
+  }
+
+  /*  line */
+  .intro-line {
+    width: 420px;
+  }
+
+  .intro-title {
+    font-size: 44px;
+  }
+
+  /* Button */
+  .make-appointment-button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    font-size: 15px;
+  }
+
+  /* ===== DOCTOR BLOCK LAYOUT ===== */
+  .doctor-block {
+    max-width: 1080px;
+  }
+
+  .doctor-block .cards {
+    --card-w: 305px;
+    --card-h: 220px;
+    --gap: 50px;
+  }
+
+}
+
+/* small laptops DONE*/
+@media (max-width: 1280px) {
+  .intro-overlay {
+    max-width: 924px;
+  }
+
+  /*  line */
+  .intro-line {
+    width: 380px;
+  }
+
+  .intro-title {
+    font-size: 42px;
+  }
+
+  /* ===== DOCTOR BLOCK LAYOUT ===== */
+  .doctor-block {
+    max-width: 924px;
+    padding: 10px 30px 10px;
+    margin-bottom: 40px;
+  }
+
+  .doctor-info {
+    grid-template-columns: 290px 1fr;
+    gap: 100px;
+  }
+
+  /* фото */
+  .doctor-info>img {
+    width: 350px;
+  }
+
+  /* правий текстовий блок */
+  .doctor-row {
+    margin-top: 0px;
+  }
+
+  /* ім’я лікаря */
+  .doctor-name {
+    font-size: 32px;
+  }
+
+  /* текст */
+  .doctor-row .plain-text {
+    margin: 30px 0 0 0;
+    font-size: 19px;
+  }
+
+  /* ===== CAROUSEL ROW ===== */
+  .doctor-block .carousel {
+    padding: 40px 0 0;
+  }
+
+  .doctor-block .cards {
+    --card-w: 380px;
+    --card-h: 230px;
+    --gap: 100px;
+  }
+}
+
+/* tablets landscape DONE*/
+@media (max-width: 1024px) {
+  .intro-overlay {
+    max-width: 820px;
+    padding: 200px 10px 0;
+  }
+
+  /*  line */
+  .intro-line {
+    width: 380px;
+  }
+
+  .intro-title {
+    font-size: 40px;
+  }
+
+  /* ===== DOCTOR BLOCK LAYOUT ===== */
+  .doctor-block {
+    max-width: 820px;
+    padding: 10px 0px 0px;
+    margin-bottom: 60px;
+    margin-top: 40px;
+  }
+
+  .doctor-info {
+    grid-template-columns: 280px 1fr;
+    gap: 100px;
+  }
+
+  /* фото */
+  .doctor-info>img {
+    width: 350px;
+  }
+
+  /* правий текстовий блок */
+  .doctor-row {
+    margin-top: 0px;
+  }
+
+  /* ім’я лікаря */
+  .doctor-name {
+    margin: 0 0 10px 0;
+    font-size: 30px;
+  }
+
+  /* текст */
+  .doctor-row .plain-text {
+    margin: 20px 0 0 0;
+    font-size: 18px;
+  }
+
+  /* ===== CAROUSEL ROW ===== */
+  .doctor-block .carousel {
+    width: 790px;
+    justify-self: center;
+  }
+
+  .doctor-block .cards {
+    --card-w: 360px;
+    --card-h: 220px;
+    --gap: 62px;
+  }
+
+  /* arrows */
+  .doctor-block .arrow {
+    top: 60%;
+  }
+
+  .doctor-block .arrow.left {
+    left: -40px;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-right: 16px solid #1a1a1a;
+  }
+
+  .doctor-block .arrow.right {
+    right: -40px;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-left: 16px solid #1a1a1a;
+  }
+
+  /* ===== LIGHTBOX ===== */
+  .lightbox-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .lightbox-close {
+    width: 35px;
+    height: 35px;
+  }
+
+  .lightbox-arrow {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* tablets portrait DONE*/
+@media (max-width: 900px) {
+  .intro-overlay {
+    max-width: 550px;
+    padding: 200px 20px 0;
+  }
+
+  /*  line */
+  .intro-line {
+    width: 300px;
+  }
+
+  .intro-title {
+    font-size: 35px;
+  }
+
+  /* Button */
+  .make-appointment-button {
+    margin-top: 15px;
+    padding: 6px 13px;
+    font-size: 14px;
+  }
+
+  /* ===== DOCTOR BLOCK LAYOUT ===== */
+  .doctor-block {
+    max-width: 500px;
+    padding: 30px 0px 0px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+
+  .doctor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  /* фото */
+  .doctor-info>img {
+    width: 350px;
+  }
+
+  /* правий текстовий блок */
+  .doctor-row {
+    margin-top: 10px;
+  }
+
+  /* ім’я лікаря */
+  .doctor-name {
+    margin: 0 0 0px 0;
+    font-size: 30px;
+  }
+
+  /* текст */
+  .doctor-row .plain-text {
+    margin: 20px 0 0 0;
+    font-size: 18px;
+  }
+
+  /* ===== CAROUSEL ROW ===== */
+  .doctor-block .carousel {
+    padding: 20px 0 0;
+    width: 90%;
+  }
+
+  .doctor-block .cards {
+    --card-w: 445px;
+    --card-h: 250px;
+  }
+
+
+  /* arrows */
+  .doctor-block .arrow {
+    top: 54%;
+  }
+
+  .doctor-block .arrow.left {
+    left: -40px;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right: 16px solid #1a1a1a;
+  }
+
+  .doctor-block .arrow.right {
+    right: -40px;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 16px solid #1a1a1a;
+  }
+
+  /* ===== LIGHTBOX ===== */
+  .lightbox-close {
+    width: 30px;
+    height: 30px;
+  }
+
+  .lightbox-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .lightbox-arrow.left::before {
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-right: 12px solid #fff;
+    margin-left: -2px;
+  }
+
+  .lightbox-arrow.right::before {
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 12px solid #fff;
+    margin-left: 2px;
+  }
+
+}
+
+/* small tablets */
+@media (max-width: 600px) {
+
+  .intro {
+    height: 100vh;
+  }
+
+  .intro-overlay {
+    max-width: 390px;
+    padding: 220px 0px 0;
+  }
+
+  /*  line */
+  .intro-line {
+    width: 300px;
+  }
+
+  .intro-title {
+    font-size: 35px;
+  }
+
+  /* Button */
+  .make-appointment-button {
+    margin-top: 15px;
+    padding: 6px 13px;
+    font-size: 14px;
+  }
+
+  /* ===== DOCTOR BLOCK LAYOUT ===== */
+  .doctor-block {
+    max-width: 390px;
+    padding: 20px 0px 0px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+  }
+
+  /* фото */
+  .doctor-info>img {
+    width: 300px;
+  }
+
+  /* правий текстовий блок */
+  .doctor-row {
+    margin-top: 10px;
+  }
+
+  /* ім’я лікаря */
+  .doctor-name {
+    font-size: 28px;
+  }
+
+  /* текст */
+  .doctor-row .plain-text {
+    margin: 10px 0 0 0;
+    font-size: 17px;
+  }
+
+  /* ===== CAROUSEL ROW ===== */
+  .doctor-block .carousel {
+    padding: 20px 0 0;
+    width: 90%;
+  }
+
+  .doctor-block .cards {
+    --card-w: 350px;
+    --card-h: 240px;
+  }
+
+  /* ===== LIGHTBOX ===== */
+
+  .lightbox-image {
+    padding: 0px 14px;
+  }
+
+  .lightbox-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #111;
+  }
+
+  .lightbox-close {
+    width: 30px;
+    height: 30px;
+  }
+
+  .lightbox-arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  .lightbox-arrow.left::before {
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 10px solid #fff;
+  }
+
+  .lightbox-arrow.right::before {
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 10px solid #fff;
+  }
+
+}
+
+/* phones */
+@media (max-width: 430px) {
+
+  .intro {
+    height: 100vh;
+  }
+
+  .intro-overlay {
+    max-width: 280px;
+    padding: 220px 0px 0;
+  }
+
+  /*  line */
+  .intro-line {
+    width: 190px;
+    margin-left: -5px;
+  }
+
+  .intro-title {
+    font-size: 28px;
+  }
+
+  /* Button */
+  .make-appointment-button {
+    margin-top: 15px;
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  /* ===== DOCTOR BLOCK LAYOUT ===== */
+  .doctor-block {
+    max-width: 280px;
+    padding: 10px 0px 0px;
+    margin-bottom: 40px;
+    margin-top: 0px;
+  }
+
+  /* фото */
+  .doctor-info>img {
+    width: 250px;
+  }
+
+  /* правий текстовий блок */
+  .doctor-row {
+    margin-top: 8px;
+  }
+
+  /* ім’я лікаря */
+  .doctor-name {
+    font-size: 25px;
+  }
+
+  /* текст */
+  .doctor-row .plain-text {
+    margin: 10px 0 0 0;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  /* ===== CAROUSEL ROW ===== */
+  .doctor-block .carousel {
+    padding: 20px 0 0;
+    width: 90%;
+  }
+
+  .doctor-block .cards {
+    --card-w: 250px;
+    --card-h: 190px;
+  }
+
+  /* arrows */
+  .doctor-block .arrow {
+    top: 54%;
+  }
+
+  .doctor-block .arrow.left {
+    left: -35px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 14px solid #1a1a1a;
+  }
+
+  .doctor-block .arrow.right {
+    right: -35px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 14px solid #1a1a1a;
+  }
+
+  /* ===== LIGHTBOX ===== */
+  .lightbox {
+    height: 70vh;
+  }
+
+  .lightbox-arrow {
+    width: 25px;
+    height: 25px;
+  }
+
+  .lightbox-close {
+    top: 2px;
+    right: 2px;
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+  }
+
+  .lightbox-arrow.left::before {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 7px solid #fff;
+  }
+
+  .lightbox-arrow.right::before {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid #fff;
+  }
+
 }

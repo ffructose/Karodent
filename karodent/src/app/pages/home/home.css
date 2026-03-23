@@ -6,13 +6,12 @@
 }
 
 .seperator-line {
-    /* was 40px */
     width: 70%;
     height: 3px;
     background-color: #d8ceab;
 }
 
-/* =================================== MAIN SECTION ========= */
+/* ======= MAIN SECTION ========= */
 .home-intro {
     position: relative;
     z-index: 1;
@@ -35,7 +34,6 @@
 /* ========= LEFT BLACK PANEL ========= */
 .black-line {
     width: 280px;
-    /* підганяй під твій дизайн */
     background: #000;
     display: flex;
 }
@@ -48,11 +46,10 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-    /* контент внизу, як на скріні */
     gap: 28px;
 }
 
-/* ========= "scroll down" вертикально ========= */
+/* ========= scroll down========= */
 .scroll-down {
     position: absolute;
     left: 10px;
@@ -129,9 +126,7 @@
 
 .social-btn {
     width: 40px;
-    /* was 56px */
     height: 40px;
-    /* was 56px */
     border-radius: 50%;
 
     display: flex;
@@ -165,10 +160,8 @@
     width: 100%;
     height: 100%;
     border: 2px solid rgb(219, 219, 219);
-    /* was 3px */
     border-radius: 50%;
 }
-
 
 /* ========= RIGHT TITLE AREA ========= */
 .title-section {
@@ -225,7 +218,6 @@
 
     position: absolute;
     left: 280px;
-    /* має дорівнювати ширині .black-line */
     right: 0;
     bottom: 0;
     height: 160px;
@@ -253,10 +245,7 @@
 }
 
 
-
-
 /* ============================================ ABOUT CLINIQUE ========= */
-
 .about-clinique {
     position: relative;
     color: #1a1a1a;
@@ -266,12 +255,10 @@
     justify-items: center;
 }
 
-/* Овал тепер окремий шар, не реагує на рух заголовка */
 .about-arc {
     position: absolute;
     left: 41%;
     top: -320px;
-    /* PX замість % -> не "пливе" */
     width: 120%;
     height: 600px;
     background: #000;
@@ -301,7 +288,6 @@
     grid-template-columns: 4fr 3fr;
     gap: 20px;
     align-items: stretch;
-    /* важливо: обидві колонки однакової висоти */
 }
 
 .about-text {
@@ -310,17 +296,14 @@
     height: 80%;
     display: grid;
     grid-template-rows: auto 1fr;
-    /* title | text */
 }
 
 .aboutText {
     align-self: center;
 }
 
-/* заголовок на чорній дузі */
 .about-title {
     margin: 0;
-    /* важливо */
     font-family: "JuraThin";
     font-weight: 100;
     letter-spacing: 2px;
@@ -378,21 +361,18 @@
     object-fit: cover;
 }
 
-/* ЛІВА */
 .card.left {
     transform: translateX(-40%) scale(.8);
     opacity: .4;
     z-index: 0;
 }
 
-/* ПРАВА */
 .card.right {
     transform: translateX(40%) scale(.8);
     opacity: .4;
     z-index: 0;
 }
 
-/* ЦЕНТР */
 .card.active {
     transform: translateX(0) scale(1);
     opacity: 1;
@@ -403,7 +383,6 @@
     box-shadow: 0 0 5px 0 rgba(81, 81, 81, 0.47);
 }
 
-/* ВСІ ІНШІ */
 .card.hidden {
     opacity: 0;
     pointer-events: none;
@@ -420,7 +399,6 @@
 .our-services_block {
     width: 1250px;
 }
-
 
 .services-body {
     display: grid;
@@ -519,11 +497,8 @@
     max-width: 760px;
 
     margin: 0px 0 14px;
-
-
 }
 
-/* two columns list (pink like reference) */
 .services-panel__links {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -665,7 +640,7 @@
     text-align: left;
 }
 
-/* photo box like on mockup */
+/* photo box */
 .doctor-photo {
     width: 320px;
     height: auto;
@@ -826,9 +801,6 @@
 }
 
 /* ==== SLIDER =======*/
-
-
-
 .keep-teeth {
     padding: 90px 0 30px;
     display: grid;
@@ -843,7 +815,6 @@
     align-items: start;
 }
 
-/* LEFT: slider */
 .slider-block {
     width: 750px;
 }
@@ -863,7 +834,7 @@
     display: block;
 }
 
-/* nav (той самий стиль, що ти вже маєш) */
+/* nav  */
 .slider__nav {
     margin-top: 18px;
     display: grid;
@@ -883,7 +854,6 @@
     max-width: 420px;
     margin-left: auto;
     text-align: left;
-    /* або right, як хочеш */
 }
 
 /* ===== compare frame ===== */
@@ -900,16 +870,13 @@
     touch-action: none;
 }
 
-/* трек, який “їде” */
 .case-track {
     position: absolute;
     inset: 0;
     display: flex;
     width: 300%;
-    /* prev + current + next */
     height: 100%;
     transform: translateX(-33.3333%);
-    /* завжди показуємо CENTER (current) */
     will-change: transform;
 }
 
@@ -917,12 +884,10 @@
     transition: transform 460ms cubic-bezier(.2, .8, .2, 1);
 }
 
-/* їдемо: до NEXT (current -> ліворуч) */
 .case-track.to-next {
     transform: translateX(-66.6666%);
 }
 
-/* їдемо: до PREV (current -> праворуч) */
 .case-track.to-prev {
     transform: translateX(0%);
 }
@@ -934,7 +899,6 @@
     flex: 0 0 33.3333%;
 }
 
-/* compare всередині кожного слайду */
 .compare-img {
     width: 750px;
     height: 100%;
@@ -1004,15 +968,10 @@
 
 /* desktop DONE*/
 @media (max-width: 1540px) {
-
-
     .seperator-line {
         width: 90%;
         height: 3px;
     }
-
-    /*  MAIN SECTION */
-
 
     /* ========= LEFT BLACK PANEL ========= */
     .black-line {
@@ -1073,7 +1032,6 @@
     }
 
     /*  ABOUT CLINIQUE ========= */
-
     .about-clinique {
         padding: 40px 0 70px;
     }
@@ -1182,7 +1140,6 @@
     }
 
     /* ==== SLIDER =======*/
-
     .keep-teeth-body {
         max-width: 1080px;
         gap: 30px;
@@ -1200,7 +1157,6 @@
 
 /* small laptops DONE*/
 @media (max-width: 1280px) {
-
     .seperator-line {
         width: 90%;
     }
@@ -1308,7 +1264,6 @@
         margin-top: -80px;
     }
 
-    /* заголовок на чорній дузі */
     .about-title {
         margin: 0;
         font-size: 36px;
@@ -1338,12 +1293,10 @@
         height: 520px;
     }
 
-    /* ЛІВА */
     .card.left {
         transform: translateX(-36%) scale(.8);
     }
 
-    /* ПРАВА */
     .card.right {
         transform: translateX(36%) scale(.8);
     }
@@ -1438,9 +1391,6 @@
     }
 
     /* ==== SLIDER =======*/
-
-
-
     .keep-teeth {
         padding: 80px 0 30px;
     }
@@ -1455,12 +1405,10 @@
         width: 550px;
     }
 
-    /* compare всередині кожного слайду */
     .compare-img {
         width: 550px;
     }
 
-    /* divider line + handle */
     .compare-divider {
         width: 2px;
     }
@@ -1474,7 +1422,6 @@
 
 /* tablets landscape DONE*/
 @media (max-width: 1024px) {
-
     /* ========= RIGHT TITLE AREA ========= */
     .title-section {
         margin-left: -100px;
@@ -1549,7 +1496,6 @@
         max-width: 450px;
         height: 520px;
     }
-
 
     .our-services_block {
         width: 820px;
@@ -1654,7 +1600,6 @@
         width: 500px;
     }
 
-    /* compare всередині кожного слайду */
     .compare-img {
         width: 500px;
     }
