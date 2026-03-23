@@ -163,14 +163,13 @@ export class Doctors {
 
   // ===== LIGHTBOX =====
   openLightbox(doctorIndex: number, loopIndex: number): void {
-    if (this.shouldBlockClick) return;
-
     const photosLen = this.doctors[doctorIndex].photos.length;
+
     this.lightboxDoctorIndex = doctorIndex;
     this.lightboxIndex = ((loopIndex % photosLen) + photosLen) % photosLen;
     this.lightboxOpen = true;
 
-
+    // lock scroll (без стрибків)
     this.scrollY = window.scrollY;
     document.body.style.position = 'fixed';
     document.body.style.top = `-${this.scrollY}px`;
@@ -207,69 +206,5 @@ export class Doctors {
     if (e.key === 'Escape') this.closeLightbox();
     if (e.key === 'ArrowRight') this.lightboxNext();
     if (e.key === 'ArrowLeft') this.lightboxPrev();
-  }
-
-
-  // ===== SWIPE / DRAG per carousel =====
-  private drag = {
-    active: false,
-    pointerId: -1,
-    startX: 0,
-    startLeft: 0,
-    moved: 0,
-    movedEnoughToCancelClick: false,
-  };
-
-  shouldBlockClick = false;
-
-  onPointerDown(e: PointerEvent, i: number): void {
-    const el = this.trackEl(i);
-
-    if (e.pointerType === 'mouse' && e.button !== 0) return;
-
-    this.drag.active = true;
-    this.drag.pointerId = e.pointerId;
-    this.drag.startX = e.clientX;
-    this.drag.startLeft = el.scrollLeft;
-    this.drag.moved = 0;
-    this.drag.movedEnoughToCancelClick = false;
-
-    el.classList.add('dragging');
-
-    el.setPointerCapture(e.pointerId);
-  }
-
-  onPointerMove(e: PointerEvent, i: number): void {
-    if (!this.drag.active || e.pointerId !== this.drag.pointerId) return;
-
-    const el = this.trackEl(i);
-    const dx = e.clientX - this.drag.startX;
-
-    this.drag.moved = Math.max(this.drag.moved, Math.abs(dx));
-    if (this.drag.moved > 6) {
-      this.drag.movedEnoughToCancelClick = true;
-      this.shouldBlockClick = true;
-    }
-
-    el.scrollLeft = this.drag.startLeft - dx;
-  }
-
-  onPointerUp(e: PointerEvent, i: number): void {
-    if (!this.drag.active || e.pointerId !== this.drag.pointerId) return;
-
-    const el = this.trackEl(i);
-    this.drag.active = false;
-
-    el.classList.remove('dragging');
-
-    try { el.releasePointerCapture(e.pointerId); } catch { }
-
-    this.normalizeLoopPosition(i);
-
-    if (this.drag.movedEnoughToCancelClick) {
-      setTimeout(() => (this.shouldBlockClick = false), 0);
-    } else {
-      this.shouldBlockClick = false;
-    }
   }
 }
