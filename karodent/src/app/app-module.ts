@@ -1,6 +1,12 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { provideHttpClient } from '@angular/common/http';
 
+import {
+  provideTranslateService,
+  TranslatePipe,
+} from '@ngx-translate/core';
+import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Footer } from './layout/footer/footer';
@@ -28,10 +34,22 @@ import { Header } from './layout/header/header';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TranslatePipe,
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    provideHttpClient(),
+
+    provideTranslateService({
+      loader: provideTranslateHttpLoader({
+        prefix: '/i18n/',
+        suffix: '.json',
+        failOnError: true
+      }),
+      fallbackLang: 'pl',
+      lang: 'pl'
+    })
   ],
   bootstrap: [App]
 })

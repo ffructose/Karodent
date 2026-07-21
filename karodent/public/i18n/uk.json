@@ -1,0 +1,210 @@
+{
+  "HEADER": {
+    "HOME": "головна",
+    "SERVICES": "послуги",
+    "DOCTORS": "лікарі",
+    "ABOUT": "про нас",
+    "RESULTS": "результати",
+    "PRICES": "ціни",
+    "CONTACTS": "контакти",
+    "MENU": "меню"
+  },
+  "FOOTER": {
+    "APPOINTMENT_LINE_1": "ЗАПИШІТЬСЯ",
+    "APPOINTMENT_LINE_2": "НА ПРИЙОМ",
+    "ADDRESS_LABEL": "Адреса",
+    "ADDRESS_VALUE": "Варшава, Siedmiogrodzka 7/U1",
+    "PHONE_LABEL": "Телефон",
+    "MAIL_LABEL": "Електронна пошта",
+    "YOUR_NAME": "Ваше ім’я",
+    "YOUR_PHONE_NUMBER": "Ваш номер телефону",
+    "YOUR_QUESTION": "Ваше запитання",
+    "SUBMIT": "НАДІСЛАТИ",
+    "FULL_ADDRESS": "вул. Siedmiogrodzka 7, приміщення U1, 01-204, Варшава",
+    "WEEKDAYS": "Пн – Пт: 10:30–18:00",
+    "SUNDAY": "Субота: 10:00–14:00",
+    "WEBSITE_PULAWY": "сайт у Пулавах",
+    "CHANGE_LANGUAGE": "змінити мову",
+    "GO_TO_TOP": "повернутися нагору"
+  },
+  "ABOUT": {
+    "TITLE": "ПРО НАС",
+    "MAKE_APPOINTMENT": "записатися на прийом",
+    "INTRO_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "OUR_VALUES": "НАШІ ЦІННОСТІ",
+    "VALUES_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "OUR_HISTORY": "НАША ІСТОРІЯ",
+    "HISTORY_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "OUR_PHOTOS": "НАШІ ФОТО",
+    "PHOTO_ALT": "фото",
+    "PHOTO_LARGE_ALT": "збільшене фото",
+    "PREVIOUS": "Попереднє",
+    "NEXT": "Наступне",
+    "CLOSE": "Закрити"
+  },
+  "CONTACT_PAGE": {
+    "TITLE": "КОНТАКТИ KARODENT",
+    "YOUR_NAME": "Ваше ім’я",
+    "YOUR_PHONE_NUMBER": "Ваш номер телефону",
+    "YOUR_EMAIL": "Ваша електронна пошта",
+    "DETAILS_OR_QUESTIONS": "Деталі або запитання",
+    "SUBMIT": "НАДІСЛАТИ",
+    "EMAIL_TITLE": "ЕЛЕКТРОННА ПОШТА",
+    "PHONE_TITLE": "ТЕЛЕФОН",
+    "MESSENGERS": "whatsapp / viber / telegram",
+    "WORK_HOURS": "ГОДИНИ РОБОТИ",
+    "WEEKDAYS": "Пн – Пт: 10:30–18:00",
+    "SUNDAY": "Субота: 10:00–14:00",
+    "ADDRESS_TITLE": "АДРЕСА",
+    "ADDRESS_VALUE": "Варшава, Siedmiogrodzka 7 / U1",
+    "SOCIALS": "СОЦМЕРЕЖІ"
+  },
+  "DOCTORS_PAGE": {
+    "TITLE": "LEKARZE",
+    "MAKE_APPOINTMENT": "umów wizytę",
+    "DOCTOR_PHOTO_ALT": "zdjęcie lekarza",
+    "PHOTO_ALT": "zdjęcie",
+    "PHOTO_LARGE_ALT": "powiększone zdjęcie",
+    "PREVIOUS": "Poprzednie",
+    "NEXT": "Następne",
+    "CLOSE": "Zamknij",
+    "DOCTOR_1": {
+      "TEXT": "Tutaj znajdzie się polski opis pierwszego lekarza."
+    },
+    "DOCTOR_2": {
+      "TEXT": "Tutaj znajdzie się polski opis drugiego lekarza."
+    }
+  },
+  "HOME_PAGE": {
+    "SCROLL_DOWN": "прокрутіть вниз",
+    "ADDRESS_LABEL": "Адреса",
+    "ADDRESS_VALUE": "Варшава, Siedmiogrodzka 7/U1",
+    "PHONE_LABEL": "Телефон",
+    "MAIL_LABEL": "Електронна пошта",
+    "CLINIQUE_TITLE_LINE_1": "Стоматологічна",
+    "CLINIQUE_TITLE_LINE_2": "клініка KARO Dent",
+    "MAKE_APPOINTMENT": "записатися на прийом",
+    "PHOTO_ALT": "фото",
+    "ABOUT_CLINIQUE": "ПРО КЛІНІКУ",
+    "ABOUT_CLINIQUE_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Вихідний текст",
+    "OUR_SERVICES": "НАШІ ПОСЛУГИ",
+    "SERVICES_LIST": "Список послуг",
+    "PREVIOUS_SERVICE": "Попередня послуга",
+    "NEXT_SERVICE": "Наступна послуга",
+    "OUR_DOCTORS": "НАШІ ЛІКАРІ",
+    "DOCTOR_CREDO": "Ваші зуби — ваші найкращі друзі!",
+    "DOCTOR_1_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Вихідний текст",
+    "DOCTOR_2_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Вихідний текст",
+    "FIRST_APPOINTMENT": "ПЕРШИЙ ПРИЙОМ",
+    "FIRST_APPOINTMENT_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "PHOTODIAGNOSTICS": "Фотодіагностика",
+    "MICROSCOPIC_EXAMINATION": "Мікроскопічне дослідження зубів",
+    "XRAY_EXAMINATION": "Рентгенологічне дослідження",
+    "OCCLUSAL_ANALYSIS": "Поверхневий аналіз прикусу",
+    "PERIODONTAL_STATUS": "Визначення стану пародонта",
+    "MEDICAL_HISTORY": "Вивчення історії хвороби",
+    "AFTER": "Після",
+    "BEFORE": "До",
+    "PREVIOUS_SLIDE": "Попередній слайд",
+    "NEXT_SLIDE": "Наступний слайд",
+    "KEEP_TEETH_TITLE": "МИ ДБАЄМО ПРО ЗДОРОВ’Я ВАШИХ ЗУБІВ",
+    "KEEP_TEETH_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+    "SERVICES": {
+      "IMPLANTOLOGY": {
+        "NAME": "Імплантологія",
+        "TITLE": "Імплантологія",
+        "DESCRIPTION": "Зубні імпланти замінюють відсутні зуби стабільними рішеннями природного вигляду. Ми працюємо з перевіреними системами та індивідуально плануємо лікування для прогнозованих результатів."
+      },
+      "AESTHETICS_SPA": {
+        "NAME": "Естетика & Spa",
+        "TITLE": "Естетика & Spa",
+        "DESCRIPTION": "Естетичні процедури, спрямовані на гармонію, комфорт і природний результат."
+      },
+      "TOOTH_EXTRACTION": {
+        "NAME": "Видалення зубів",
+        "TITLE": "Видалення зубів",
+        "DESCRIPTION": "Безпечне видалення зубів, зокрема хірургічні випадки. Мінімальна травматизація тканин і належне післяопераційне ведення для доброго загоєння."
+      }
+    }
+  },
+  "PRICES_PAGE": {
+    "TITLE": "ЦІНИ",
+    "MAKE_APPOINTMENT": "записатися на прийом",
+    "CAUTION": "Вартість лікування визначається індивідуально під час консультації з лікарем",
+    "COMMON_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    "INDIVIDUAL_PRICING_SHORT": "інд. вартість",
+    "FROM": "від",
+    "ITEMS": {
+      "ITEM_01": "Лікарська консультація та стоматологічне обстеження",
+      "ITEM_02": "Внутрішньоротовий рентгенівський знімок зуба",
+      "ITEM_03": "Професійна гігієна - скейлінг, піскоструминне очищення, фторування",
+      "ITEM_04": "Композитна пломба",
+      "ITEM_05": "Пряма композитна реконструкція - вінір / оверлей",
+      "ITEM_06": "Капове відбілювання зубів",
+      "ITEM_07": "Лазерне відбілювання зубів",
+      "ITEM_08": "Суцільнокерамічна коронка",
+      "ITEM_09": "Керамічний вінір",
+      "ITEM_10": "Композитний онлей CAD/CAM",
+      "ITEM_11": "Коронково-коренева вкладка (скловолокно/титан)",
+      "ITEM_12": "Зняття ортопедичної конструкції з опорного зуба",
+      "ITEM_13": "Професійна гігієна",
+      "ITEM_14": "Тимчасовий міст Maryland",
+      "ITEM_15": "Акриловий протез",
+      "ITEM_16": "Бюгельний протез",
+      "ITEM_17": "Біологічне лікування пульпи - Biodentine",
+      "ITEM_18": "Лікування кореневих каналів (за 1 канал)",
+      "ITEM_19": "Видалення вкладки або зламаного інструмента",
+      "ITEM_20": "Ендодонтична мікрохірургія (резекція верхівки кореня)",
+      "ITEM_21": "Видалення зуба (екстракція)",
+      "ITEM_22": "Видалення зуба мудрості (екстракція третього моляра)",
+      "ITEM_23": "Кісткова пластика (аугментація)",
+      "ITEM_24": "Підготовка хірургічного плану та шаблону для навігаційної імплантації",
+      "ITEM_25": "Зубний імплант (MIS Conincal Connection)",
+      "ITEM_26": "Абатмент MIS Connect",
+      "ITEM_27": "Формувач ясен MIS (процедура відкриття імпланта)",
+      "ITEM_28": "Суцільнокерамічна коронка на імпланті MIS"
+    }
+  },
+  "RESULTS_PAGE": {
+    "TITLE": "РЕЗУЛЬТАТИ",
+    "MAKE_APPOINTMENT": "записатися на прийом",
+    "BEFORE": "ДО:",
+    "AFTER": "Після:",
+    "BEFORE_ALT": "до лікування",
+    "AFTER_ALT": "після лікування",
+    "CASE_1": {
+      "TITLE": "ВИПАДОК 1 - lalallalla",
+      "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    "CASE_2": {
+      "TITLE": "ВИПАДОК 2 - lalallalla",
+      "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+  },
+  "SERVICES_PAGE": {
+    "TITLE": "ПОСЛУГИ",
+    "FIRST_APPOINTMENT": "ПЕРШИЙ ПРИЙОМ",
+    "FIRST_APPOINTMENT_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "MAKE_APPOINTMENT": "записатися на прийом",
+    "PHOTODIAGNOSTICS": "Фотодіагностика",
+    "MICROSCOPIC_EXAMINATION": "Мікроскопічне дослідження зубів",
+    "XRAY_EXAMINATION": "Рентгенологічне дослідження",
+    "OCCLUSAL_ANALYSIS": "Поверхневий аналіз прикусу",
+    "PERIODONTAL_STATUS": "Визначення стану пародонта",
+    "MEDICAL_HISTORY": "Вивчення історії хвороби",
+    "INTRO_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in",
+    "SERVICE_PHOTO_ALT": "фото послуги",
+    "SERVICE_1": {
+      "NAME": "Назва послуги",
+      "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Вихідний текст"
+    },
+    "SERVICE_2": {
+      "NAME": "Назва послуги",
+      "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Вихідний текст"
+    },
+    "SERVICE_3": {
+      "NAME": "Назва послуги",
+      "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Вихідний текст"
+    }
+  }
+}

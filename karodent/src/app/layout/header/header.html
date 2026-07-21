@@ -6,14 +6,32 @@
         <!-- DESKTOP NAV -->
         <nav class="header-list header-list--desktop">
             <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-                home
+                {{ 'HEADER.HOME' | translate }}
             </a>
-            <a routerLink="/services" routerLinkActive="active">services</a>
-            <a routerLink="/doctors" routerLinkActive="active">doctors</a>
-            <a routerLink="/aboutus" routerLinkActive="active">about us</a>
-            <a routerLink="/results" routerLinkActive="active">results</a>
-            <a routerLink="/prices" routerLinkActive="active">prices</a>
-            <a routerLink="/contacts" routerLinkActive="active">contacts</a>
+
+            <a routerLink="/services" routerLinkActive="active">
+                {{ 'HEADER.SERVICES' | translate }}
+            </a>
+
+            <a routerLink="/doctors" routerLinkActive="active">
+                {{ 'HEADER.DOCTORS' | translate }}
+            </a>
+
+            <a routerLink="/aboutus" routerLinkActive="active">
+                {{ 'HEADER.ABOUT' | translate }}
+            </a>
+
+            <a routerLink="/results" routerLinkActive="active">
+                {{ 'HEADER.RESULTS' | translate }}
+            </a>
+
+            <a routerLink="/prices" routerLinkActive="active">
+                {{ 'HEADER.PRICES' | translate }}
+            </a>
+
+            <a routerLink="/contacts" routerLinkActive="active">
+                {{ 'HEADER.CONTACTS' | translate }}
+            </a>
         </nav>
 
         <!-- DESKTOP OPTIONS -->
@@ -36,16 +54,29 @@
 
             <!-- LANG -->
             <div class="dd" [class.open]="openDropdown === 'lang'">
-                <button type="button" class="dd-trigger" (click)="toggle('lang'); $event.stopPropagation()"
-                    aria-haspopup="listbox" [attr.aria-expanded]="openDropdown === 'lang'">
-                    <span class="dd-value">{{ selectedLang }}</span>
-                    <span class="dd-arrow" aria-hidden="true">▾</span>
+                <button type="button" class="dd-trigger" (click)="
+                toggle('lang');
+                $event.stopPropagation()
+                " aria-haspopup="listbox" [attr.aria-expanded]="
+                openDropdown === 'lang'
+                ">
+                    <span class="dd-value">
+                        {{ selectedLang.label }}
+                    </span>
+
+                    <span class="dd-arrow" aria-hidden="true">
+                        ▾
+                    </span>
                 </button>
 
                 <div class="dd-menu" *ngIf="openDropdown === 'lang'" role="listbox">
-                    <button type="button" class="dd-item" *ngFor="let l of langs"
-                        (click)="selectLang(l); $event.stopPropagation()" role="option" [hidden]="l === selectedLang">
-                        {{ l }}
+                    <button type="button" class="dd-item" *ngFor="let language of langs" (click)="
+                    selectLang(language);
+                    $event.stopPropagation()
+                " role="option" [hidden]="
+                    language.code === selectedLang.code
+                ">
+                        {{ language.label }}
                     </button>
                 </div>
             </div>
@@ -68,18 +99,39 @@
     <!-- MOBILE PANEL -->
     <aside class="mobile-panel" [class.open]="mobileMenuOpen" (click)="$event.stopPropagation()">
         <div class="mobile-panel__top">
-            <div class="mobile-title">MENU</div>
+            <div class="mobile-title">{{ 'HEADER.MENU' | translate }}</div>
             <button type="button" class="mobile-close" (click)="closeMobileMenu()" aria-label="Close menu">✕</button>
         </div>
 
         <nav class="mobile-nav">
-            <a routerLink="/" (click)="onMobileNavClick()" routerLinkActive="active">home</a>
-            <a routerLink="/services" (click)="onMobileNavClick()" routerLinkActive="active">services</a>
-            <a routerLink="/doctors" (click)="onMobileNavClick()" routerLinkActive="active">doctors</a>
-            <a routerLink="/aboutus" (click)="onMobileNavClick()" routerLinkActive="active">aboutus</a>
-            <a routerLink="/results" (click)="onMobileNavClick()" routerLinkActive="active">results</a>
-            <a routerLink="/prices" (click)="onMobileNavClick()" routerLinkActive="active">prices</a>
-            <a routerLink="/contacts" (click)="onMobileNavClick()" routerLinkActive="active">contacts</a>
+            <a routerLink="/" (click)="onMobileNavClick()" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">
+                {{ 'HEADER.HOME' | translate }}
+            </a>
+
+            <a routerLink="/services" (click)="onMobileNavClick()" routerLinkActive="active">
+                {{ 'HEADER.SERVICES' | translate }}
+            </a>
+
+            <a routerLink="/doctors" (click)="onMobileNavClick()" routerLinkActive="active">
+                {{ 'HEADER.DOCTORS' | translate }}
+            </a>
+
+            <a routerLink="/aboutus" (click)="onMobileNavClick()" routerLinkActive="active">
+                {{ 'HEADER.ABOUT' | translate }}
+            </a>
+
+            <a routerLink="/results" (click)="onMobileNavClick()" routerLinkActive="active">
+                {{ 'HEADER.RESULTS' | translate }}
+            </a>
+
+            <a routerLink="/prices" (click)="onMobileNavClick()" routerLinkActive="active">
+                {{ 'HEADER.PRICES' | translate }}
+            </a>
+
+            <a routerLink="/contacts" (click)="onMobileNavClick()" routerLinkActive="active">
+                {{ 'HEADER.CONTACTS' | translate }}
+            </a>
         </nav>
 
         <div class="mobile-options">
@@ -97,16 +149,23 @@
                 </div>
             </div>
 
-            <!-- LANG -->
+            <!-- MOBILE LANG -->
             <div class="dd" [class.open]="openDropdown === 'lang'">
                 <button type="button" class="dd-trigger" (click)="toggle('lang'); $event.stopPropagation()">
-                    <span class="dd-value">{{ selectedLang }}</span>
-                    <span class="dd-arrow" aria-hidden="true">▾</span>
+                    <span class="dd-value">
+                        {{ selectedLang.label }}
+                    </span>
+
+                    <span class="dd-arrow" aria-hidden="true">
+                        ▾
+                    </span>
                 </button>
+
                 <div class="dd-menu" *ngIf="openDropdown === 'lang'">
-                    <button type="button" class="dd-item" *ngFor="let l of langs"
-                        (click)="selectLang(l); $event.stopPropagation()" [hidden]="l === selectedLang">
-                        {{ l }}
+                    <button type="button" class="dd-item" *ngFor="let language of langs"
+                        (click)="selectLang(language); $event.stopPropagation()"
+                        [hidden]="language.code === selectedLang.code">
+                        {{ language.label }}
                     </button>
                 </div>
             </div>

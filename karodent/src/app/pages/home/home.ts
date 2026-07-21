@@ -3,9 +3,9 @@ import { ChangeDetectorRef, Component, NgZone, ElementRef, ViewChild } from '@an
 type CardState = 'left' | 'active' | 'right' | 'hidden';
 
 interface ServiceItem {
-  name: string;
-  title: string;
-  desc: string;
+  nameKey: string;
+  titleKey: string;
+  descKey: string;
 }
 
 interface CaseItem {
@@ -52,19 +52,19 @@ export class Home {
   // services
   services: ServiceItem[] = [
     {
-      name: 'Implantology',
-      title: 'Implantology',
-      desc: 'Dental implants replace missing teeth with stable, natural-looking solutions. We work with proven systems and plan treatment individually for predictable results.',
+      nameKey: 'HOME_PAGE.SERVICES.IMPLANTOLOGY.NAME',
+      titleKey: 'HOME_PAGE.SERVICES.IMPLANTOLOGY.TITLE',
+      descKey: 'HOME_PAGE.SERVICES.IMPLANTOLOGY.DESCRIPTION',
     },
     {
-      name: 'Aesthetics & Spa',
-      title: 'Aesthetics & Spa',
-      desc: 'Aesthetic treatments focused on harmony, comfort and natural results.',
+      nameKey: 'HOME_PAGE.SERVICES.AESTHETICS_SPA.NAME',
+      titleKey: 'HOME_PAGE.SERVICES.AESTHETICS_SPA.TITLE',
+      descKey: 'HOME_PAGE.SERVICES.AESTHETICS_SPA.DESCRIPTION',
     },
     {
-      name: 'Tooth Extraction',
-      title: 'Tooth Extraction',
-      desc: 'Safe extractions, including surgical cases. Minimal trauma, good healing protocols.',
+      nameKey: 'HOME_PAGE.SERVICES.TOOTH_EXTRACTION.NAME',
+      titleKey: 'HOME_PAGE.SERVICES.TOOTH_EXTRACTION.TITLE',
+      descKey: 'HOME_PAGE.SERVICES.TOOTH_EXTRACTION.DESCRIPTION',
     },
     // додай решту
   ];

@@ -40,7 +40,7 @@
 
 @font-face {
     font-family: 'Futura';
-    src: url('./assets/fonts/futura/FuturaCyrillicLight.ttf') format('truetype');
+    src: url('./assets/fonts/futura/FuturaPT-Light.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -48,28 +48,28 @@
 
 @font-face {
     font-family: 'FuturaBold';
-    src: url('./assets/fonts/futura/FuturaCyrillicBold.ttf') format('truetype');
+    src: url('./assets/fonts/futura/FuturaPT-Bold.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'FuturaBook';
-    src: url('./assets/fonts/futura/FuturaCyrillicBook.ttf') format('truetype');
+    src: url('./assets/fonts/futura/FuturaPT-Book.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'FuturaDemi';
-    src: url('./assets/fonts/futura/FuturaCyrillicDemi.ttf') format('truetype');
+    src: url('./assets/fonts/futura/FuturaPT-Demi.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'FuturaHeavy';
-    src: url('./assets/fonts/futura/FuturaCyrillicHeavy.ttf') format('truetype');
+    src: url('./assets/fonts/futura/FuturaPT-Heavy.ttf') format('truetype');
     font-style: normal;
     font-display: swap;
 }

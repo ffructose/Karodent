@@ -1,6 +1,5 @@
 <div class="home-page">
 
-
     <section class="home-intro">
 
         <video class="bg-video" autoplay muted loop playsinline preload="auto">
@@ -12,24 +11,43 @@
 
                 <div class="scroll-down">
                     <span class="scroll-down__line"></span>
-                    <span class="scroll-down__text">scroll down</span>
+
+                    <span class="scroll-down__text">
+                        {{ 'HOME_PAGE.SCROLL_DOWN' | translate }}
+                    </span>
+
                     <span class="scroll-down__line line-two"></span>
                 </div>
 
                 <div class="black-line__info">
                     <div class="info-block">
-                        <div class="info-label">Address</div>
-                        <div class="info-value">Warsaw, Siedmiogrodzka 7/U1</div>
+                        <div class="info-label">
+                            {{ 'HOME_PAGE.ADDRESS_LABEL' | translate }}
+                        </div>
+
+                        <div class="info-value">
+                            {{ 'HOME_PAGE.ADDRESS_VALUE' | translate }}
+                        </div>
                     </div>
 
                     <div class="info-block">
-                        <div class="info-label">Phone</div>
-                        <div class="info-value">+48 506 555 666</div>
+                        <div class="info-label">
+                            {{ 'HOME_PAGE.PHONE_LABEL' | translate }}
+                        </div>
+
+                        <div class="info-value">
+                            +48 506 555 666
+                        </div>
                     </div>
 
                     <div class="info-block">
-                        <div class="info-label">Mail</div>
-                        <a class="info-link" href="mailto:karodent@gmail.com">karodent@gmail.com</a>
+                        <div class="info-label">
+                            {{ 'HOME_PAGE.MAIL_LABEL' | translate }}
+                        </div>
+
+                        <a class="info-link" href="mailto:karodent@gmail.com">
+                            karodent@gmail.com
+                        </a>
                     </div>
 
                     <div class="black-line__social">
@@ -40,35 +58,38 @@
 
                         <!-- TikTok -->
                         <a class="social-btn" href="#" aria-label="TikTok">
-                            <img src="/assets/photos/tiktok-logo.png" alt="TikTok" class="social-icon  circle-outline">
+                            <img src="/assets/photos/tiktok-logo.png" alt="TikTok" class="social-icon circle-outline">
                         </a>
 
                         <!-- Facebook -->
                         <a class="social-btn" href="#" aria-label="Facebook">
                             <img src="/assets/photos/facebook-logo.png" alt="Facebook"
-                                class="social-icon  circle-outline">
+                                class="social-icon circle-outline">
                         </a>
                     </div>
                 </div>
 
-
             </section>
         </section>
 
-
         <section class="title-section">
-            <h2 class="clinique-title">Stomatological <br>clinique KARO Dent</h2>
-            <button class="make-appointment-button" type="button" (click)="scrollToFooter()">make an
-                appointment</button>
+            <h2 class="clinique-title">
+                {{ 'HOME_PAGE.CLINIQUE_TITLE_LINE_1' | translate }}
+                <br>
+                {{ 'HOME_PAGE.CLINIQUE_TITLE_LINE_2' | translate }}
+            </h2>
 
+            <button class="make-appointment-button" type="button" (click)="scrollToFooter()">
+                {{ 'HOME_PAGE.MAKE_APPOINTMENT' | translate }}
+            </button>
         </section>
 
         <section class="triangles">
             <span class="left-triangle"></span>
             <span class="right-triangle"></span>
         </section>
-    </section>
 
+    </section>
 
     <section class="about-clinique">
         <span class="about-arc" aria-hidden="true"></span>
@@ -85,29 +106,23 @@
                                 [class.left]="stateOf(i) === 'left'" [class.active]="stateOf(i) === 'active'"
                                 [class.right]="stateOf(i) === 'right'" [class.hidden]="stateOf(i) === 'hidden'"
                                 (click)="setActive(i)">
-                                <img [src]="src" alt="photo" loading="lazy" />
+                                <img [src]="src" [alt]="'HOME_PAGE.PHOTO_ALT' | translate" loading="lazy" />
                             </label>
                         </div>
                     </div>
                 </div>
 
-
-
                 <!-- TEXT -->
                 <div class="about-text">
-                    <h2 class="about-title about-title-marg">ABOUT CLINIQUE</h2>
-                    <p class="plain-text aboutText">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
-                        Source text
-                    </p>
+                    <h2 class="about-title about-title-marg">
+                        {{ 'HOME_PAGE.ABOUT_CLINIQUE' | translate }}
+                    </h2>
 
+                    <p class="plain-text aboutText">
+                        {{ 'HOME_PAGE.ABOUT_CLINIQUE_TEXT' | translate }}
+                    </p>
                 </div>
+
             </section>
         </section>
     </section>
@@ -117,48 +132,63 @@
     <section class="our-services">
         <section class="our-services_block">
 
-            <h2 class="unified-title">OUR SERVICES</h2>
+            <h2 class="unified-title">
+                {{ 'HOME_PAGE.OUR_SERVICES' | translate }}
+            </h2>
 
             <section class="services-body">
+
                 <!-- LEFT MENU -->
-                <aside class="services-menu" aria-label="Services list">
+                <aside class="services-menu" [attr.aria-label]="'HOME_PAGE.SERVICES_LIST' | translate">
                     <button type="button" *ngFor="let s of services; let i = index" (click)="select(i)"
                         [class.is-active]="i === servicesActiveIndex">
-                        {{ s.name }}
+                        {{ s.nameKey | translate }}
                     </button>
                 </aside>
 
-                <!-- RIGHT PANEL -->
                 <section class="services-panel">
                     <div class="services-panel__meta">
                         <span class="services-panel__counter">
                             {{ servicesActiveIndex + 1 }} / {{ services.length }}
                         </span>
+
                         <span class="services-panel__line"></span>
                     </div>
 
                     <ng-container *ngIf="services.length > 0">
                         <div class="services-panel__content" [class.is-fading]="isFading">
                             <h3 class="services-panel__title">
-                                {{ services[servicesActiveIndex]?.title }}
+                                {{
+                                services[servicesActiveIndex]?.titleKey
+                                | translate
+                                }}
                             </h3>
 
                             <p class="services-panel__desc">
-                                {{ services[servicesActiveIndex]?.desc }}
+                                {{
+                                services[servicesActiveIndex]?.descKey
+                                | translate
+                                }}
                             </p>
                         </div>
                     </ng-container>
 
                     <div class="services-panel__nav">
-                        <button type="button" class="nav-btn" (click)="prevService()"
-                            aria-label="Previous service">←</button>
+                        <button type="button" class="nav-btn" (click)="prevService()" [attr.aria-label]="
+                'HOME_PAGE.PREVIOUS_SERVICE' | translate
+            ">
+                            ←
+                        </button>
 
                         <div class="progress">
                             <span class="progress__fill" [style.width.%]="serviceProgressPercent"></span>
                         </div>
 
-                        <button type="button" class="nav-btn" (click)="nextService()"
-                            aria-label="Next service">→</button>
+                        <button type="button" class="nav-btn" (click)="nextService()" [attr.aria-label]="
+                'HOME_PAGE.NEXT_SERVICE' | translate
+            ">
+                            →
+                        </button>
                     </div>
                 </section>
 
@@ -171,7 +201,9 @@
 
     <section class="our-doctors">
         <header class="our-doctors__title-block">
-            <h2 class="unified-title our-doctors__title">OUR DOCTORS</h2>
+            <h2 class="unified-title our-doctors__title">
+                {{ 'HOME_PAGE.OUR_DOCTORS' | translate }}
+            </h2>
         </header>
 
         <div class="our-doctors__block">
@@ -184,17 +216,16 @@
                 </div>
 
                 <div class="doctor-text">
-                    <h3 class="doctor-name">Dr. Rafal Sulej</h3>
+                    <h3 class="doctor-name">
+                        Dr. Rafal Sulej
+                    </h3>
+
                     <p class="doctor-credo">
-                        Your teeth - are your best friends!
+                        {{ 'HOME_PAGE.DOCTOR_CREDO' | translate }}
                     </p>
+
                     <p class="doctor-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        Source text
+                        {{ 'HOME_PAGE.DOCTOR_1_DESCRIPTION' | translate }}
                     </p>
                 </div>
             </article>
@@ -206,86 +237,108 @@
                 </div>
 
                 <div class="doctor-text">
-                    <h3 class="doctor-name">Dr. Robert Sulej</h3>
+                    <h3 class="doctor-name">
+                        Dr. Robert Sulej
+                    </h3>
+
                     <p class="doctor-credo">
-                        Your teeth - are your best friends!
+                        {{ 'HOME_PAGE.DOCTOR_CREDO' | translate }}
                     </p>
+
                     <p class="doctor-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        Source text
+                        {{ 'HOME_PAGE.DOCTOR_2_DESCRIPTION' | translate }}
                     </p>
                 </div>
             </article>
+
         </div>
     </section>
+
     <hr class="seperator-line">
+
     <section class="first-app">
         <div class="first-app-body">
-            <h2 class="unified-title app-title">FIRST APPOINTMENT</h2>
+
+            <h2 class="unified-title app-title">
+                {{ 'HOME_PAGE.FIRST_APPOINTMENT' | translate }}
+            </h2>
 
             <!-- LEFT TEXT -->
             <div class="first-app-text">
 
                 <p class="plain-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    {{ 'HOME_PAGE.FIRST_APPOINTMENT_TEXT' | translate }}
                 </p>
 
                 <button class="fa-button" type="button" (click)="scrollToFooter()">
-                    make an appointment <span aria-hidden="true">→</span>
+                    {{ 'HOME_PAGE.MAKE_APPOINTMENT' | translate }}
+                    <span aria-hidden="true">→</span>
                 </button>
             </div>
 
             <!-- RIGHT ICONS GRID -->
             <div class="first-app-icons">
+
                 <div class="icon-block">
                     <div class="icon-al">
-                        <img src="/assets/photos/icon1.png" alt="Photodiagnostics">
-                        <h4 class="icon-name">Photodiagnostics</h4>
+                        <img src="/assets/photos/icon1.png" [alt]="'HOME_PAGE.PHOTODIAGNOSTICS' | translate">
+
+                        <h4 class="icon-name">
+                            {{ 'HOME_PAGE.PHOTODIAGNOSTICS' | translate }}
+                        </h4>
                     </div>
                 </div>
 
                 <div class="icon-block">
                     <div class="icon-al">
-                        <img src="/assets/photos/icon2.png" alt="Microscopic Examination of Teeth">
-                        <h4 class="icon-name">Microscopic Examination of Teeth</h4>
+                        <img src="/assets/photos/icon2.png" [alt]="'HOME_PAGE.MICROSCOPIC_EXAMINATION' | translate">
+
+                        <h4 class="icon-name">
+                            {{ 'HOME_PAGE.MICROSCOPIC_EXAMINATION' | translate }}
+                        </h4>
                     </div>
                 </div>
 
                 <div class="icon-block">
                     <div class="icon-al">
-                        <img src="/assets/photos/icon3.png" alt="X-ray Examination">
-                        <h4 class="icon-name">X-ray Examination</h4>
+                        <img src="/assets/photos/icon3.png" [alt]="'HOME_PAGE.XRAY_EXAMINATION' | translate">
+
+                        <h4 class="icon-name">
+                            {{ 'HOME_PAGE.XRAY_EXAMINATION' | translate }}
+                        </h4>
                     </div>
                 </div>
 
                 <div class="icon-block">
                     <div class="icon-al">
-                        <img src="/assets/photos/icon4.png" alt="Superficial Occlusal Analysis">
-                        <h4 class="icon-name">Superficial Occlusal Analysis</h4>
+                        <img src="/assets/photos/icon4.png" [alt]="'HOME_PAGE.OCCLUSAL_ANALYSIS' | translate">
+
+                        <h4 class="icon-name">
+                            {{ 'HOME_PAGE.OCCLUSAL_ANALYSIS' | translate }}
+                        </h4>
                     </div>
                 </div>
 
                 <div class="icon-block">
                     <div class="icon-al">
-                        <img src="/assets/photos/icon5.png" alt="Determination of Periodontal Status">
-                        <h4 class="icon-name">Determination of Periodontal Status</h4>
+                        <img src="/assets/photos/icon5.png" [alt]="'HOME_PAGE.PERIODONTAL_STATUS' | translate">
+
+                        <h4 class="icon-name">
+                            {{ 'HOME_PAGE.PERIODONTAL_STATUS' | translate }}
+                        </h4>
                     </div>
                 </div>
 
                 <div class="icon-block">
                     <div class="icon-al">
-                        <img src="/assets/photos/icon6.png" alt="Study of Medical History">
-                        <h4 class="icon-name">Study of Medical History</h4>
+                        <img src="/assets/photos/icon6.png" [alt]="'HOME_PAGE.MEDICAL_HISTORY' | translate">
+
+                        <h4 class="icon-name">
+                            {{ 'HOME_PAGE.MEDICAL_HISTORY' | translate }}
+                        </h4>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -307,25 +360,29 @@
 
                         <!-- PREV -->
                         <div class="case-slide">
-                            <img class="compare-img" [src]="cases[prevCaseIndex].after" alt="After">
+                            <img class="compare-img" [src]="cases[prevCaseIndex].after"
+                                [alt]="'HOME_PAGE.AFTER' | translate">
 
                             <div class="compare-before" [style.width.%]="comparePercent">
-                                <img class="compare-img" [src]="cases[prevCaseIndex].before" alt="Before">
+                                <img class="compare-img" [src]="cases[prevCaseIndex].before"
+                                    [alt]="'HOME_PAGE.BEFORE' | translate">
                             </div>
-                            <!-- divider + handle (поверх усього) -->
+
                             <div class="compare-divider" [style.left.%]="comparePercent">
                                 <div class="compare-handle" aria-hidden="true"></div>
                             </div>
                         </div>
 
-                        <!-- CURRENT (CENTER) -->
+                        <!-- CURRENT -->
                         <div class="case-slide">
-                            <img class="compare-img" [src]="cases[activeCase].after" alt="After">
+                            <img class="compare-img" [src]="cases[activeCase].after"
+                                [alt]="'HOME_PAGE.AFTER' | translate">
 
                             <div class="compare-before" [style.width.%]="comparePercent">
-                                <img class="compare-img" [src]="cases[activeCase].before" alt="Before">
+                                <img class="compare-img" [src]="cases[activeCase].before"
+                                    [alt]="'HOME_PAGE.BEFORE' | translate">
                             </div>
-                            <!-- divider + handle (поверх усього) -->
+
                             <div class="compare-divider" [style.left.%]="comparePercent">
                                 <div class="compare-handle" aria-hidden="true"></div>
                             </div>
@@ -333,48 +390,51 @@
 
                         <!-- NEXT -->
                         <div class="case-slide">
-                            <img class="compare-img" [src]="cases[nextCaseIndexReal].after" alt="After">
+                            <img class="compare-img" [src]="cases[nextCaseIndexReal].after"
+                                [alt]="'HOME_PAGE.AFTER' | translate">
 
                             <div class="compare-before" [style.width.%]="comparePercent">
-                                <img class="compare-img" [src]="cases[nextCaseIndexReal].before" alt="Before">
+                                <img class="compare-img" [src]="cases[nextCaseIndexReal].before"
+                                    [alt]="'HOME_PAGE.BEFORE' | translate">
                             </div>
-                            <!-- divider + handle (поверх усього) -->
+
                             <div class="compare-divider" [style.left.%]="comparePercent">
                                 <div class="compare-handle" aria-hidden="true"></div>
                             </div>
                         </div>
+
                     </div>
-
-
                 </div>
 
-                <!-- bottom nav like services -->
                 <div class="slider__nav">
-                    <button type="button" class="nav-btn" (click)="prevCase()" aria-label="Previous slide">←</button>
+                    <button type="button" class="nav-btn" (click)="prevCase()"
+                        [attr.aria-label]="'HOME_PAGE.PREVIOUS_SLIDE' | translate">
+                        ←
+                    </button>
 
                     <div class="progress">
                         <span class="progress__fill" [style.width.%]="casesProgress"></span>
                     </div>
 
-                    <button type="button" class="nav-btn" (click)="nextCase()" aria-label="Next slide">→</button>
+                    <button type="button" class="nav-btn" (click)="nextCase()"
+                        [attr.aria-label]="'HOME_PAGE.NEXT_SLIDE' | translate">
+                        →
+                    </button>
                 </div>
             </div>
 
-
             <!-- RIGHT TEXT -->
             <div class="keep-teeth-text">
-                <h2 class="unified-title keep-teeth-title">WE KEEP YOUR TEETH HEALTHY</h2>
+                <h2 class="unified-title keep-teeth-title">
+                    {{ 'HOME_PAGE.KEEP_TEETH_TITLE' | translate }}
+                </h2>
 
                 <p class="plain-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum.
+                    {{ 'HOME_PAGE.KEEP_TEETH_TEXT' | translate }}
                 </p>
             </div>
 
         </div>
     </section>
-
 
 </div>

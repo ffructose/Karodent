@@ -1,0 +1,210 @@
+{
+  "HEADER": {
+    "HOME": "home",
+    "SERVICES": "services",
+    "DOCTORS": "doctors",
+    "ABOUT": "about us",
+    "RESULTS": "results",
+    "PRICES": "prices",
+    "CONTACTS": "contacts",
+    "MENU": "menu"
+  },
+  "FOOTER": {
+    "APPOINTMENT_LINE_1": "MAKE AN",
+    "APPOINTMENT_LINE_2": "APPOINTMENT",
+    "ADDRESS_LABEL": "Address",
+    "ADDRESS_VALUE": "Warsaw, Siedmiogrodzka 7/U1",
+    "PHONE_LABEL": "Phone",
+    "MAIL_LABEL": "Mail",
+    "YOUR_NAME": "Your name",
+    "YOUR_PHONE_NUMBER": "Your phone number",
+    "YOUR_QUESTION": "Your question",
+    "SUBMIT": "SUBMIT",
+    "FULL_ADDRESS": "Siedmiogrodzka 7 street, local U1, 01-204, Warsaw",
+    "WEEKDAYS": "Mo – Fr: 10:30 to 18:00",
+    "SUNDAY": "Saturday: 10:00 to 14:00",
+    "WEBSITE_PULAWY": "website in Pulawy",
+    "CHANGE_LANGUAGE": "change language",
+    "GO_TO_TOP": "go to the top"
+  },
+  "ABOUT": {
+    "TITLE": "ABOUT US",
+    "MAKE_APPOINTMENT": "make an appointment",
+    "INTRO_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "OUR_VALUES": "OUR VALUES",
+    "VALUES_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "OUR_HISTORY": "OUR HISTORY",
+    "HISTORY_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "OUR_PHOTOS": "OUR PHOTOS",
+    "PHOTO_ALT": "photo",
+    "PHOTO_LARGE_ALT": "photo-large",
+    "PREVIOUS": "Previous",
+    "NEXT": "Next",
+    "CLOSE": "Close"
+  },
+  "CONTACT_PAGE": {
+    "TITLE": "CONTACT KARODENT",
+    "YOUR_NAME": "Your name",
+    "YOUR_PHONE_NUMBER": "Your phone number",
+    "YOUR_EMAIL": "Your e-mail",
+    "DETAILS_OR_QUESTIONS": "Details or Questions",
+    "SUBMIT": "SUBMIT",
+    "EMAIL_TITLE": "E-MAIL",
+    "PHONE_TITLE": "PHONE",
+    "MESSENGERS": "whatsapp / viber / telegram",
+    "WORK_HOURS": "WORK HOURS",
+    "WEEKDAYS": "Mo – Fr: 10:30 to 18:00",
+    "SUNDAY": "Saturday: 10:00 to 14:00",
+    "ADDRESS_TITLE": "ADDRESS",
+    "ADDRESS_VALUE": "Warsaw, Siedmiogrodzka 7 / U1",
+    "SOCIALS": "SOCIALS"
+  },
+  "DOCTORS_PAGE": {
+    "TITLE": "DOCTORS",
+    "MAKE_APPOINTMENT": "make an appointment",
+    "DOCTOR_PHOTO_ALT": "doctor-photo",
+    "PHOTO_ALT": "photo",
+    "PHOTO_LARGE_ALT": "photo-large",
+    "PREVIOUS": "Previous",
+    "NEXT": "Next",
+    "CLOSE": "Close",
+    "DOCTOR_1": {
+      "TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    "DOCTOR_2": {
+      "TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+  },
+  "HOME_PAGE": {
+    "SCROLL_DOWN": "scroll down",
+    "ADDRESS_LABEL": "Address",
+    "ADDRESS_VALUE": "Warsaw, Siedmiogrodzka 7/U1",
+    "PHONE_LABEL": "Phone",
+    "MAIL_LABEL": "Mail",
+    "CLINIQUE_TITLE_LINE_1": "Stomatological",
+    "CLINIQUE_TITLE_LINE_2": "clinique KARO Dent",
+    "MAKE_APPOINTMENT": "make an appointment",
+    "PHOTO_ALT": "photo",
+    "ABOUT_CLINIQUE": "ABOUT CLINIQUE",
+    "ABOUT_CLINIQUE_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Source text",
+    "OUR_SERVICES": "OUR SERVICES",
+    "SERVICES_LIST": "Services list",
+    "PREVIOUS_SERVICE": "Previous service",
+    "NEXT_SERVICE": "Next service",
+    "OUR_DOCTORS": "OUR DOCTORS",
+    "DOCTOR_CREDO": "Your teeth - are your best friends!",
+    "DOCTOR_1_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Source text",
+    "DOCTOR_2_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Source text",
+    "FIRST_APPOINTMENT": "FIRST APPOINTMENT",
+    "FIRST_APPOINTMENT_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "PHOTODIAGNOSTICS": "Photodiagnostics",
+    "MICROSCOPIC_EXAMINATION": "Microscopic Examination of Teeth",
+    "XRAY_EXAMINATION": "X-ray Examination",
+    "OCCLUSAL_ANALYSIS": "Superficial Occlusal Analysis",
+    "PERIODONTAL_STATUS": "Determination of Periodontal Status",
+    "MEDICAL_HISTORY": "Study of Medical History",
+    "AFTER": "After",
+    "BEFORE": "Before",
+    "PREVIOUS_SLIDE": "Previous slide",
+    "NEXT_SLIDE": "Next slide",
+    "KEEP_TEETH_TITLE": "WE KEEP YOUR TEETH HEALTHY",
+    "KEEP_TEETH_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+    "SERVICES": {
+      "IMPLANTOLOGY": {
+        "NAME": "Implantology",
+        "TITLE": "Implantology",
+        "DESCRIPTION": "Dental implants replace missing teeth with stable, natural-looking solutions. We work with proven systems and plan treatment individually for predictable results."
+      },
+      "AESTHETICS_SPA": {
+        "NAME": "Aesthetics & Spa",
+        "TITLE": "Aesthetics & Spa",
+        "DESCRIPTION": "Aesthetic treatments focused on harmony, comfort and natural results."
+      },
+      "TOOTH_EXTRACTION": {
+        "NAME": "Tooth Extraction",
+        "TITLE": "Tooth Extraction",
+        "DESCRIPTION": "Safe extractions, including surgical cases. Minimal trauma, good healing protocols."
+      }
+    }
+  },
+  "PRICES_PAGE": {
+    "TITLE": "PRICES",
+    "MAKE_APPOINTMENT": "make an appointment",
+    "CAUTION": "The cost of treatment is determined individually during a consultation with the doctor",
+    "COMMON_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    "INDIVIDUAL_PRICING_SHORT": "ind. price",
+    "FROM": "from",
+    "ITEMS": {
+      "ITEM_01": "Medical consultation and dental examination",
+      "ITEM_02": "Intraoral dental X-ray",
+      "ITEM_03": "Professional dental cleaning - scaling, air polishing, fluoride treatment",
+      "ITEM_04": "Composite filling",
+      "ITEM_05": "Direct composite reconstruction - veneer / overlay",
+      "ITEM_06": "Tray-based teeth whitening",
+      "ITEM_07": "Laser teeth whitening",
+      "ITEM_08": "All-ceramic crown",
+      "ITEM_09": "Ceramic veneer",
+      "ITEM_10": "CAD/CAM composite onlay",
+      "ITEM_11": "Post and core (fiberglass/titanium)",
+      "ITEM_12": "Removal of a restoration from a prosthetic abutment",
+      "ITEM_13": "Professional dental cleaning",
+      "ITEM_14": "Temporary Maryland bridge",
+      "ITEM_15": "Acrylic denture",
+      "ITEM_16": "Cast partial denture",
+      "ITEM_17": "Vital pulp therapy - Biodentine",
+      "ITEM_18": "Root canal treatment (per 1 canal)",
+      "ITEM_19": "Removal of a post or broken instrument",
+      "ITEM_20": "Endodontic microsurgery (root-end resection)",
+      "ITEM_21": "Tooth extraction",
+      "ITEM_22": "Wisdom tooth extraction (third molar extraction)",
+      "ITEM_23": "Bone augmentation",
+      "ITEM_24": "Preparation of a surgical plan and guided implant surgery template",
+      "ITEM_25": "Dental implant (MIS Conincal Connection)",
+      "ITEM_26": "MIS Connect abutment",
+      "ITEM_27": "MIS healing screw (implant exposure procedure)",
+      "ITEM_28": "All-ceramic crown on an MIS implant"
+    }
+  },
+  "RESULTS_PAGE": {
+    "TITLE": "RESULTS",
+    "MAKE_APPOINTMENT": "make an appointment",
+    "BEFORE": "BEFORE:",
+    "AFTER": "After:",
+    "BEFORE_ALT": "before",
+    "AFTER_ALT": "after",
+    "CASE_1": {
+      "TITLE": "CASE 1 - lalallalla",
+      "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    "CASE_2": {
+      "TITLE": "CASE 2 - lalallalla",
+      "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+  },
+  "SERVICES_PAGE": {
+    "TITLE": "SERVICES",
+    "FIRST_APPOINTMENT": "FIRST APPOINTMENT",
+    "FIRST_APPOINTMENT_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "MAKE_APPOINTMENT": "make an appointment",
+    "PHOTODIAGNOSTICS": "Photodiagnostics",
+    "MICROSCOPIC_EXAMINATION": "Microscopic Examination of Teeth",
+    "XRAY_EXAMINATION": "X-ray Examination",
+    "OCCLUSAL_ANALYSIS": "Superficial Occlusal Analysis",
+    "PERIODONTAL_STATUS": "Determination of Periodontal Status",
+    "MEDICAL_HISTORY": "Study of Medical History",
+    "INTRO_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in",
+    "SERVICE_PHOTO_ALT": "service-photo",
+    "SERVICE_1": {
+      "NAME": "Service Name",
+      "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Source text"
+    },
+    "SERVICE_2": {
+      "NAME": "Service Name",
+      "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Source text"
+    },
+    "SERVICE_3": {
+      "NAME": "Service Name",
+      "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Source text"
+    }
+  }
+}

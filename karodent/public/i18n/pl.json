@@ -1,0 +1,210 @@
+{
+  "HEADER": {
+    "HOME": "główna",
+    "SERVICES": "usługi",
+    "DOCTORS": "lekarze",
+    "ABOUT": "o nas",
+    "RESULTS": "wyniki",
+    "PRICES": "cennik",
+    "CONTACTS": "kontakt",
+    "MENU": "menu"
+  },
+  "FOOTER": {
+    "APPOINTMENT_LINE_1": "UMÓW SIĘ",
+    "APPOINTMENT_LINE_2": "NA WIZYTĘ",
+    "ADDRESS_LABEL": "Adres",
+    "ADDRESS_VALUE": "Warszawa, Siedmiogrodzka 7/U1",
+    "PHONE_LABEL": "Telefon",
+    "MAIL_LABEL": "E-mail",
+    "YOUR_NAME": "Imię i nazwisko",
+    "YOUR_PHONE_NUMBER": "Numer telefonu",
+    "YOUR_QUESTION": "Twoje pytanie",
+    "SUBMIT": "WYŚLIJ",
+    "FULL_ADDRESS": "ul. Siedmiogrodzka 7, lokal U1, 01-204 Warszawa",
+    "WEEKDAYS": "Pn – Pt: 10:30–18:00",
+    "SUNDAY": "Sobota: 10:00–14:00",
+    "WEBSITE_PULAWY": "strona w Puławach",
+    "CHANGE_LANGUAGE": "zmień język",
+    "GO_TO_TOP": "wróć na górę"
+  },
+  "ABOUT": {
+    "TITLE": "O NAS",
+    "MAKE_APPOINTMENT": "umów wizytę",
+    "INTRO_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "OUR_VALUES": "NASZE WARTOŚCI",
+    "VALUES_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "OUR_HISTORY": "NASZA HISTORIA",
+    "HISTORY_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "OUR_PHOTOS": "NASZE ZDJĘCIA",
+    "PHOTO_ALT": "zdjęcie",
+    "PHOTO_LARGE_ALT": "powiększone zdjęcie",
+    "PREVIOUS": "Poprzednie",
+    "NEXT": "Następne",
+    "CLOSE": "Zamknij"
+  },
+  "CONTACT_PAGE": {
+    "TITLE": "KONTAKT Z KARODENT",
+    "YOUR_NAME": "Imię i nazwisko",
+    "YOUR_PHONE_NUMBER": "Numer telefonu",
+    "YOUR_EMAIL": "Adres e-mail",
+    "DETAILS_OR_QUESTIONS": "Szczegóły lub pytania",
+    "SUBMIT": "WYŚLIJ",
+    "EMAIL_TITLE": "E-MAIL",
+    "PHONE_TITLE": "TELEFON",
+    "MESSENGERS": "whatsapp / viber / telegram",
+    "WORK_HOURS": "GODZINY PRACY",
+    "WEEKDAYS": "Pn – Pt: 10:30–18:00",
+    "SUNDAY": "Sobota: 10:00–14:00",
+    "ADDRESS_TITLE": "ADRES",
+    "ADDRESS_VALUE": "Warszawa, Siedmiogrodzka 7 / U1",
+    "SOCIALS": "MEDIA"
+  },
+  "DOCTORS_PAGE": {
+    "TITLE": "LEKARZE",
+    "MAKE_APPOINTMENT": "umów wizytę",
+    "DOCTOR_PHOTO_ALT": "zdjęcie lekarza",
+    "PHOTO_ALT": "zdjęcie",
+    "PHOTO_LARGE_ALT": "powiększone zdjęcie",
+    "PREVIOUS": "Poprzednie",
+    "NEXT": "Następne",
+    "CLOSE": "Zamknij",
+    "DOCTOR_1": {
+      "TEXT": "Tutaj znajdzie się polski opis pierwszego lekarza."
+    },
+    "DOCTOR_2": {
+      "TEXT": "Tutaj znajdzie się polski opis drugiego lekarza."
+    }
+  },
+  "HOME_PAGE": {
+    "SCROLL_DOWN": "przewiń w dół",
+    "ADDRESS_LABEL": "Adres",
+    "ADDRESS_VALUE": "Warszawa, Siedmiogrodzka 7/U1",
+    "PHONE_LABEL": "Telefon",
+    "MAIL_LABEL": "E-mail",
+    "CLINIQUE_TITLE_LINE_1": "Stomatologiczna",
+    "CLINIQUE_TITLE_LINE_2": "klinika KARO Dent",
+    "MAKE_APPOINTMENT": "umów wizytę",
+    "PHOTO_ALT": "zdjęcie",
+    "ABOUT_CLINIQUE": "O KLINICE",
+    "ABOUT_CLINIQUE_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Tekst źródłowy",
+    "OUR_SERVICES": "NASZE USŁUGI",
+    "SERVICES_LIST": "Lista usług",
+    "PREVIOUS_SERVICE": "Poprzednia usługa",
+    "NEXT_SERVICE": "Następna usługa",
+    "OUR_DOCTORS": "NASI LEKARZE",
+    "DOCTOR_CREDO": "Twoje zęby są twoimi najlepszymi przyjaciółmi!",
+    "DOCTOR_1_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Tekst źródłowy",
+    "DOCTOR_2_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Tekst źródłowy",
+    "FIRST_APPOINTMENT": "PIERWSZA WIZYTA",
+    "FIRST_APPOINTMENT_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "PHOTODIAGNOSTICS": "Fotodiagnostyka",
+    "MICROSCOPIC_EXAMINATION": "Badanie zębów pod mikroskopem",
+    "XRAY_EXAMINATION": "Badanie rentgenowskie",
+    "OCCLUSAL_ANALYSIS": "Wstępna analiza zgryzu",
+    "PERIODONTAL_STATUS": "Określenie stanu przyzębia",
+    "MEDICAL_HISTORY": "Analiza historii medycznej",
+    "AFTER": "Po",
+    "BEFORE": "Przed",
+    "PREVIOUS_SLIDE": "Poprzedni slajd",
+    "NEXT_SLIDE": "Następny slajd",
+    "KEEP_TEETH_TITLE": "DBAMY O ZDROWIE TWOICH ZĘBÓW",
+    "KEEP_TEETH_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+    "SERVICES": {
+      "IMPLANTOLOGY": {
+        "NAME": "Implantologia",
+        "TITLE": "Implantologia",
+        "DESCRIPTION": "Implanty zębowe zastępują brakujące zęby stabilnymi rozwiązaniami o naturalnym wyglądzie. Pracujemy na sprawdzonych systemach i indywidualnie planujemy leczenie, aby osiągać przewidywalne rezultaty."
+      },
+      "AESTHETICS_SPA": {
+        "NAME": "Estetyka & Spa",
+        "TITLE": "Estetyka & Spa",
+        "DESCRIPTION": "Zabiegi estetyczne ukierunkowane na harmonię, komfort i naturalne efekty."
+      },
+      "TOOTH_EXTRACTION": {
+        "NAME": "Usuwanie zębów",
+        "TITLE": "Usuwanie zębów",
+        "DESCRIPTION": "Bezpieczne usuwanie zębów, w tym zabiegi chirurgiczne. Minimalna traumatyzacja tkanek i odpowiednie postępowanie wspomagające gojenie."
+      }
+    }
+  },
+  "PRICES_PAGE": {
+    "TITLE": "CENNIK",
+    "MAKE_APPOINTMENT": "umów wizytę",
+    "CAUTION": "Wycena leczenia ustalana jest indywidualnie podczas konsultacji z lekarzem",
+    "COMMON_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    "INDIVIDUAL_PRICING_SHORT": "wyc. ind.",
+    "FROM": "od",
+    "ITEMS": {
+      "ITEM_01": "Konsultacja lekarska oraz badanie stomatologiczne",
+      "ITEM_02": "Zdjęcie RTG wewnątrzustne - zębowe",
+      "ITEM_03": "Zabieg higienizacji - scaling, piaskowanie, fluoryzacja",
+      "ITEM_04": "Wypełnienie kompozytowe",
+      "ITEM_05": "Rekonstrukcja kompozytowa bezpośrednia - licówka / overlay",
+      "ITEM_06": "Wybielanie metodą nakładkową",
+      "ITEM_07": "Wybielanie metodą laserową",
+      "ITEM_08": "Korona pełnoceramiczna",
+      "ITEM_09": "Licówka ceramiczna",
+      "ITEM_10": "Onlay kompozytowy CAD/CAM",
+      "ITEM_11": "Wkład koronowo-korzeniowy (włókno szklane/tytan)",
+      "ITEM_12": "Demontaż pracy z filaru protetycznego",
+      "ITEM_13": "Higienizacja",
+      "ITEM_14": "Most tymczasowy Maryland",
+      "ITEM_15": "Proteza akrylowa",
+      "ITEM_16": "Proteza szkieletowa",
+      "ITEM_17": "Leczenie biologiczne miazgi - Biodentine",
+      "ITEM_18": "Leczenie kanałowe (za 1 kanał)",
+      "ITEM_19": "Usunięcie wkładu lub złamanego narzędzia",
+      "ITEM_20": "Mikrochirurgia endodontyczna (resekcja wierzchołka korzenia)",
+      "ITEM_21": "Usunięcie zęba (ekstrakcja)",
+      "ITEM_22": "Usunięcie ósemki (ekstrakcja trzeciego zęba trzonowego)",
+      "ITEM_23": "Odbudowa kości (augmentacja)",
+      "ITEM_24": "Wykonanie planu chirurgicznego oraz szablonu do implantacji nawigowanej",
+      "ITEM_25": "Implant zębowy (MIS Conincal Connection)",
+      "ITEM_26": "Filar MIS Connect",
+      "ITEM_27": "Śruba gojąca MIS (zabieg odsłonięcia implantu)",
+      "ITEM_28": "Korona pełnoceramiczna na implancie MIS"
+    }
+  },
+  "RESULTS_PAGE": {
+    "TITLE": "EFEKTY LECZENIA",
+    "MAKE_APPOINTMENT": "umów wizytę",
+    "BEFORE": "PRZED:",
+    "AFTER": "Po:",
+    "BEFORE_ALT": "przed",
+    "AFTER_ALT": "po",
+    "CASE_1": {
+      "TITLE": "PRZYPADEK 1 - lalallalla",
+      "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    "CASE_2": {
+      "TITLE": "PRZYPADEK 2 - lalallalla",
+      "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+  },
+  "SERVICES_PAGE": {
+    "TITLE": "USŁUGI",
+    "FIRST_APPOINTMENT": "PIERWSZA WIZYTA",
+    "FIRST_APPOINTMENT_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "MAKE_APPOINTMENT": "umów wizytę",
+    "PHOTODIAGNOSTICS": "Fotodiagnostyka",
+    "MICROSCOPIC_EXAMINATION": "Badanie zębów pod mikroskopem",
+    "XRAY_EXAMINATION": "Badanie rentgenowskie",
+    "OCCLUSAL_ANALYSIS": "Wstępna analiza zgryzu",
+    "PERIODONTAL_STATUS": "Określenie stanu przyzębia",
+    "MEDICAL_HISTORY": "Analiza historii medycznej",
+    "INTRO_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in",
+    "SERVICE_PHOTO_ALT": "zdjęcie usługi",
+    "SERVICE_1": {
+      "NAME": "Nazwa usługi",
+      "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Tekst źródłowy"
+    },
+    "SERVICE_2": {
+      "NAME": "Nazwa usługi",
+      "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Tekst źródłowy"
+    },
+    "SERVICE_3": {
+      "NAME": "Nazwa usługi",
+      "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Tekst źródłowy"
+    }
+  }
+}

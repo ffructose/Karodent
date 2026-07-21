@@ -1,45 +1,65 @@
 <div class="page">
 
-
     <section class="intro">
         <video class="bg-video" autoplay muted loop playsinline preload="auto">
             <source src="..." type="video/mp4" />
         </video>
+
         <div class="black-line"></div>
 
         <div class="intro-overlay">
 
             <hr class="intro-line">
-            <h1 class="intro-title">CONTACT KARODENT</h1>
+
+            <h1 class="intro-title">
+                {{ 'CONTACT_PAGE.TITLE' | translate }}
+            </h1>
 
             <div class="appointment">
                 <form class="form" autocomplete="on">
+
                     <label class="field">
-                        <span class="field__label">Your name</span>
+                        <span class="field__label">
+                            {{ 'CONTACT_PAGE.YOUR_NAME' | translate }}
+                        </span>
+
                         <input class="field__control" type="text" name="name" />
                     </label>
 
                     <label class="field">
-                        <span class="field__label">Your phone number</span>
+                        <span class="field__label">
+                            {{ 'CONTACT_PAGE.YOUR_PHONE_NUMBER' | translate }}
+                        </span>
+
                         <input class="field__control" type="tel" name="phone" />
                     </label>
 
                     <label class="field">
-                        <span class="field__label">Your e-mail</span>
+                        <span class="field__label">
+                            {{ 'CONTACT_PAGE.YOUR_EMAIL' | translate }}
+                        </span>
+
                         <input class="field__control" type="mail" name="mail" />
                     </label>
 
                     <label class="large-field">
-                        <span class="field__label">Details or Questions</span>
+                        <span class="field__label">
+                            {{ 'CONTACT_PAGE.DETAILS_OR_QUESTIONS' | translate }}
+                        </span>
+
                         <textarea class="field__control field__control--textarea" name="question"></textarea>
                     </label>
 
-                    <button class="form__btn" type="button">SUBMIT</button>
+                    <button class="form__btn" type="button">
+                        {{ 'CONTACT_PAGE.SUBMIT' | translate }}
+                    </button>
+
                 </form>
             </div>
 
         </div>
     </section>
+
     <section class="info-block">
 
         <div class="map-block">
@@ -49,14 +69,18 @@
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
+
         <div class="info-body">
 
             <div class="block-body">
                 <div class="icon-wrap">
                     <img class="icon" src="/assets/photos/mail.png" alt="mail">
-
                 </div>
-                <h3 class="name">E-MAIL</h3>
+
+                <h3 class="name">
+                    {{ 'CONTACT_PAGE.EMAIL_TITLE' | translate }}
+                </h3>
+
                 <a href="mailto:karodent@gmail.com" class="info">
                     karodent@gmail.com
                 </a>
@@ -65,12 +89,17 @@
             <div class="block-body">
                 <div class="icon-wrap">
                     <img class="icon" src="/assets/photos/phone.png" alt="phone">
-
                 </div>
-                <h3 class="name">PHONE</h3>
+
+                <h3 class="name">
+                    {{ 'CONTACT_PAGE.PHONE_TITLE' | translate }}
+                </h3>
 
                 <div class="info">
-                    <h6>whatsapp / viber / telegram</h6>
+                    <h6>
+                        {{ 'CONTACT_PAGE.MESSENGERS' | translate }}
+                    </h6>
+
                     <h5>
                         +48 506 555 666
                     </h5>
@@ -80,41 +109,57 @@
             <div class="block-body">
                 <div class="icon-wrap">
                     <img class="icon" src="/assets/photos/time.png" alt="time">
-
                 </div>
-                <h3 class="name">WORK HOURS</h3>
+
+                <h3 class="name">
+                    {{ 'CONTACT_PAGE.WORK_HOURS' | translate }}
+                </h3>
+
                 <div class="info">
-                    <p>Mo – Fr: 10:30 to 18:00</p>
-                    <p>Sunday: 10:00 to 14:00</p>
+                    <p>
+                        {{ 'CONTACT_PAGE.WEEKDAYS' | translate }}
+                    </p>
+
+                    <p>
+                        {{ 'CONTACT_PAGE.SUNDAY' | translate }}
+                    </p>
                 </div>
             </div>
 
             <div class="block-body">
                 <div class="icon-wrap">
                     <img class="icon" src="/assets/photos/address.png" alt="address">
-
                 </div>
-                <h3 class="name">ADDRESS</h3>
+
+                <h3 class="name">
+                    {{ 'CONTACT_PAGE.ADDRESS_TITLE' | translate }}
+                </h3>
+
                 <h5 class="info">
-                    Warsaw, Siedmiogrodzka 7 / U1
+                    {{ 'CONTACT_PAGE.ADDRESS_VALUE' | translate }}
                 </h5>
             </div>
 
             <div class="block-body">
                 <div class="icon-wrap">
                     <img class="icon" src="/assets/photos/socials.png" alt="socials">
-
                 </div>
-                <h3 class="name">SOCIALS</h3>
+
+                <h3 class="name">
+                    {{ 'CONTACT_PAGE.SOCIALS' | translate }}
+                </h3>
+
                 <div class="info socials">
-                    <a href="#" class="social-btn ">
-                        <img href="#" class="social-btn inst" src="/assets/photos/insta-logo.png" alt="instagram">
-                    </a>
                     <a href="#" class="social-btn">
-                        <img href="#" class="social-btn" src="/assets/photos/facebook-logo.png" alt="facebook">
+                        <img class="social-btn inst" src="/assets/photos/insta-logo.png" alt="instagram">
                     </a>
+
                     <a href="#" class="social-btn">
-                        <img href="#" class="social-btn" src="/assets/photos/tiktok-logo.png" alt="tiktok">
+                        <img class="social-btn" src="/assets/photos/facebook-logo.png" alt="facebook">
+                    </a>
+
+                    <a href="#" class="social-btn">
+                        <img class="social-btn" src="/assets/photos/tiktok-logo.png" alt="tiktok">
                     </a>
                 </div>
             </div>
