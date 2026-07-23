@@ -25,7 +25,7 @@
     "WEEKDAYS": "Пн – Пт: 10:30–18:00",
     "SUNDAY": "Субота: 10:00–14:00",
     "WEBSITE_PULAWY": "сайт у Пулавах",
-    "CHANGE_LANGUAGE": "змінити мову",
+    "CHANGE_LANGUAGE": "гугл мапи",
     "GO_TO_TOP": "повернутися нагору"
   },
   "ABOUT": {
@@ -44,7 +44,7 @@
     "CLOSE": "Закрити"
   },
   "CONTACT_PAGE": {
-    "TITLE": "КОНТАКТИ KARODENT",
+    "TITLE": "КОНТАКТ З KARODENT",
     "YOUR_NAME": "Ваше ім’я",
     "YOUR_PHONE_NUMBER": "Ваш номер телефону",
     "YOUR_EMAIL": "Ваша електронна пошта",
@@ -52,7 +52,7 @@
     "SUBMIT": "НАДІСЛАТИ",
     "EMAIL_TITLE": "ЕЛЕКТРОННА ПОШТА",
     "PHONE_TITLE": "ТЕЛЕФОН",
-    "MESSENGERS": "whatsapp / viber / telegram",
+    "MESSENGERS": "whatsapp / telegram",
     "WORK_HOURS": "ГОДИНИ РОБОТИ",
     "WEEKDAYS": "Пн – Пт: 10:30–18:00",
     "SUNDAY": "Субота: 10:00–14:00",
@@ -132,7 +132,6 @@
     "TITLE": "ЦІНИ",
     "MAKE_APPOINTMENT": "записатися на прийом",
     "CAUTION": "Вартість лікування визначається індивідуально під час консультації з лікарем",
-    "COMMON_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
     "INDIVIDUAL_PRICING_SHORT": "інд. вартість",
     "FROM": "від",
     "ITEMS": {

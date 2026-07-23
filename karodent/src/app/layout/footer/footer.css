@@ -145,14 +145,6 @@
     opacity: 1;
 }
 
-.circle-outline {
-    width: 100%;
-    height: 100%;
-    border: 2px solid rgb(219, 219, 219);
-    /* was 3px */
-    border-radius: 50%;
-}
-
 
 
 /* RIGHT form card */
@@ -508,9 +500,6 @@
         height: 30px;
     }
 
-    .circle-outline {
-        border: 1px solid rgb(219, 219, 219);
-    }
 
     /* RIGHT form card */
     .appointment__right {
@@ -695,9 +684,6 @@
         height: 30px;
     }
 
-    .circle-outline {
-        border: 1px solid rgb(219, 219, 219);
-    }
 
     /* RIGHT form card */
     .appointment__right {
@@ -884,12 +870,6 @@
     }
 
 
-    .circle-outline {
-        width: 100%;
-        height: 100%;
-        border: 1px solid rgb(219, 219, 219);
-        border-radius: 50%;
-    }
 
     /* RIGHT form card */
     .appointment__right {
@@ -1095,9 +1075,6 @@
         height: 35px;
     }
 
-    .circle-outline {
-        border: 2px solid rgb(219, 219, 219);
-    }
 
     /* RIGHT form card */
     .appointment__right {
@@ -1253,10 +1230,6 @@
     .social-btn {
         width: 30px;
         height: 30px;
-    }
-
-    .circle-outline {
-        border: 1px solid rgb(219, 219, 219);
     }
 
     /* RIGHT form card */

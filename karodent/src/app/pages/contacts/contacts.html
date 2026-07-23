@@ -65,14 +65,14 @@
                         {{ submitButtonKey | translate }}
                     </button>
 
-                    @if (formMessageKey) {
-                    <p class="form__message" aria-live="polite"
-                        [style.color]="formStatus === 'success' ? '#2e7d32' : '#b00020'">
-                        {{ formMessageKey | translate }}
-                    </p>
-                    }
-
                 </form>
+
+                @if (formMessageKey) {
+                <div class="form-notification" [class.form-notification--error]="formStatus === 'error'" role="status"
+                    aria-live="polite">
+                    {{ formMessageKey | translate }}
+                </div>
+                }
             </div>
 
         </div>
@@ -168,16 +168,28 @@
                 </h3>
 
                 <div class="info socials">
-                    <a href="#" class="social-btn">
-                        <img class="social-btn inst" src="/assets/photos/insta-logo.png" alt="instagram">
+                    <a href="https://www.instagram.com/karodent.stomatologia" class="social-btn">
+                        <img class="social-btn" src="/assets/photos/insta-logo.png" alt="instagram">
                     </a>
 
-                    <a href="#" class="social-btn">
+                    <a href="https://www.facebook.com/karodentstomatologia" class="social-btn">
                         <img class="social-btn" src="/assets/photos/facebook-logo.png" alt="facebook">
                     </a>
 
-                    <a href="#" class="social-btn">
+                    <a href="https://www.tiktok.com/@karodent.stomatologia" class="social-btn">
                         <img class="social-btn" src="/assets/photos/tiktok-logo.png" alt="tiktok">
+                    </a>
+
+                    <a href="https://wa.me/48506555666" class="social-btn">
+                        <img class="social-btn" src="/assets/photos/whatsapp-logo.png" alt="WhatsApp">
+                    </a>
+
+                    <a href="https://t.me/karodent_stomatologia" class="social-btn">
+                        <img class="social-btn" src="/assets/photos/telegram-logo.png" alt="Telegram">
+                    </a>
+
+                    <a href="https://m.me/karodent.stomatologia" class="social-btn">
+                        <img class="social-btn" src="/assets/photos/mess-logo.png" alt="Messenger">
                     </a>
                 </div>
             </div>

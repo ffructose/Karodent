@@ -25,7 +25,7 @@
     "WEEKDAYS": "Mo – Fr: 10:30 to 18:00",
     "SUNDAY": "Saturday: 10:00 to 14:00",
     "WEBSITE_PULAWY": "website in Pulawy",
-    "CHANGE_LANGUAGE": "change language",
+    "CHANGE_LANGUAGE": "google maps",
     "GO_TO_TOP": "go to the top"
   },
   "ABOUT": {
@@ -52,7 +52,7 @@
     "SUBMIT": "SUBMIT",
     "EMAIL_TITLE": "E-MAIL",
     "PHONE_TITLE": "PHONE",
-    "MESSENGERS": "whatsapp / viber / telegram",
+    "MESSENGERS": "whatsapp / telegram",
     "WORK_HOURS": "WORK HOURS",
     "WEEKDAYS": "Mo – Fr: 10:30 to 18:00",
     "SUNDAY": "Saturday: 10:00 to 14:00",
@@ -132,7 +132,6 @@
     "TITLE": "PRICES",
     "MAKE_APPOINTMENT": "make an appointment",
     "CAUTION": "The cost of treatment is determined individually during a consultation with the doctor",
-    "COMMON_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
     "INDIVIDUAL_PRICING_SHORT": "ind. price",
     "FROM": "from",
     "ITEMS": {

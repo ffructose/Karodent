@@ -21,11 +21,11 @@
     "YOUR_EMAIL": "Adres e-mail",
     "YOUR_QUESTION": "Twoje pytanie",
     "SUBMIT": "WYŚLIJ",
-    "FULL_ADDRESS": "ul. Siedmiogrodzka 7, lokal U1, 01-204 Warszawa",
+    "FULL_ADDRESS": "ul. Siedmiogrodzka 7, lokal U1, 01-204, Warszawa",
     "WEEKDAYS": "Pn – Pt: 10:30–18:00",
     "SUNDAY": "Sobota: 10:00–14:00",
     "WEBSITE_PULAWY": "strona w Puławach",
-    "CHANGE_LANGUAGE": "zmień język",
+    "CHANGE_LANGUAGE": "mapy google",
     "GO_TO_TOP": "wróć na górę"
   },
   "ABOUT": {
@@ -52,7 +52,7 @@
     "SUBMIT": "WYŚLIJ",
     "EMAIL_TITLE": "E-MAIL",
     "PHONE_TITLE": "TELEFON",
-    "MESSENGERS": "whatsapp / viber / telegram",
+    "MESSENGERS": "whatsapp / telegram",
     "WORK_HOURS": "GODZINY PRACY",
     "WEEKDAYS": "Pn – Pt: 10:30–18:00",
     "SUNDAY": "Sobota: 10:00–14:00",
@@ -132,7 +132,6 @@
     "TITLE": "CENNIK",
     "MAKE_APPOINTMENT": "umów wizytę",
     "CAUTION": "Wycena leczenia ustalana jest indywidualnie podczas konsultacji z lekarzem",
-    "COMMON_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
     "INDIVIDUAL_PRICING_SHORT": "wyc. ind.",
     "FROM": "od",
     "ITEMS": {

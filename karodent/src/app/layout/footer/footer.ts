@@ -1,4 +1,5 @@
 import {
+  ChangeDetectorRef,
   Component,
   HostListener,
   Inject,
@@ -6,10 +7,12 @@ import {
   OnDestroy,
   PLATFORM_ID,
 } from '@angular/core';
+
 import {
   DOCUMENT,
   isPlatformBrowser,
 } from '@angular/common';
+
 import { HttpClient } from '@angular/common/http';
 
 type FooterVariant = 'default' | 'contacts';
@@ -49,8 +52,11 @@ export class Footer implements OnDestroy {
 
   constructor(
     private readonly http: HttpClient,
+    private readonly changeDetectorRef: ChangeDetectorRef,
+
     @Inject(DOCUMENT)
     private readonly document: Document,
+
     @Inject(PLATFORM_ID)
     platformId: object,
   ) {
@@ -121,6 +127,8 @@ export class Footer implements OnDestroy {
     this.formStatus = 'sending';
     this.formMessageKey = '';
 
+    this.changeDetectorRef.detectChanges();
+
     const sendingStartedAt = Date.now();
 
     this.http
@@ -135,8 +143,11 @@ export class Footer implements OnDestroy {
             return;
           }
 
-          const elapsed = Date.now() - sendingStartedAt;
-          const remainingSendingTime = Math.max(0, 1500 - elapsed);
+          const elapsed =
+            Date.now() - sendingStartedAt;
+
+          const remainingSendingTime =
+            Math.max(0, 1500 - elapsed);
 
           this.sendingTimerId = setTimeout(() => {
             form.reset();
@@ -144,12 +155,17 @@ export class Footer implements OnDestroy {
             this.formStatus = 'success';
             this.formMessageKey =
               'FORM_STATUS.SUCCESS_MESSAGE';
+
             this.sendingTimerId = null;
+
+            this.changeDetectorRef.detectChanges();
 
             this.resetTimerId = setTimeout(() => {
               this.formStatus = 'idle';
               this.formMessageKey = '';
               this.resetTimerId = null;
+
+              this.changeDetectorRef.detectChanges();
             }, 2000);
           }, remainingSendingTime);
         },
@@ -168,6 +184,16 @@ export class Footer implements OnDestroy {
     this.formStatus = 'error';
     this.formMessageKey =
       'FORM_STATUS.ERROR_MESSAGE';
+
+    this.changeDetectorRef.detectChanges();
+
+    this.resetTimerId = setTimeout(() => {
+      this.formStatus = 'idle';
+      this.formMessageKey = '';
+      this.resetTimerId = null;
+
+      this.changeDetectorRef.detectChanges();
+    }, 3000);
   }
 
   private clearTimers(): void {

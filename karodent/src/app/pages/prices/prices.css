@@ -117,7 +117,7 @@
 }
 
 .service-name {
-  margin: 0 0 10px 0;
+  margin: 0 0 0px 0;
   font-family: 'Jura';
   font-size: 28px;
   font-weight: 600;
@@ -423,7 +423,6 @@
     column-gap: 10px;
     row-gap: 3px;
     padding: 0 10px 10px 10px;
-    align-items: start;
   }
 
   .number {
