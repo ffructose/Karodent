@@ -54,18 +54,15 @@
                         </div>
 
                         <div class="appointment__social">
-                            <!-- Instagram -->
                             <a class="social-btn" href="#" aria-label="Instagram">
                                 <img src="/assets/photos/insta-logo.png" alt="Instagram" class="social-icon">
                             </a>
 
-                            <!-- TikTok -->
                             <a class="social-btn" href="#" aria-label="TikTok">
                                 <img src="/assets/photos/tiktok-logo.png" alt="TikTok"
                                     class="social-icon circle-outline">
                             </a>
 
-                            <!-- Facebook -->
                             <a class="social-btn" href="#" aria-label="Facebook">
                                 <img src="/assets/photos/facebook-logo.png" alt="Facebook"
                                     class="social-icon circle-outline">
@@ -75,13 +72,14 @@
 
                     <!-- RIGHT (floating form) -->
                     <div class="appointment__right">
-                        <form class="form" autocomplete="on">
+                        <form class="form" autocomplete="on" (submit)="submitForm($event)">
                             <label class="field">
                                 <span class="field__label">
                                     {{ 'FOOTER.YOUR_NAME' | translate }}
                                 </span>
 
-                                <input class="field__control" type="text" name="name" />
+                                <input class="field__control" type="text" name="name" autocomplete="name"
+                                    maxlength="100" required />
                             </label>
 
                             <label class="field">
@@ -89,21 +87,47 @@
                                     {{ 'FOOTER.YOUR_PHONE_NUMBER' | translate }}
                                 </span>
 
-                                <input class="field__control" type="tel" name="phone" />
+                                <input class="field__control" type="tel" name="phone" autocomplete="tel" maxlength="40"
+                                    required />
                             </label>
+
+                            <label class="field">
+                                <span class="field__label">
+                                    {{ 'FOOTER.YOUR_EMAIL' | translate }}
+                                </span>
+
+                                <input class="field__control" type="email" name="email" autocomplete="email"
+                                    maxlength="150" />
+                            </label>
+
 
                             <label class="field">
                                 <span class="field__label">
                                     {{ 'FOOTER.YOUR_QUESTION' | translate }}
                                 </span>
 
-                                <textarea class="field__control field__control--textarea" name="question"></textarea>
+                                <textarea class="field__control field__control--textarea" name="question"
+                                    maxlength="3000"></textarea>
                             </label>
 
-                            <button class="form__btn" type="button">
-                                {{ 'FOOTER.SUBMIT' | translate }}
+                            <!-- Hidden honeypot field for bots -->
+                            <label aria-hidden="true"
+                                style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">
+                                Website
+                                <input type="text" name="website" tabindex="-1" autocomplete="off" />
+                            </label>
+
+                            <button class="form__btn" type="submit" [disabled]="isFormLocked"
+                                [attr.aria-busy]="formStatus === 'sending'">
+                                {{ submitButtonKey | translate }}
                             </button>
+
                         </form>
+
+                        <div *ngIf="formMessageKey" class="form-notification"
+                            [class.form-notification--error]="formStatus === 'error'" role="status" aria-live="polite">
+                            {{ formMessageKey | translate }}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -114,7 +138,6 @@
         <section class="footer-second-part">
             <div class="footer-second-part__wrap">
 
-                <!-- LEFT -->
                 <div class="fsp__info">
                     <h3 style="font-family: 'Jura';" class="fsp__title">
                         KARODENT STOMATOLOGIA
@@ -157,7 +180,6 @@
                     </div>
                 </div>
 
-                <!-- SOCIAL -->
                 <div class="fsp__social">
                     <a href="#" class="fsp__social-btn" aria-label="Facebook">
                         <img class="fsp__social-btn" src="/assets/photos/facebook-logo.png" alt="Facebook">
@@ -173,7 +195,6 @@
                     </a>
                 </div>
 
-                <!-- NAV -->
                 <div class="fsp__nav">
                     <div class="fsp__nav-col">
                         <a routerLink="/services">
@@ -204,7 +225,6 @@
                     </div>
                 </div>
 
-                <!-- RIGHT -->
                 <div class="fsp__extra">
                     <a href="https://karodent.pl/" class="fsp__extra-link">
                         {{ 'FOOTER.WEBSITE_PULAWY' | translate }}

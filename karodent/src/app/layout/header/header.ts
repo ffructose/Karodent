@@ -1,12 +1,12 @@
+import { DOCUMENT } from '@angular/common';
 import {
+  afterNextRender,
   Component,
   HostListener,
+  Inject,
   Input,
 } from '@angular/core';
-
-import {
-  TranslateService,
-} from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 type DropdownName = 'city' | 'lang' | null;
 type LanguageCode = 'pl' | 'en' | 'uk';
@@ -40,30 +40,46 @@ export class Header {
   mobileMenuOpen = false;
   isScrolled = false;
 
+  private storage: Storage | null = null;
+
   constructor(
     private readonly translate: TranslateService,
+    @Inject(DOCUMENT) private readonly document: Document,
   ) {
-    const savedLanguage =
-      localStorage.getItem('karodent-language');
-
-    const initialLanguage: LanguageCode =
-      this.isLanguageCode(savedLanguage)
-        ? savedLanguage
-        : 'pl';
+    // SSR uses Polish as the stable initial language.
+    const initialLanguage: LanguageCode = 'pl';
 
     this.selectedLang =
       this.langs.find(
-        language => language.code === initialLanguage
+        language => language.code === initialLanguage,
       ) ?? this.langs[0];
 
     this.translate.use(initialLanguage);
+    this.document.documentElement.lang = initialLanguage;
 
-    document.documentElement.lang =
-      initialLanguage;
+    // Runs only in the browser, never during server-side rendering.
+    afterNextRender(() => {
+      this.storage = localStorage;
+
+      const savedLanguage =
+        this.storage.getItem('karodent-language');
+
+      if (!this.isLanguageCode(savedLanguage)) {
+        return;
+      }
+
+      this.selectedLang =
+        this.langs.find(
+          language => language.code === savedLanguage,
+        ) ?? this.langs[0];
+
+      this.translate.use(savedLanguage);
+      this.document.documentElement.lang = savedLanguage;
+    });
   }
 
   toggle(
-    which: Exclude<DropdownName, null>
+    which: Exclude<DropdownName, null>,
   ): void {
     this.openDropdown =
       this.openDropdown === which
@@ -101,25 +117,25 @@ export class Header {
   }
 
   selectLang(
-    language: LanguageOption
+    language: LanguageOption,
   ): void {
     this.selectedLang = language;
 
     this.translate.use(language.code);
 
-    localStorage.setItem(
+    this.storage?.setItem(
       'karodent-language',
-      language.code
+      language.code,
     );
 
-    document.documentElement.lang =
+    this.document.documentElement.lang =
       language.code;
 
     this.closeDropdowns();
   }
 
   private isLanguageCode(
-    value: string | null
+    value: string | null,
   ): value is LanguageCode {
     return (
       value === 'pl' ||
@@ -130,10 +146,10 @@ export class Header {
 
   @HostListener(
     'document:click',
-    ['$event']
+    ['$event'],
   )
   onDocumentClick(
-    event: MouseEvent
+    event: MouseEvent,
   ): void {
     const target =
       event.target as HTMLElement | null;
@@ -154,17 +170,17 @@ export class Header {
   }
 
   @HostListener(
-    'document:keydown.escape'
+    'document:keydown.escape',
   )
   onEsc(): void {
     this.closeMobileMenu();
   }
 
   @HostListener(
-    'window:scroll'
+    'window:scroll',
   )
   onWindowScroll(): void {
     this.isScrolled =
-      window.scrollY > 40;
+      (this.document.defaultView?.scrollY ?? 0) > 40;
   }
 }

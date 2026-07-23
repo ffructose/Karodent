@@ -16,14 +16,15 @@
             </h1>
 
             <div class="appointment">
-                <form class="form" autocomplete="on">
+                <form class="form" autocomplete="on" (submit)="submitForm($event)">
 
                     <label class="field">
                         <span class="field__label">
                             {{ 'CONTACT_PAGE.YOUR_NAME' | translate }}
                         </span>
 
-                        <input class="field__control" type="text" name="name" />
+                        <input class="field__control" type="text" name="name" autocomplete="name" maxlength="100"
+                            required />
                     </label>
 
                     <label class="field">
@@ -31,7 +32,8 @@
                             {{ 'CONTACT_PAGE.YOUR_PHONE_NUMBER' | translate }}
                         </span>
 
-                        <input class="field__control" type="tel" name="phone" />
+                        <input class="field__control" type="tel" name="phone" autocomplete="tel" maxlength="40"
+                            required />
                     </label>
 
                     <label class="field">
@@ -39,7 +41,7 @@
                             {{ 'CONTACT_PAGE.YOUR_EMAIL' | translate }}
                         </span>
 
-                        <input class="field__control" type="mail" name="mail" />
+                        <input class="field__control" type="email" name="email" autocomplete="email" maxlength="150" />
                     </label>
 
                     <label class="large-field">
@@ -47,12 +49,28 @@
                             {{ 'CONTACT_PAGE.DETAILS_OR_QUESTIONS' | translate }}
                         </span>
 
-                        <textarea class="field__control field__control--textarea" name="question"></textarea>
+                        <textarea class="field__control field__control--textarea" name="question"
+                            maxlength="3000"></textarea>
                     </label>
 
-                    <button class="form__btn" type="button">
-                        {{ 'CONTACT_PAGE.SUBMIT' | translate }}
+                    <!-- Hidden honeypot field for bots -->
+                    <label aria-hidden="true"
+                        style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">
+                        Website
+                        <input type="text" name="website" tabindex="-1" autocomplete="off" />
+                    </label>
+
+                    <button class="form__btn" type="submit" [disabled]="isFormLocked"
+                        [attr.aria-busy]="formStatus === 'sending'">
+                        {{ submitButtonKey | translate }}
                     </button>
+
+                    @if (formMessageKey) {
+                    <p class="form__message" aria-live="polite"
+                        [style.color]="formStatus === 'success' ? '#2e7d32' : '#b00020'">
+                        {{ formMessageKey | translate }}
+                    </p>
+                    }
 
                 </form>
             </div>

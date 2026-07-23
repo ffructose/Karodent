@@ -18,6 +18,7 @@
     "MAIL_LABEL": "E-mail",
     "YOUR_NAME": "Imię i nazwisko",
     "YOUR_PHONE_NUMBER": "Numer telefonu",
+    "YOUR_EMAIL": "Adres e-mail",
     "YOUR_QUESTION": "Twoje pytanie",
     "SUBMIT": "WYŚLIJ",
     "FULL_ADDRESS": "ul. Siedmiogrodzka 7, lokal U1, 01-204 Warszawa",
@@ -206,5 +207,12 @@
       "NAME": "Nazwa usługi",
       "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Tekst źródłowy"
     }
+  },
+  "FORM_STATUS": {
+    "SENDING": "Wysyłanie...",
+    "SUCCESS_BUTTON": "Wysłano ✓",
+    "RETRY": "Spróbuj ponownie",
+    "SUCCESS_MESSAGE": "Dziękujemy! Skontaktujemy się wkrótce.",
+    "ERROR_MESSAGE": "Nie udało się wysłać wiadomości. Spróbuj ponownie lub skontaktuj się z nami telefonicznie."
   }
 }

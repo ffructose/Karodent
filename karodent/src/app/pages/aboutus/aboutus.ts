@@ -1,7 +1,18 @@
-import { ChangeDetectorRef, Component, NgZone, ElementRef, ViewChild, HostListener, QueryList, ViewChildren } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  Inject,
+  OnDestroy,
+  PLATFORM_ID,
+  ViewChild,
+} from '@angular/core';
+import {
+  DOCUMENT,
+  isPlatformBrowser,
+} from '@angular/common';
 
 type CardState = 'left' | 'active' | 'right' | 'hidden';
-
 
 @Component({
   selector: 'app-aboutus',
@@ -9,13 +20,31 @@ type CardState = 'left' | 'active' | 'right' | 'hidden';
   templateUrl: './aboutus.html',
   styleUrl: './aboutus.css',
 })
-export class Aboutus {
-  scrollToFooter() {
-    const footer = document.getElementById('page-footer');
-    if (footer) footer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-  //----------------------------
+export class Aboutus implements OnDestroy {
+  private readonly isBrowser: boolean;
 
+  constructor(
+    @Inject(DOCUMENT)
+    private readonly document: Document,
+    @Inject(PLATFORM_ID)
+    platformId: object,
+  ) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
+
+  scrollToFooter(): void {
+    if (!this.isBrowser) {
+      return;
+    }
+
+    const footer =
+      this.document.getElementById('page-footer');
+
+    footer?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
 
   photos = [
     '/assets/photos/photo_1.jpg',
@@ -24,16 +53,19 @@ export class Aboutus {
     '/assets/photos/photo_4.jpg',
     '/assets/photos/photo_5.jpg',
   ];
+
   activeIndex = 0;
 
-  setActive(i: number) {
+  setActive(i: number): void {
     this.activeIndex = i;
   }
 
-  // Визначаємо: ліва/активна/права (інші hidden)
   stateOf(i: number): CardState {
     const n = this.photos.length;
-    if (n === 0) return 'hidden';
+
+    if (n === 0) {
+      return 'hidden';
+    }
 
     const prev = (this.activeIndex - 1 + n) % n;
     const next = (this.activeIndex + 1) % n;
@@ -41,12 +73,12 @@ export class Aboutus {
     if (i === this.activeIndex) return 'active';
     if (i === prev) return 'left';
     if (i === next) return 'right';
+
     return 'hidden';
   }
-  //----------------------------
 
-  // ===== SINGLE "OUR PHOTOS" CAROUSEL =====
-  @ViewChild('track') track!: ElementRef<HTMLDivElement>;
+  @ViewChild('track')
+  track!: ElementRef<HTMLDivElement>;
 
   ourPhotos = [
     '/assets/photos/photo_1.jpg',
@@ -59,10 +91,9 @@ export class Aboutus {
   loopPhotos: string[] = [];
 
   locked = false;
-  settleTimer: any = null;
+  settleTimer: number | null = null;
   lastLeft = 0;
 
-  // ===== LIGHTBOX (для single каруселі) =====
   lightboxOpen = false;
   lightboxIndex = 0;
   private scrollY = 0;
@@ -72,12 +103,32 @@ export class Aboutus {
   }
 
   ngOnInit(): void {
-    // loop = photos*3
-    this.loopPhotos = [...this.ourPhotos, ...this.ourPhotos, ...this.ourPhotos];
+    this.loopPhotos = [
+      ...this.ourPhotos,
+      ...this.ourPhotos,
+      ...this.ourPhotos,
+    ];
   }
 
   ngAfterViewInit(): void {
-    setTimeout(() => this.jumpToMiddle(), 0);
+    if (!this.isBrowser) {
+      return;
+    }
+
+    this.document.defaultView?.requestAnimationFrame(() => {
+      this.jumpToMiddle();
+    });
+  }
+
+  ngOnDestroy(): void {
+    const browserWindow = this.document.defaultView;
+
+    if (
+      browserWindow &&
+      this.settleTimer !== null
+    ) {
+      browserWindow.clearTimeout(this.settleTimer);
+    }
   }
 
   private trackEl(): HTMLDivElement {
@@ -85,21 +136,36 @@ export class Aboutus {
   }
 
   private firstCardEl(): HTMLElement | null {
-    return this.trackEl().querySelector<HTMLElement>('.card');
+    return this.trackEl()
+      .querySelector<HTMLElement>('.card');
   }
 
   private cardsEl(): HTMLElement | null {
-    return this.trackEl().querySelector<HTMLElement>('.cards');
+    return this.trackEl()
+      .querySelector<HTMLElement>('.cards');
   }
 
   private step(): number {
     const card = this.firstCardEl();
-    if (!card) return 320;
+
+    if (!card) {
+      return 320;
+    }
 
     const cards = this.cardsEl();
-    const styles = cards ? getComputedStyle(cards) : null;
-    const gapStr = styles?.gap || styles?.columnGap || '0';
-    const gap = parseFloat(gapStr) || 0;
+    const browserWindow = this.document.defaultView;
+
+    const styles =
+      cards && browserWindow
+        ? browserWindow.getComputedStyle(cards)
+        : null;
+
+    const gapString =
+      styles?.gap ||
+      styles?.columnGap ||
+      '0';
+
+    const gap = parseFloat(gapString) || 0;
 
     return card.offsetWidth + gap;
   }
@@ -112,16 +178,26 @@ export class Aboutus {
     this.trackEl().scrollLeft = this.oneBlockWidth();
   }
 
-  next(): void { this.scrollDir(+1); }
-  prev(): void { this.scrollDir(-1); }
+  next(): void {
+    this.scrollDir(1);
+  }
+
+  prev(): void {
+    this.scrollDir(-1);
+  }
 
   private scrollDir(dir: 1 | -1): void {
-    if (this.locked) return;
+    if (this.locked) {
+      return;
+    }
 
-    const el = this.trackEl();
+    const element = this.trackEl();
     this.locked = true;
 
-    el.scrollBy({ left: dir * this.step(), behavior: 'smooth' });
+    element.scrollBy({
+      left: dir * this.step(),
+      behavior: 'smooth',
+    });
 
     this.waitForScrollEnd(() => {
       this.normalizeLoopPosition();
@@ -129,78 +205,130 @@ export class Aboutus {
     });
   }
 
-  private waitForScrollEnd(done: () => void): void {
-    const el = this.trackEl();
+  private waitForScrollEnd(
+    done: () => void,
+  ): void {
+    const browserWindow = this.document.defaultView;
 
-    if (this.settleTimer) clearTimeout(this.settleTimer);
-    this.lastLeft = el.scrollLeft;
+    if (!browserWindow) {
+      done();
+      return;
+    }
 
-    const check = () => {
-      const now = el.scrollLeft;
-      if (Math.abs(now - this.lastLeft) > 0.5) {
-        this.lastLeft = now;
-        this.settleTimer = setTimeout(check, 80);
+    const element = this.trackEl();
+
+    if (this.settleTimer !== null) {
+      browserWindow.clearTimeout(this.settleTimer);
+    }
+
+    this.lastLeft = element.scrollLeft;
+
+    const check = (): void => {
+      const currentLeft = element.scrollLeft;
+
+      if (
+        Math.abs(currentLeft - this.lastLeft) > 0.5
+      ) {
+        this.lastLeft = currentLeft;
+        this.settleTimer =
+          browserWindow.setTimeout(check, 80);
         return;
       }
+
       done();
     };
 
-    this.settleTimer = setTimeout(check, 120);
+    this.settleTimer =
+      browserWindow.setTimeout(check, 120);
   }
 
   private normalizeLoopPosition(): void {
-    const el = this.trackEl();
-    const w = this.oneBlockWidth();
-    if (w <= 0) return;
+    const element = this.trackEl();
+    const width = this.oneBlockWidth();
 
-    let x = el.scrollLeft % w;
-    if (x < 0) x += w;
+    if (width <= 0) {
+      return;
+    }
 
-    el.scrollLeft = x + w; // тримаємо в середньому блоці
+    let x = element.scrollLeft % width;
+
+    if (x < 0) {
+      x += width;
+    }
+
+    element.scrollLeft = x + width;
   }
 
-  // ===== LIGHTBOX =====
   openLightbox(loopIndex: number): void {
-    const len = this.ourPhotos.length;
+    const browserWindow = this.document.defaultView;
 
-    this.lightboxIndex = ((loopIndex % len) + len) % len;
+    if (!browserWindow) {
+      return;
+    }
+
+    const length = this.ourPhotos.length;
+
+    this.lightboxIndex =
+      ((loopIndex % length) + length) % length;
+
     this.lightboxOpen = true;
+    this.scrollY = browserWindow.scrollY;
 
-    // lock scroll (без стрибків)
-    this.scrollY = window.scrollY;
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${this.scrollY}px`;
-    document.body.style.left = '0';
-    document.body.style.right = '0';
-    document.body.style.width = '100%';
+    this.document.body.style.position = 'fixed';
+    this.document.body.style.top =
+      `-${this.scrollY}px`;
+    this.document.body.style.left = '0';
+    this.document.body.style.right = '0';
+    this.document.body.style.width = '100%';
   }
 
   closeLightbox(): void {
+    const browserWindow = this.document.defaultView;
+
+    if (!browserWindow) {
+      return;
+    }
+
     this.lightboxOpen = false;
 
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.left = '';
-    document.body.style.right = '';
-    document.body.style.width = '';
+    this.document.body.style.position = '';
+    this.document.body.style.top = '';
+    this.document.body.style.left = '';
+    this.document.body.style.right = '';
+    this.document.body.style.width = '';
 
-    window.scrollTo(0, this.scrollY);
+    browserWindow.scrollTo(0, this.scrollY);
   }
 
   lightboxNext(): void {
-    this.lightboxIndex = (this.lightboxIndex + 1) % this.ourPhotos.length;
+    this.lightboxIndex =
+      (this.lightboxIndex + 1) %
+      this.ourPhotos.length;
   }
 
   lightboxPrev(): void {
-    this.lightboxIndex = (this.lightboxIndex - 1 + this.ourPhotos.length) % this.ourPhotos.length;
+    this.lightboxIndex =
+      (this.lightboxIndex - 1 +
+        this.ourPhotos.length) %
+      this.ourPhotos.length;
   }
 
   @HostListener('document:keydown', ['$event'])
   onKeydown(e: KeyboardEvent): void {
-    if (!this.lightboxOpen) return;
-    if (e.key === 'Escape') this.closeLightbox();
-    if (e.key === 'ArrowRight') this.lightboxNext();
-    if (e.key === 'ArrowLeft') this.lightboxPrev();
-  }
+    if (!this.lightboxOpen) {
+      return;
+    }
 
+    if (e.key === 'Escape') {
+      this.closeLightbox();
+    }
+
+    if (e.key === 'ArrowRight') {
+      this.lightboxNext();
+    }
+
+    if (e.key === 'ArrowLeft') {
+      this.lightboxPrev();
+    }
+  }
 }

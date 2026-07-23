@@ -1,6 +1,17 @@
-import { ChangeDetectorRef, Component, NgZone, ElementRef, ViewChild, HostListener, QueryList, ViewChildren } from '@angular/core';
-
-type CardState = 'left' | 'active' | 'right' | 'hidden';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  Inject,
+  OnDestroy,
+  PLATFORM_ID,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
+import {
+  DOCUMENT,
+  isPlatformBrowser,
+} from '@angular/common';
 
 @Component({
   selector: 'app-doctors',
@@ -8,21 +19,40 @@ type CardState = 'left' | 'active' | 'right' | 'hidden';
   templateUrl: './doctors.html',
   styleUrl: './doctors.css',
 })
-export class Doctors {
-  // SCROLLBAR
-  scrollToFooter() {
-    const footer = document.getElementById('page-footer');
-    if (footer) footer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+export class Doctors implements OnDestroy {
+  private readonly isBrowser: boolean;
+
+  constructor(
+    @Inject(DOCUMENT)
+    private readonly document: Document,
+    @Inject(PLATFORM_ID)
+    platformId: object,
+  ) {
+    this.isBrowser = isPlatformBrowser(platformId);
   }
 
-  @ViewChildren('track') tracks!: QueryList<ElementRef<HTMLDivElement>>;
+  scrollToFooter(): void {
+    if (!this.isBrowser) {
+      return;
+    }
+
+    const footer =
+      this.document.getElementById('page-footer');
+
+    footer?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
+
+  @ViewChildren('track')
+  tracks!: QueryList<ElementRef<HTMLDivElement>>;
 
   doctors = [
     {
       name: 'Rafal Sulej',
       photo: '/assets/photos/Rafal.png',
       textKey: 'DOCTORS_PAGE.DOCTOR_1.TEXT',
-
       photos: [
         '/assets/photos/photo_1.jpg',
         '/assets/photos/photo_2.jpg',
@@ -32,7 +62,7 @@ export class Doctors {
       ],
       loopPhotos: [] as string[],
       locked: false,
-      settleTimer: null as any,
+      settleTimer: null as number | null,
       lastLeft: 0,
     },
     {
@@ -48,12 +78,11 @@ export class Doctors {
       ],
       loopPhotos: [] as string[],
       locked: false,
-      settleTimer: null as any,
+      settleTimer: null as number | null,
       lastLeft: 0,
     },
   ];
 
-  // ===== LIGHTBOX (спільний для всіх) =====
   lightboxOpen = false;
   lightboxIndex = 0;
   lightboxDoctorIndex = 0;
@@ -61,150 +90,284 @@ export class Doctors {
   private scrollY = 0;
 
   get lightboxSrc(): string {
-    return this.doctors[this.lightboxDoctorIndex].photos[this.lightboxIndex];
+    return this.doctors[
+      this.lightboxDoctorIndex
+    ].photos[this.lightboxIndex];
   }
 
   ngOnInit(): void {
-    // loop = photos*3 для кожного лікаря
-    for (const d of this.doctors) {
-      d.loopPhotos = [...d.photos, ...d.photos, ...d.photos];
+    for (const doctor of this.doctors) {
+      doctor.loopPhotos = [
+        ...doctor.photos,
+        ...doctor.photos,
+        ...doctor.photos,
+      ];
     }
   }
 
   ngAfterViewInit(): void {
-    // після рендера — стрибаємо в середину для КОЖНОЇ каруселі
-    setTimeout(() => {
-      this.tracks.forEach((t, i) => this.jumpToMiddle(i));
-    }, 0);
+    if (!this.isBrowser) {
+      return;
+    }
+
+    this.document.defaultView?.requestAnimationFrame(() => {
+      this.tracks.forEach((_, index) => {
+        this.jumpToMiddle(index);
+      });
+    });
   }
 
-  // ===== helpers per carousel =====
-  private trackEl(i: number): HTMLDivElement {
-    return this.tracks.toArray()[i].nativeElement;
+  ngOnDestroy(): void {
+    const browserWindow = this.document.defaultView;
+
+    if (!browserWindow) {
+      return;
+    }
+
+    for (const doctor of this.doctors) {
+      if (doctor.settleTimer !== null) {
+        browserWindow.clearTimeout(
+          doctor.settleTimer,
+        );
+      }
+    }
   }
 
-  private firstCardEl(i: number): HTMLElement | null {
-    return this.trackEl(i).querySelector<HTMLElement>('.card');
+  private trackEl(index: number): HTMLDivElement {
+    return this.tracks.toArray()[index].nativeElement;
   }
 
-  private cardsEl(i: number): HTMLElement | null {
-    return this.trackEl(i).querySelector<HTMLElement>('.cards');
+  private firstCardEl(
+    index: number,
+  ): HTMLElement | null {
+    return this.trackEl(index)
+      .querySelector<HTMLElement>('.card');
   }
 
-  private step(i: number): number {
-    const card = this.firstCardEl(i);
-    if (!card) return 320;
+  private cardsEl(
+    index: number,
+  ): HTMLElement | null {
+    return this.trackEl(index)
+      .querySelector<HTMLElement>('.cards');
+  }
 
-    const cards = this.cardsEl(i);
-    const styles = cards ? getComputedStyle(cards) : null;
-    const gapStr = styles?.gap || styles?.columnGap || '0';
-    const gap = parseFloat(gapStr) || 0;
+  private step(index: number): number {
+    const card = this.firstCardEl(index);
+
+    if (!card) {
+      return 320;
+    }
+
+    const cards = this.cardsEl(index);
+    const browserWindow = this.document.defaultView;
+
+    const styles =
+      cards && browserWindow
+        ? browserWindow.getComputedStyle(cards)
+        : null;
+
+    const gapString =
+      styles?.gap ||
+      styles?.columnGap ||
+      '0';
+
+    const gap = parseFloat(gapString) || 0;
 
     return card.offsetWidth + gap;
   }
 
-  private oneBlockWidth(i: number): number {
-    return this.doctors[i].photos.length * this.step(i);
+  private oneBlockWidth(index: number): number {
+    return (
+      this.doctors[index].photos.length *
+      this.step(index)
+    );
   }
 
-  private jumpToMiddle(i: number): void {
-    const el = this.trackEl(i);
-    el.scrollLeft = this.oneBlockWidth(i);
+  private jumpToMiddle(index: number): void {
+    const element = this.trackEl(index);
+    element.scrollLeft =
+      this.oneBlockWidth(index);
   }
 
-  next(i: number): void { this.scrollDir(i, +1); }
-  prev(i: number): void { this.scrollDir(i, -1); }
+  next(index: number): void {
+    this.scrollDir(index, 1);
+  }
 
-  private scrollDir(i: number, dir: 1 | -1): void {
-    const d = this.doctors[i];
-    if (d.locked) return;
+  prev(index: number): void {
+    this.scrollDir(index, -1);
+  }
 
-    const el = this.trackEl(i);
-    d.locked = true;
+  private scrollDir(
+    index: number,
+    direction: 1 | -1,
+  ): void {
+    const doctor = this.doctors[index];
 
-    el.scrollBy({ left: dir * this.step(i), behavior: 'smooth' });
+    if (doctor.locked) {
+      return;
+    }
 
-    this.waitForScrollEnd(i, () => {
-      this.normalizeLoopPosition(i);
-      d.locked = false;
+    const element = this.trackEl(index);
+    doctor.locked = true;
+
+    element.scrollBy({
+      left: direction * this.step(index),
+      behavior: 'smooth',
+    });
+
+    this.waitForScrollEnd(index, () => {
+      this.normalizeLoopPosition(index);
+      doctor.locked = false;
     });
   }
 
-  private waitForScrollEnd(i: number, done: () => void): void {
-    const d = this.doctors[i];
-    const el = this.trackEl(i);
+  private waitForScrollEnd(
+    index: number,
+    done: () => void,
+  ): void {
+    const browserWindow = this.document.defaultView;
 
-    if (d.settleTimer) clearTimeout(d.settleTimer);
-    d.lastLeft = el.scrollLeft;
+    if (!browserWindow) {
+      done();
+      return;
+    }
 
-    const check = () => {
-      const now = el.scrollLeft;
-      if (Math.abs(now - d.lastLeft) > 0.5) {
-        d.lastLeft = now;
-        d.settleTimer = setTimeout(check, 80);
+    const doctor = this.doctors[index];
+    const element = this.trackEl(index);
+
+    if (doctor.settleTimer !== null) {
+      browserWindow.clearTimeout(
+        doctor.settleTimer,
+      );
+    }
+
+    doctor.lastLeft = element.scrollLeft;
+
+    const check = (): void => {
+      const currentLeft = element.scrollLeft;
+
+      if (
+        Math.abs(
+          currentLeft - doctor.lastLeft,
+        ) > 0.5
+      ) {
+        doctor.lastLeft = currentLeft;
+        doctor.settleTimer =
+          browserWindow.setTimeout(check, 80);
         return;
       }
+
       done();
     };
 
-    d.settleTimer = setTimeout(check, 120);
+    doctor.settleTimer =
+      browserWindow.setTimeout(check, 120);
   }
 
-  private normalizeLoopPosition(i: number): void {
-    const el = this.trackEl(i);
-    const w = this.oneBlockWidth(i);
-    if (w <= 0) return;
+  private normalizeLoopPosition(
+    index: number,
+  ): void {
+    const element = this.trackEl(index);
+    const width = this.oneBlockWidth(index);
 
-    let x = el.scrollLeft % w;
-    if (x < 0) x += w;
+    if (width <= 0) {
+      return;
+    }
 
-    el.scrollLeft = x + w; // тримаємо в середньому блоці
+    let x = element.scrollLeft % width;
+
+    if (x < 0) {
+      x += width;
+    }
+
+    element.scrollLeft = x + width;
   }
 
-  // ===== LIGHTBOX =====
-  openLightbox(doctorIndex: number, loopIndex: number): void {
-    const photosLen = this.doctors[doctorIndex].photos.length;
+  openLightbox(
+    doctorIndex: number,
+    loopIndex: number,
+  ): void {
+    const browserWindow = this.document.defaultView;
+
+    if (!browserWindow) {
+      return;
+    }
+
+    const photosLength =
+      this.doctors[doctorIndex].photos.length;
 
     this.lightboxDoctorIndex = doctorIndex;
-    this.lightboxIndex = ((loopIndex % photosLen) + photosLen) % photosLen;
-    this.lightboxOpen = true;
+    this.lightboxIndex =
+      ((loopIndex % photosLength) +
+        photosLength) %
+      photosLength;
 
-    // lock scroll (без стрибків)
-    this.scrollY = window.scrollY;
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${this.scrollY}px`;
-    document.body.style.left = '0';
-    document.body.style.right = '0';
-    document.body.style.width = '100%';
+    this.lightboxOpen = true;
+    this.scrollY = browserWindow.scrollY;
+
+    this.document.body.style.position = 'fixed';
+    this.document.body.style.top =
+      `-${this.scrollY}px`;
+    this.document.body.style.left = '0';
+    this.document.body.style.right = '0';
+    this.document.body.style.width = '100%';
   }
 
   closeLightbox(): void {
+    const browserWindow = this.document.defaultView;
+
+    if (!browserWindow) {
+      return;
+    }
+
     this.lightboxOpen = false;
 
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.left = '';
-    document.body.style.right = '';
-    document.body.style.width = '';
+    this.document.body.style.position = '';
+    this.document.body.style.top = '';
+    this.document.body.style.left = '';
+    this.document.body.style.right = '';
+    this.document.body.style.width = '';
 
-    window.scrollTo(0, this.scrollY);
+    browserWindow.scrollTo(0, this.scrollY);
   }
 
   lightboxNext(): void {
-    const len = this.doctors[this.lightboxDoctorIndex].photos.length;
-    this.lightboxIndex = (this.lightboxIndex + 1) % len;
+    const length =
+      this.doctors[
+        this.lightboxDoctorIndex
+      ].photos.length;
+
+    this.lightboxIndex =
+      (this.lightboxIndex + 1) % length;
   }
 
   lightboxPrev(): void {
-    const len = this.doctors[this.lightboxDoctorIndex].photos.length;
-    this.lightboxIndex = (this.lightboxIndex - 1 + len) % len;
+    const length =
+      this.doctors[
+        this.lightboxDoctorIndex
+      ].photos.length;
+
+    this.lightboxIndex =
+      (this.lightboxIndex - 1 + length) %
+      length;
   }
 
   @HostListener('document:keydown', ['$event'])
   onKeydown(e: KeyboardEvent): void {
-    if (!this.lightboxOpen) return;
-    if (e.key === 'Escape') this.closeLightbox();
-    if (e.key === 'ArrowRight') this.lightboxNext();
-    if (e.key === 'ArrowLeft') this.lightboxPrev();
+    if (!this.lightboxOpen) {
+      return;
+    }
+
+    if (e.key === 'Escape') {
+      this.closeLightbox();
+    }
+
+    if (e.key === 'ArrowRight') {
+      this.lightboxNext();
+    }
+
+    if (e.key === 'ArrowLeft') {
+      this.lightboxPrev();
+    }
   }
 }
